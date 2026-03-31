@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-JouJou - Complete Tock implementation with calendar navigation
+JouJou - Complete: Navigate calendar and find first available Saturday
 """
 
 from playwright.sync_api import sync_playwright
@@ -19,54 +19,87 @@ with sync_playwright() as p:
     print("JouJou SF - Finding First Available Saturday")
     print("=" * 60)
     
-    # Load experience
     url = 'https://www.exploretock.com/joujousf/experience/583810/joujou-dinner-reservation?size=2'
     page.goto(url, wait_until='domcontentloaded', timeout=30000)
     page.wait_for_timeout(4000)
     
-    # Get initial state
-    initial = page.evaluate('''() => {
-        const text = document.body.innerText;
-        const buttons = [...document.querySelectorAll('button')];
-        const times = buttons
-            .filter(b => /\\d{1,2}:\\d{2}/.test(b.textContent))
-            .map(b => b.textContent.trim());
-        
-        return { times, hasModal: text.includes('Reservation') && text.includes('JouJou Dinner') };
-    }''')
-    
-    print(f"Initial times found: {len(initial['times'])}")
-    if initial['times']:
-        print(f"Times: {initial['times'][:5]}")
-    
-    # Close modal if present
+    # Close modal
     try:
         close_btn = page.locator('button[aria-label*="Close"]').first
         if close_btn.is_visible():
             close_btn.click()
             page.wait_for_timeout(2000)
-            print("Modal closed")
     except:
         pass
     
-    # Now look for times again
-    result = page.evaluate('''() => {
-        const buttons = [...document.querySelectorAll('button')];
-        return buttons
-            .filter(b => /\\d{1,2}:\\d{2}/.test(b.textContent))
-            .map(b => ({
-                time: b.textContent.trim(),
-                disabled: b.disabled
+    # Click date picker
+    print("Opening date picker...")
+    date_btn = page.locator('button:has-text("Date")').first
+    date_btn.click()
+    page.wait_for_timeout(2000)
+    
+    # Extract calendar to find Saturdays
+    print("Scanning calendar for Saturdays...")
+    
+    # Get the month
+    month = page.evaluate('''() => {
+        const header = document.querySelector('h6');
+        return header ? header.textContent : 'unknown';
+    }''')
+    
+    print(f"Current month: {month}")
+    
+    # Get all calendar cells
+    cells = page.evaluate('''() => {
+        const allCells = [...document.querySelectorAll('button, td, [role="button"]')];
+        return allCells
+            .filter(el => /^\\d+$/.test(el.textContent.trim()))
+            .map(el => ({
+                day: el.textContent.trim(),
+                disabled: el.disabled || el.getAttribute('disabled'),
+                ariaLabel: el.getAttribute('aria-label') || ''
             }));
     }''')
     
-    print(f"\nAfter modal close: {len(result)} times")
+    print(f"Found {len(cells)} date cells")
     
-    available = [r for r in result if not r['disabled']]
-    if available:
-        print(f"✅ {len(available)} available times:")
-        for t in available[:10]:
-            print(f"   - {t['time']}")
+    # Find Saturdays (check aria-label for "Saturday")
+    saturdays = [c for c in cells if 'saturday' in c.get('ariaLabel', '').lower()]
+    available_saturdays = [s for s in saturdays if not s.get('disabled')]
+    
+    print(f"Saturdays found: {len(saturdays)}")
+    print(f"Available Saturdays: {len(available_saturdays)}")
+    
+    if available_saturdays:
+        # Click first available Saturday
+        first_sat = available_saturdays[0]
+        day_num = first_sat['day']
+        print(f"\nClicking Saturday, {month} {day_num}...")
+        
+        # Find and click the button
+        day_btn = page.locator(f'button:has-text("{day_num}"):not([disabled])').first
+        if day_btn.is_visible():
+            day_btn.click()
+            page.wait_for_timeout(3000)
+            
+            # Extract times
+            times = page.evaluate('''() => {
+                return [...document.querySelectorAll('button')]
+                    .filter(b => /\\d{1,2}:\\d{2}/.test(b.textContent))
+                    .map(b => b.textContent.trim());
+            }''')
+            
+            if times:
+                print(f"\n✅ AVAILABLE TIMES for Saturday {day_num}:")
+                for t in times[:10]:
+                    print(f"   - {t}")
+                print(f"\n🎉 First available Saturday: {month} {day_num}")
+            else:
+                print("\n⚠️ No times found after clicking date")
+        else:
+            print("\n❌ Could not click Saturday")
+    else:
+        print("\n❌ No available Saturdays in current month")
     
     browser.close()
 
