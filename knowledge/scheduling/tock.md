@@ -165,15 +165,22 @@ date_cell.click()  # Blocked by modal or no-op
 
 ## Root Cause Identified
 
-**Tock releases reservations in monthly batches.**
+**Cloudflare Turnstile blocks interactions after initial page load.**
 
-Page message for Lazy Bear:
-> "Reservations for May 2026 will be released on Wednesday, April 1, 2026 at 10am."
+Tested 2026-03-31 with JouJou:
+- ✅ Initial page load works with stealth scripts
+- ✅ Can extract calendar structure (`.ConsumerCalendar-day`, `.ConsumerCalendar-week`)
+- ✅ Found 10 Saturdays, all marked available
+- ❌ **Cloudflare verification triggers on JavaScript clicks**
 
-This means:
-1. **No availability shown for unreleased months** — The time slots literally don't exist in the DOM
-2. **Can't extract what's not there** — My automation works, but there's no data to extract for future dates
-3. **Need to check dates within released window** — April dates may be available, May is blocked until April 1
+Error after clicking Saturday:
+```
+Performing security verification
+This website uses a security service to protect against malicious bots.
+Ray ID: 9e4d45b5ea67080d
+```
+
+**Second issue:** Tock also releases reservations in monthly batches (Lazy Bear: "May 2026 released April 1 at 10am"), but bot detection is the primary blocker.
 
 ---
 
