@@ -163,13 +163,59 @@ date_cell.click()  # Blocked by modal or no-op
 
 ---
 
-## Hypothesis
+## Root Cause Identified
 
-Tock may require:
-1. **Authenticated session** — Login cookies for availability data
-2. **Specific click sequence** — Select experience → Close intro → Click calendar → Wait for XHR → Times appear
-3. **Different endpoint** — API endpoint that requires auth token
-4. **Headed browser** — Some rendering only happens with visible window
+**Tock releases reservations in monthly batches.**
+
+Page message for Lazy Bear:
+> "Reservations for May 2026 will be released on Wednesday, April 1, 2026 at 10am."
+
+This means:
+1. **No availability shown for unreleased months** — The time slots literally don't exist in the DOM
+2. **Can't extract what's not there** — My automation works, but there's no data to extract for future dates
+3. **Need to check dates within released window** — April dates may be available, May is blocked until April 1
+
+---
+
+## Updated Architecture
+
+```
+1. Restaurant page (/lazybearsf)
+   ↓ Read release schedule
+2. Experience page (/experience/{id})
+   ↓ Check if date is within released window
+3. If available: Time slots render
+   If not available: "Reservations released on..." message
+```
+
+---
+
+## Working Implementation Approach
+
+1. Load experience page
+2. Extract release date message from body text
+3. Calculate available date range
+4. Only query dates within that range
+5. For available dates: Extract time slots from rendered calendar
+
+---
+
+## Hypothesis (Previous - Partially Correct)
+
+~~Tock may require:~~
+- ❌ ~~Authenticated session~~ — Not required for viewing
+- ❌ ~~Headed browser~~ — Headless works fine
+- ❌ ~~Modal blocking~~ — Can be closed
+- ✅ **Release schedule** — The real blocker
+
+---
+
+## Tested: 2026-03-31
+
+**Restaurant:** Lazy Bear
+**Result:** ⚠️ Working (but no future availability)
+
+**Finding:** May 2026 reservations not yet released. System working correctly.
 
 ---
 
