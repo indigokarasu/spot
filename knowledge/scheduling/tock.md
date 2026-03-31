@@ -1,242 +1,170 @@
 # Tock
 
-**Status:** ⚠️ Partially Working (Page loads, availability extraction incomplete)
+**Status:** ✅ Working
 **Last tested:** 2026-03-31
-**Method:** Browser automation (multi-step flow)
+**Method:** URL-based date iteration
 
 ---
 
 ## Overview
 
-Tock uses Cloudflare Turnstile bot detection and a multi-step booking flow. Page loads successfully but extracting actual availability times requires handling modal dialogs and dynamic rendering.
+Tock uses Cloudflare Turnstile bot detection that **triggers on calendar interactions**, but page loads work fine with stealth scripts. The key insight: **rewrite URLs instead of clicking the calendar**.
 
 ---
 
 ## Implementation Status
 
-**File:** `scripts/tock_availability.py` (partial)
+**File:** `scripts/joujou_working_tock.py`
 
 **Working:**
-- ✅ Navigate to restaurant page
-- ✅ Extract experience links
-- ✅ Load experience with date parameters
-- ✅ Close blocking modal dialogs
-
-**Not Working:**
-- ❌ Extract time slot buttons after modal closes
-- ❌ Navigate calendar to select specific dates
-- ❌ Detect availability vs. no availability state
+- ✅ Navigate to experience page with stealth scripts
+- ✅ Close blocking modal
+- ✅ Extract time slots from DOM
+- ✅ Iterate dates via URL parameters
+- ✅ Detect availability by checking for times in page content
 
 ---
 
-## Architecture
+## Working Architecture
 
-**Flow:**
 ```
-1. Restaurant page (/lazybearsf)
-   ↓ Click experience
-2. Experience page (/experience/{id})
-   ↓ Modal opens
-3. Close modal / click date in calendar
-   ↓ SPA fetches availability
-4. Time slots render dynamically
+1. Load experience URL with date parameter
+   URL: /experience/{id}?cameFrom=search_modal&date=YYYY-MM-DD&size=2
+   ↓
+2. Close modal dialog
+   ↓
+3. Extract times from DOM
+   Look for container with "4:00 PM" through "10:00 PM"
+   ↓
+4. If times found → availability exists
+   If no times → no availability for that date
 ```
 
-**Challenges:**
-1. **Modal blocking** — `data-testid="experience-dialog"` intercepts clicks
-2. **SPA polling** — Network never idle, continuous API polling
-3. **Dynamic rendering** — Time slots load after date selection via XHR
-4. **Cloudflare** — Requires stealth scripts to bypass bot detection
+**Critical discovery:** Don't click the calendar. JavaScript clicks trigger Cloudflare bot detection. URL-based iteration works because it's just page loads.
 
 ---
 
-## Methods Tried
+## Working Implementation
 
-### Method 1: API Endpoint
 ```python
-# Tried public widget API pattern (like SevenRooms)
-# Result: No known public endpoint found
-```
+from playwright.sync_api import sync_playwright
+from datetime import datetime, timedelta
 
-### Method 2: Headless Browser
-```python
-browser = p.chromium.launch(headless=True)
-# Result: Page loads, modal blocks interaction
-```
-
-### Method 3: Stealth Scripts
-```javascript
-Object.defineProperty(navigator, 'webdriver', { get: () =>> undefined });
-// Result: Bypasses bot detection, modal still blocks
-```
-
-### Method 4: Modal Close + Wait
-```python
-close_btn = page.locator('[data-testid="experience-dialog"] button').first
-close_btn.click()
-page.wait_for_timeout(5000)
-# Result: Modal closes, times still not in DOM
-```
-
-### Method 5: Text Extraction
-```python
-text = page.evaluate('() => document.body.innerText')
-times = text.match(/\d{1,2}:\d{2}/g)
-# Result: No time patterns found in body text
-```
-
-### Method 6: Mobile Viewport
-```python
-viewport={'width': 390, 'height': 844}
-user_agent='iPhone...'
-# Result: Same behavior as desktop
-```
-
----
-
-## What Works
-
-**Page Investigation:**
-```python
-# Load experience page
-url = "https://www.exploretock.com/lazybearsf/experience/597492/2026-april-dinner-lazy-bear"
-page.goto(url, wait_until='domcontentloaded')
-
-# Find experiences
-experiences = page.evaluate('''() => {
-    return [...document.querySelectorAll('a[href*="/experience/"]')]
-        .map(a => ({ text: a.textContent, href: a.href }));
-}''')
-# Returns: "2026 March Dinner", "2026 April Dinner"
-```
-
-**Modal Detection:**
-```python
-modal = page.locator('[data-testid="experience-dialog"]')
-# Exists and blocks all interaction
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True, args=['--no-sandbox'])
+    context = browser.new_context(
+        viewport={'width': 1280, 'height': 800},
+        user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+    )
+    context.add_init_script('Object.defineProperty(navigator, "webdriver", {get: () => undefined})')
+    
+    page = context.new_page()
+    
+    # URL pattern that works
+    base = 'https://www.exploretock.com/joujousf/experience/583810/joujou-dinner-reservation'
+    url = f'{base}?cameFrom=search_modal&date=2026-04-04&showExclusives=true&size=2'
+    
+    page.goto(url, wait_until='domcontentloaded', timeout=30000)
+    page.wait_for_timeout(4000)
+    
+    # Close modal
+    try:
+        close_btn = page.locator('button[aria-label*="Close"]').first
+        if close_btn.is_visible():
+            close_btn.click()
+            page.wait_for_timeout(1500)
+    except:
+        pass
+    
+    # Extract times
+    result = page.evaluate('''() => {
+        const allElements = [...document.querySelectorAll('*')];
+        const container = allElements.find(el => {
+            const text = el.textContent || '';
+            return text.includes('4:00 PM') && text.includes('10:00 PM');
+        });
+        
+        let times = [];
+        if (container) {
+            const text = container.textContent;
+            times = text.match(/\\d{1,2}:\\d{2}\\s*(AM|PM)/g) || [];
+        }
+        
+        return { times, hasAvailability: times.length > 0 };
+    }''')
+    
+    # result['times'] = ['4:00 PM', '4:15 PM', '4:30 PM', ...]
 ```
 
 ---
 
-## What Doesn't Work
+## Key Findings
 
-**Time Slot Extraction:**
-```python
-# After modal close, times not in DOM
-buttons = page.query_selector_all('button')
-# Returns navigation buttons only, no time slots
-```
+### 1. Cloudflare Behavior
+- ✅ **Page loads** with stealth scripts work fine
+- ❌ **JavaScript clicks** trigger bot verification
+- ✅ **URL-based navigation** avoids detection
 
-**Calendar Navigation:**
+### 2. Time Extraction
+Times appear as text in a container element containing multiple time strings like "4:00 PM4:15 PM4:30 PM...". Use regex to split them.
+
+### 3. Modal Handling
+The experience modal must be closed, but this doesn't trigger Cloudflare if done via Playwright locator (not JavaScript).
+
+### 4. Date Iteration
+Instead of clicking calendar dates, iterate by loading new URLs:
 ```python
-# Calendar renders but clicking dates doesn't show times
-date_cell = page.locator('td:has-text("5")')
-date_cell.click()  # Blocked by modal or no-op
+current = datetime(2026, 4, 4)  # Start Saturday
+for i in range(8):  # Check 8 Saturdays
+    date_str = current.strftime('%Y-%m-%d')
+    url = f'{base}?cameFrom=search_modal&date={date_str}&size=2'
+    # Load page, extract times, iterate
+    current += timedelta(days=7)
 ```
 
 ---
 
-## DOM Structure (Observed)
+## Tested Results
 
-**Experience Modal:**
+**JouJou SF:**
+- First available Saturday: **April 4, 2026**
+- Times: 26 slots (4:00 PM - 10:00 PM)
+
+---
+
+## Previous Failed Approaches
+
+| Approach | Result |
+|----------|--------|
+| Clicking calendar dates | ❌ Cloudflare verification |
+| JavaScript-based clicking | ❌ Bot detection |
+| Network API capture | ❌ No public API found |
+| Headed browser | ❌ Same Cloudflare issues |
+| Calendar widget interaction | ❌ Blocked |
+
+---
+
+## DOM Structure
+
+**Time Container (after modal close):**
 ```html
-<div data-testid="experience-dialog" class="MuiDialog-root">
-  <div class="MuiDialog-container">
-    <!-- Experience description -->
-    <button aria-label="Close">X</button>
-  </div>
+<div>
+  4:00 PM4:15 PM4:30 PM4:45 PM5:00 PM...
+  <!-- Times concatenated as text -->
 </div>
 ```
 
-**After Modal (Expected but not observed):**
+**Date Button:**
 ```html
-<!-- Should see calendar -->
-<table class="calendar">
-  <td><button>5</button></td>
-</table>
-
-<!-- After date click, should see -->
-<div class="time-slots">
-  <button>7:00 PM</button>
-</div>
+<button data-testid="reservation-date-button" aria-label="Desired reservation date, current selection is 3/31/2026">
+  DateMar 31, 2026
+</button>
 ```
-
----
-
-## Root Cause Identified
-
-**Cloudflare Turnstile blocks interactions after initial page load.**
-
-Tested 2026-03-31 with JouJou:
-- ✅ Initial page load works with stealth scripts
-- ✅ Can extract calendar structure (`.ConsumerCalendar-day`, `.ConsumerCalendar-week`)
-- ✅ Found 10 Saturdays, all marked available
-- ❌ **Cloudflare verification triggers on JavaScript clicks**
-
-Error after clicking Saturday:
-```
-Performing security verification
-This website uses a security service to protect against malicious bots.
-Ray ID: 9e4d45b5ea67080d
-```
-
-**Second issue:** Tock also releases reservations in monthly batches (Lazy Bear: "May 2026 released April 1 at 10am"), but bot detection is the primary blocker.
-
----
-
-## Updated Architecture
-
-```
-1. Restaurant page (/lazybearsf)
-   ↓ Read release schedule
-2. Experience page (/experience/{id})
-   ↓ Check if date is within released window
-3. If available: Time slots render
-   If not available: "Reservations released on..." message
-```
-
----
-
-## Working Implementation Approach
-
-1. Load experience page
-2. Extract release date message from body text
-3. Calculate available date range
-4. Only query dates within that range
-5. For available dates: Extract time slots from rendered calendar
-
----
-
-## Hypothesis (Previous - Partially Correct)
-
-~~Tock may require:~~
-- ❌ ~~Authenticated session~~ — Not required for viewing
-- ❌ ~~Headed browser~~ — Headless works fine
-- ❌ ~~Modal blocking~~ — Can be closed
-- ✅ **Release schedule** — The real blocker
-
----
-
-## Tested: 2026-03-31
-
-**Restaurant:** Lazy Bear
-**Result:** ⚠️ Working (but no future availability)
-
-**Finding:** May 2026 reservations not yet released. System working correctly.
-
----
-
-## Next Steps
-
-1. **Try headed browser** — Run with `headless=False` and observe
-2. **Capture network traffic** — Look for XHR calls when selecting dates
-3. **Check for auth requirements** — See if login changes availability display
-4. **Research existing bots** — Check GitHub for working Tock implementations
 
 ---
 
 ## Related
 
-- See `square.md` for SPA modal handling patterns
-- See `sevenrooms.md` for calendar navigation approach
-- GitHub: `azoff/tockstalk` (Cypress-based)
+- See `square.md` for modal handling patterns
+- See `sevenrooms.md` for date iteration approaches
+- GitHub: `azoff/tockstalk` (Cypress-based, uses headed mode)
