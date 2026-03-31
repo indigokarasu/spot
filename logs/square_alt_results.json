@@ -1,0 +1,13 @@
+{
+  "url": "https://app.squareup.com/appointments/book/start/L6SV5MCXN00CB",
+  "apiCalls": [
+    "https://app.squareup.com/appointments/book/start/L6SV5MCXN00CB",
+    "https://appointments-production-f.squarecdn.com/appointments/assets/appointments-8aa08f29ec121de9ffa30b60362ff93c1fb35c4783adcb4f8de75e64595de6fb.css",
+    "https://appointments-production-f.squarecdn.com/images/fonts/sqmarket/sqmarket-medium.woff2",
+    "https://appointments-production-f.squarecdn.com/images/fonts/sqmarket/sqmarket-regular.woff2",
+    "https://appointments-production-f.squarecdn.com/images/fonts/sqmarket/sqmarket-medium.woff",
+    "https://appointments-production-f.squarecdn.com/images/fonts/sqmarket/sqmarket-regular.woff"
+  ],
+  "serviceMatches": [],
+  "timestamp": "2026-03-30T19:32:45.627Z"
+}

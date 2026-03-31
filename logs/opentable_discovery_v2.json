@@ -1,0 +1,19 @@
+{
+  "phase": "discovery",
+  "attempts": [
+    {
+      "method": "http",
+      "success": true,
+      "url": "http://www.opentable.com/r/atelier-crenn"
+    }
+  ],
+  "fingerprint": {
+    "url": "http://www.opentable.com/r/atelier-crenn",
+    "title": "Access Denied",
+    "textSample": "Access Denied\nYou don't have permission to access \"http://www.opentable.com/r/atelier-crenn\" on this server.\n\nReference #18.8c9b3e17.1774912295.c93317a2\n\nhttps://errors.edgesuite.net/18.8c9b3e17.1774912295.c93317a2"
+  },
+  "bookingInfo": {
+    "buttons": []
+  },
+  "apiCalls": []
+}

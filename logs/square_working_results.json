@@ -1,0 +1,19 @@
+{
+  "location": "Shade Nail Spa",
+  "service": "Peppermint Pedi",
+  "availableDates": [
+    30,
+    31,
+    1,
+    2,
+    3,
+    4
+  ],
+  "testedDate": 30,
+  "allTimes": [
+    "2:15 PM",
+    "2:30 PM"
+  ],
+  "eveningTimes": [],
+  "timestamp": "2026-03-30T21:14:03.807Z"
+}

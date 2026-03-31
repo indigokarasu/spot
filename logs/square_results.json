@@ -1,0 +1,31 @@
+{
+  "service": "Peppermint Pedi",
+  "targetDate": "2026-04-29",
+  "steps": [
+    {
+      "step": 1,
+      "status": "loaded",
+      "url": "https://my-business-102000-107381.square.site/"
+    },
+    {
+      "step": 2,
+      "status": "service_selected"
+    },
+    {
+      "step": 3,
+      "status": "staff_handled"
+    },
+    {
+      "step": 6,
+      "status": "date_not_found"
+    },
+    {
+      "step": 7,
+      "status": "complete",
+      "totalSlots": 0,
+      "eveningSlots": 0
+    }
+  ],
+  "availability": [],
+  "errors": []
+}

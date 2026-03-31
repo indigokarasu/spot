@@ -1,0 +1,18 @@
+{
+  "url": "https://app.squareup.com/appointments/book/start/L6SV5MCXN00CB",
+  "services": [
+    {
+      "strategy": "react-check",
+      "reactRootCount": 0
+    }
+  ],
+  "clickResults": [],
+  "allTimeSlots": [],
+  "eveningSlots": [],
+  "intercepted": {
+    "services": [],
+    "availability": [],
+    "apiCalls": []
+  },
+  "timestamp": "2026-03-30T19:38:16.501Z"
+}

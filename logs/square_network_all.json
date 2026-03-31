@@ -1,0 +1,1856 @@
+{
+  "requests": [
+    {
+      "url": "https://square.site/book/L6SV5MCXN00CB/shade-nail-spa-san-francisco-ca",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/cms/ping",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "blob:https://my-business-102000-107381.square.site/c8c7de5b-ce2b-4544-9cc9-e570bfbb367c",
+      "method": "GET",
+      "headers": {
+        "accept": "*/*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/chevron-left.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "8181859078115061048",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "1509515177504738906",
+        "traceparent": "00-000000000000000014f2e00e623b0e5a-718bcd7b715a6d38-01",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "1"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/cashapp.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/applepay.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/googlepay.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/visa.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/mastercard.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/americanexpress.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/discover.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/jcb.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::getSquareStoreConfig]",
+      "method": "POST",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3640746393359775266",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6InU3VG82Q2VLUE5YNlJPeEhkT1ljNVE9PSIsInZhbHVlIjoiYjNRRVNwdVNlWlpVUlBtUUtrc1dpOFlhTWxXYUgyZU0vY3JrTjU3T0Y2SzI0L3c1TFEvRnMycTg5QXdJSnpDdFJiSk1QcVN3S1VlMVBpemFSRUQwM0ExYmdsL1kxNytmVDFFRFJ4WmhoMER1emo5MzAweHpqVGVPMkZCRmVrLzciLCJtYWMiOiI1MmM0NTMwMzVkYTBhNDViNDVlODAyMWExYjliYTMzYWZjMmYwODM0ZDBlYTdkNTRkNzk4Mzk5ODA0OGNmYjk3IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "client-application-name": "prime-website",
+        "x-datadog-trace-id": "7824678033546378374",
+        "traceparent": "00-00000000000000006c96d736ef557c86-3286878e257e7622-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "x-datadog-sampling-priority": "0"
+      },
+      "postData": "{\"id\":0,\"jsonrpc\":\"2.0\",\"method\":\"Checkout::getSquareStoreConfig\",\"params\":[]}"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=de54b54f-0b2e-4025-bd33-ea290585baaf&batch_time=1774901131613",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901129773,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\"},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"0252e474-8e69-4f4f-80de-157aff14a7c7\",\"type\":\"document\",\"url\":\"https://my-business-102000-107381.square.site/\",\"status_code\":200,\"duration\":1491600000,\"render_blocking_status\":\"non-blocking\",\"size\":40582,\"encoded_body_size\":11960,\"decoded_body_size\":40582,\"transfer_size\":12260,\"download\":{\"duration\":1700000,\"start\":680600000},\"first_by"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/cms/api/v1/users/143340576/customers/coordinates",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "6863906960769614357",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6InU3VG82Q2VLUE5YNlJPeEhkT1ljNVE9PSIsInZhbHVlIjoiYjNRRVNwdVNlWlpVUlBtUUtrc1dpOFlhTWxXYUgyZU0vY3JrTjU3T0Y2SzI0L3c1TFEvRnMycTg5QXdJSnpDdFJiSk1QcVN3S1VlMVBpemFSRUQwM0ExYmdsL1kxNytmVDFFRFJ4WmhoMER1emo5MzAweHpqVGVPMkZCRmVrLzciLCJtYWMiOiI1MmM0NTMwMzVkYTBhNDViNDVlODAyMWExYjliYTMzYWZjMmYwODM0ZDBlYTdkNTRkNzk4Mzk5ODA0OGNmYjk3IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "8207033975802869506",
+        "traceparent": "00-000000000000000071e53deb134ab702-5f417f03a8010215-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/ping?lang=en",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "8510278086217724057",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "8064881990238281267",
+        "traceparent": "00-00000000000000006fec3770c7991e33-761a94d47ccc7099-00",
+        "square-merchant-token": "ML6JXAK0STY6V",
+        "accept": "application/json, text/plain, */*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=637f2213-912c-4c03-9792-38b857ef80d7&batch_time=1774901131848",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100}},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901131613,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\"},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\",\"in_foreground\":true},\"action\":{\"id\":\"732a8006-17b5-4dea-9dfc-06db80de6ba7\",\"target\":{\"name\":\"pubsite-router_before-resolve\"},\"type\":\"custom\"},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"type\":\"action\",\"context\":{\"type\":\"event\",\"toViewName\":\"home\",\"fromViewName\":null,\"toPathname\":\"/\",\"fromPathname\":\"/\",\"hostname\":\"my-business-102000-107381.square.site\"}}\n{\"_dd\":{\"format_version\":2,\"drift\":0,\"configuration\":{\"session_sample_rate\":100"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/customers/me?lang=en&updateSqCustomers=true&syncPrimaryCard=false",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3210494028243108143",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6ImM3K1BPUHltWWlGVHNTWDVMc2Y0NUE9PSIsInZhbHVlIjoiK3RyZjNGemdQWVI1MkJVb0xSQUR6aVJ3ckw2U3V2eFNvOW5HYlNOS3dLcXZHSDRGUXFFb2Nkako1aFlKajZXczk1bG9OZEdYUU1IdXlYWmlGaUIwR25abU5YQ29ua0d2cHFmdEFpMENoU05jdTJHQW0vZFZ2eiswcG1HRWt6V0ciLCJtYWMiOiI3NDIwNGM4YTNkOTZlMzJhNzFmZWM1OWJlYWMxOGVhMWM0NDNlMzdiZWYzNGY4MDY2MDY1OTU0NGQ0Mzk5MTg0IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "3192848582001831514",
+        "traceparent": "00-00000000000000002c4f46de6fd42e5a-2c8df74f0af1812f-00",
+        "square-merchant-token": "ML6JXAK0STY6V",
+        "accept": "application/json, text/plain, */*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/subscriptions/plans?lang=en",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "7664540607265951077",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6ImM3K1BPUHltWWlGVHNTWDVMc2Y0NUE9PSIsInZhbHVlIjoiK3RyZjNGemdQWVI1MkJVb0xSQUR6aVJ3ckw2U3V2eFNvOW5HYlNOS3dLcXZHSDRGUXFFb2Nkako1aFlKajZXczk1bG9OZEdYUU1IdXlYWmlGaUIwR25abU5YQ29ua0d2cHFmdEFpMENoU05jdTJHQW0vZFZ2eiswcG1HRWt6V0ciLCJtYWMiOiI3NDIwNGM4YTNkOTZlMzJhNzFmZWM1OWJlYWMxOGVhMWM0NDNlMzdiZWYzNGY4MDY2MDY1OTU0NGQ0Mzk5MTg0IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4288931808829780214",
+        "traceparent": "00-00000000000000003b8558c1a32c30f6-6a5deb12e6a4cd65-00",
+        "square-merchant-token": "ML6JXAK0STY6V",
+        "accept": "application/json, text/plain, */*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=f6514a35-c7f7-4f62-a15d-90e8439588b6&batch_time=1774901132296",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901131619,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"44d9534a-e300-457b-a32c-f0610cb393cd\",\"type\":\"xhr\",\"duration\":227100000,\"method\":\"GET\",\"status_code\":204,\"url\":\"https://my-business-102000-107381.square.site/app/accounts/v1/ping?lang=en\",\"render_blocking_status\":\"non-blocking\",\"size\":0,\"encoded_body_size\":0,\"decoded_body_size\":0,\"transfer_size\":300,\"download\":{\"durat"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=a68e5164-b0c5-4bd7-a4e0-a71cc7553f36&batch_time=1774901132309",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":0,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901132247,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"92b032d1-c09c-4c1b-b846-e096ec6fc62d\",\"type\":\"js\",\"url\":\"https://cdn3.editmysite.com/app/website/js/95334.0c5a3018634d30e89356.js\",\"duration\":16400000,\"render_blocking_status\":\"non-blocking\"},\"type\":\"resource\"}\n{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\""
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2710755275883428141",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6801823053005610953",
+        "traceparent": "00-00000000000000005e64ee0773765fc9-259e898fac0c392d-01",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "1"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/spinner.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3450277584411036687",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6752798247268855418",
+        "traceparent": "00-00000000000000005db6c23a60572e7a-2fe1d92ec3500c0f-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2142235868920616822",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "8391450039178575373",
+        "traceparent": "00-000000000000000074746b59cfad3e0d-1dbac02c381d1776-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::getCurrentOrder]",
+      "method": "POST",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2167293225879041060",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "client-application-name": "prime-website",
+        "x-datadog-trace-id": "7711376337780013450",
+        "traceparent": "00-00000000000000006b044fec2ebaf98a-1e13c5b4c4a17424-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "x-datadog-sampling-priority": "0"
+      },
+      "postData": "{\"id\":0,\"jsonrpc\":\"2.0\",\"method\":\"Checkout::getCurrentOrder\",\"params\":[false,false,true]}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::hasCouponsAvailable]",
+      "method": "POST",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2047303880469044631",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "client-application-name": "prime-website",
+        "x-datadog-trace-id": "5301738517849847740",
+        "traceparent": "00-000000000000000049938f17987237bc-1c697c083ea2dd97-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "x-datadog-sampling-priority": "0"
+      },
+      "postData": "{\"id\":0,\"jsonrpc\":\"2.0\",\"method\":\"Checkout::hasCouponsAvailable\",\"params\":[]}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/menu.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "1227222449963689924",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4024579040930447664",
+        "traceparent": "00-000000000000000037da2d5089244130-1107f850ee7867c4-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/user.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "8024150321085093246",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6282093716207312148",
+        "traceparent": "00-0000000000000000572e7af370401d14-6f5b8234089d157e-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/cart.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "5743838879601010556",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "1986207932552620142",
+        "traceparent": "00-00000000000000001b906d975ddca86e-4fb6370761b2277c-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=9ddb2bc6-aa66-4a44-9d35-2101440bf310&batch_time=1774901132413",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":0,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901132292,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"14d8797b-7ec6-46b3-afd5-a2b53320df09\",\"type\":\"css\",\"url\":\"https://cdn3.editmysite.com/app/website/css/location-hours-side-by-side.ab733df9adfef54c900d.css\",\"duration\":11300000,\"render_blocking_status\":\"non-blocking\"},\"type\":\"resource\"}\n{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"se"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/locations",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "5156618162249614933",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4999743913566686095",
+        "traceparent": "00-00000000000000004562a89980104b8f-478ffce5cb374655-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/services/L6SV5MCXN00CB?return_bookable=true",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "7723677319518199174",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "5902850528605271756",
+        "traceparent": "00-000000000000000051eb2347f7be76cc-6b300399ad9f9d86-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staff-members/L6SV5MCXN00CB",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "4109999438620913224",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "85909945782413001",
+        "traceparent": "00-0000000000000000013136a3f908a6c9-3909a6b6b60dee48-01",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "1"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/services/L6SV5MCXN00CB?return_bookable=true",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3716934079402119064",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4035255314018607083",
+        "traceparent": "00-000000000000000038001b5412161feb-339533da204e8f98-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staff-members/L6SV5MCXN00CB",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "6042713621970250600",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "750408711997765305",
+        "traceparent": "00-00000000000000000a69fcbf6afc36b9-53dc080604f36b68-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/business-booking-profile",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "4785032692594966905",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6917774902240695546",
+        "traceparent": "00-00000000000000006000df9f242b54fa-4267d9e1b8c10179-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/classes-profile",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3485196691164718007",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "9206586287282640066",
+        "traceparent": "00-00000000000000007fc45d731f76d4c2-305de7ecdd3d63b7-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/cms/api/v1/users/143340576/customers/locale",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "1250857493355598202",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "1754194998111784414",
+        "traceparent": "00-00000000000000001858270e81384dde-115bf0434c18917a-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=479c56a7-45cf-45bc-b4fc-4c56bcb1561d&batch_time=1774901133460",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false,\"span_id\":\"2710755275883428141\",\"trace_id\":\"6801823053005610953\",\"rule_psr\":0.1},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901132323,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"8714e672-a60f-480c-8bd0-b024daf3de57\",\"type\":\"fetch\",\"duration\":88200000,\"method\":\"GET\",\"status_code\":200,\"url\":\"https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg\",\"render_blocking_status\":\"non-bl"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/replay?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Axhr%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=31418fba-3dc6-49d3-8f29-96ce336b0317",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryQgHu3ljLnfepbpVk",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://app.squareup.com/appointments/book/L6SV5MCXN00CB/start?color=ece9e4&buttonTextColor=000000&service_id=XA4S2WKU7HYBHTWNKCPBIBDJ&locale=en&referrer=so",
+      "method": "GET",
+      "headers": {
+        "referer": "https://my-business-102000-107381.square.site/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Abeacon%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=3ee99657-865f-42c9-89ec-ff4b34477c8e&batch_time=1774901146740",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false,\"span_id\":\"4109999438620913224\",\"trace_id\":\"85909945782413001\",\"rule_psr\":0.1},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901133201,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"71f13a68-1e7d-4b2e-bb93-90214c9ccdf4\",\"type\":\"xhr\",\"duration\":258599999,\"method\":\"GET\",\"status_code\":200,\"url\":\"https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staf"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/replay?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=cc3e02d7-85d9-4869-b821-5a0aecbd3240",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundarydlHgIRX8NTAM26tq",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://book.squareup.com/appointments/zhyuoylr81g79j/location/L6SV5MCXN00CB?buttonTextColor=000000&color=ece9e4&locale=en&referrer=so&service_id=XA4S2WKU7HYBHTWNKCPBIBDJ",
+      "method": "GET",
+      "headers": {
+        "referer": "https://my-business-102000-107381.square.site/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingHeader-BHPwhBAk.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DbaL_rPj.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DEvkWYvb.css",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://seller-brand-assets-f.squarecdn.com/ML6JXAK0STY6V/a6a146865ee23772bfa018ca021844ea.png?height=250",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://app.squareup.com/1.0/features/get-flags",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"project\":\"PIE\",\"flag_requests\":[{\"flag_name\":\"appointments-group-booking-bbf-creates-enabled\",\"flag_type\":\"BOOLEAN\"},{\"flag_name\":\"appointments-bbf-dd-sample-rate\",\"flag_type\":\"INTEGER\"},{\"flag_name\":\"appointments-bbf-monochrome-theme\",\"flag_type\":\"BOOLEAN\"},{\"flag_name\":\"appointments-customize-deposits-by-service\",\"flag_type\":\"BOOLEAN\"}],\"user_token\":{\"type\":\"MERCHANT\",\"token\":\"ML6JXAK0STY6V\"},\"user_attributes\":{\"user_attributes\":[{\"name\":\"platform\",\"string_value\":\"web\"}]}}"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/en-CvVuN7b1.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-context-manager.entry-BhvtLBw6-DlAAZOrH.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/index-2dc281eb-500a7VBn-0gQ3rZQI.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-activity-indicator.entry-DqdvkK2N-B-UiHLGj.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-link.entry-ps3-IhYj-CTK7S0BQ.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/aria-b15b1259-DLUSiWT4-DvPqcRIW.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/cash-sans/CashSans-Bold.woff2",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/cash-sans/CashSans-Regular.woff2",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-footer.entry-BDMimwaB-CmwcckmG.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://web.squarecdn.com/v1/square.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-header.entry-B0iPWBfx-BF3qbi8F.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/index-49581dff-DDAJ6Z1U-DDXtB6WH.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-list.entry-BbLZ7Oj3-BCppxhuC.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/reorderable-b8935e88-DXp-SBng-Bg3qlYav.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/draggable-d20865ad-C5abqCRA-GQ8mgPxk.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/max-z-index-7a974719-BN5V-jxh-D6D5plXa.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/utils-642247e6-_Gqxcp_x-C1DWDTh2.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_baseIsEqual-efa577aa-CcEBxYX6-D18FOHw7.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_arrayPush-074dda83-D7MJbSIN-B3-lPlWc.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_getNative-e422aac7-Ble8OEZC-gBLmhk2v.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/isObject-f305a0d7-6kmifcdD-CJxeGRoD.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_Map-5d7abd2f-B5pRK3vC-DA-V9KHN.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_getTag-40eee50c-CBeVfFM2-Dp8DX80O.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/hasIn-91a6dab9-DP-E37XQ-DfNgn2ZF.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/isSymbol-385885b1-B1FDXeDW-CclLOoQW.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/identity-db011338-DuZT3TVp-CMJLyRP8.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-row.entry-Dy9e6qDs-8AYRvMka.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/classnames-7c1d9f20-C3e9H3gz-Dt30wMDX.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/element-type-guard-08daa588-BeWd4FyO-sqsnXkfm.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-radio.entry-BkbiAsrc-DjLRyRJK.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-button-group.entry-CdLwOYKC-CobDbduL.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/throttle-552e88ff-DLdg0ty--CMUQydFa.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-button.entry-BJlv9xfh-Co7mqq3h.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/cash-sans/CashSans-Medium.woff2",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-icon.entry-W9-g-5zq-B_qiwS4p.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-empty-state.entry-Dd3PgQzO-DL4ckTpK.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://web.squarecdn.com/1.83.0/main-iframe.html?applicationId=sq0idp-0WpGrONcXfCcfav3Lkd9Jg&hostname=book.squareup.com",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://web.squarecdn.com/1.83.0/main-iframe.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://web.squarecdn.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://web.squarecdn.com/1.83.0/main-iframe.html?applicationId=sq0idp-0WpGrONcXfCcfav3Lkd9Jg&hostname=book.squareup.com",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://pci-connect.squareup.com/payments/hydrate?applicationId=sq0idp-0WpGrONcXfCcfav3Lkd9Jg&hostname=book.squareup.com&locationId=L6SV5MCXN00CB&version=1.83.0",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://web.squarecdn.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "application/json; charset=utf-8",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://conversations-production-f.squarecdn.com/v2/messages-plugin.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://pci-connect.squareup.com/payments/mtx/v2",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=utf-8",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://api.squareup.com/messenger/plugin-settings/L6SV5MCXN00CB",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://pci-connect.squareup.com/payments/mtx/v2",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://web.squarecdn.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=utf-8",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://api.squareup.com/v1/cdp/batch",
+      "method": "POST",
+      "headers": {
+        "x-cdp-batch-id": "v1:Ek+8M3KGlTwfgXpHGHjYgAVGAHS22F1d7XqMuaweSTk=",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "authorization": "Basic NDkyMDQwNjEtMGJlYS00OGNmLWJiZGMtNjkzOWVjNDY4OTY2Og==",
+        "referer": "",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "content-type": "application/json"
+      },
+      "postData": "{\"batch\":[{\"properties\":{\"merchantToken\":\"ML6JXAK0STY6V\",\"unitToken\":\"L6SV5MCXN00CB\"},\"eventName\":\"View Text Us\",\"apiMethod\":\"track\",\"anonymousId\":\"be07b29f-3c90-459f-8f5f-ee5a2a9c9bf5\",\"apiKey\":\"49204061-0bea-48cf-bbdc-6939ec468966\",\"entityType\":\"anonymous_visitor\",\"context\":{\"application\":{\"name\":\"booking-flow\"},\"browser\":{\"name\":\"WebKit\",\"version\":\"537.36\",\"height\":1080,\"width\":1920},\"library\":{\"name\":\"@squareup/cdp\",\"version\":\"1.1.0\"},\"locale\":{\"countryCode\":\"US\",\"language\":\"en-US\"},\"network\":{\"type\":0},\"os\":{\"name\":\"Mac OS\",\"version\":\"10.15.7\"},\"page\":{\"path\":\"/appointments/zhyuoylr81g79j/location/L6SV5MCXN00CB/services/XA4S2WKU7HYBHTWNKCPBIBDJ\",\"referrer\":\"https://my-business-102000-107381.square.site/\",\"title\":\"Square Booking Flow\",\"url\":\"https://book.squareup.com/appointments/zhyuoylr81g79j/location/L6SV5MCXN00CB/services/XA4S2WKU7HYBHTWNKCPBIBDJ\",\"realPath\":\"/appointments/zhyuoylr81g79j/location/L6SV5MCXN00CB/services/XA4S2WKU7HYBHTWNKCPBIBDJ\",\"realUrl\":\"https://book.squareup."
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://my-business-102000-107381.square.site/",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title></title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n    <meta name=\"generator\" content=\"Square Online\">\n    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"/square.ico\">\n    <link rel=\"preload\" href=\"https://cdn3.editmysite.com/app/website/css/site.80dde82e64cd7e8a0309.css\" as=\"style\">\n\n    <style>\n        .loading-view {\n            width: 100vw;\n            height: 1"
+    },
+    {
+      "url": "blob:https://my-business-102000-107381.square.site/c8c7de5b-ce2b-4544-9cc9-e570bfbb367c",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "!function(){\"use strict\";function t(t){for(var e=t.reduce((function(t,e){return t+e.length}),0),a=new Uint8Array(e),n=0,r=0,i=t;r<i.length;r++){var s=i[r];a.set(s,n),n+=s.length}return a}function e(t){for(var e=t.length;--e>=0;)t[e]=0}var a=256,n=286,r=30,i=15,s=new Uint8Array([0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0]),_=new Uint8Array([0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13]),h=new Uint8Array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,7]),l=new Uint8Arra"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/chevron-left.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 16 16\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M4.3 7.3a1 1 0 0 0 0 1.4l6 6 1.4-1.4L6.42 8l5.3-5.3-1.42-1.4-6 6Z\" clip-rule=\"evenodd\"/></svg>\n"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/visa.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"22\" viewBox=\"0 0 34 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\t<path d=\"M0.5 3.66667C0.5 1.64162 2.14162 0 4.16667 0H29.8333C31.8584 0 33.5 1.64162 33.5 3.66667V18.3333C33.5 20.3584 31.8584 22 29.8333 22H4.16667C2.14162 22 0.5 20.3584 0.5 18.3333V3.66667Z\" fill=\"white\"/>\n\t<path d=\"M4.16667 0.458333H29.8333C31.6052 0.458333 33.0417 1.89475 33.0417 3.66667V18.3333C33.0417 20.1052 31.6052 21.5417 29.8333 21.5417H4.16667C2.39475 21.5417 0.958333 20.1052 0.958333 18."
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/jcb.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"24\" viewBox=\"0 0 34 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 4C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V20C34 22.2091 32.2091 24 30 24H4C1.79086 24 0 22.2091 0 20V4Z\" fill=\"white\"/>\n<path d=\"M4 1H30V-1H4V1ZM33 4V20H35V4H33ZM30 23H4V25H30V23ZM1 20V4H-1V20H1ZM4 23C2.34315 23 1 21.6569 1 20H-1C-1 22.7614 1.23858 25 4 25V23ZM33 20C33 21.6569 31.6569 23 30 23V25C32.7614 25 35 22.7614 35 20H33ZM30 1C31.6569 1 33 2.34315 33 4H35C35 1.23858 32.7"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/cashapp.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"24\" viewBox=\"0 0 34 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 4C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V20C34 22.2091 32.2091 24 30 24H4C1.79086 24 0 22.2091 0 20V4Z\" fill=\"#00D632\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17.4845 8.17639C18.6245 8.17639 19.7171 8.63799 20.431 9.27162C20.6115 9.43191 20.8818 9.43093 21.0513 9.25922L21.9007 8.39772C22.0799 8.21589 22.0734 7.91817 21.8798 7.75201C21.3098 7.26201 20.5446 6.78017 "
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/applepay.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"24\" viewBox=\"0 0 34 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 3C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V20C34 22.2091 32.2091 24 30 24H4C1.79086 24 0 22.2091 0 20V4Z\" fill=\"white\" />\n<path d=\"M4 1H30V-1H4V1ZM33 4V20H35V4H33ZM30 23H4V25H30V23ZM1 20V4H-1V20H1ZM4 23C2.34315 23 1 21.6569 1 20H-1C-1 22.7614 1.23858 25 4 25V23ZM33 20C33 21.6569 31.6569 23 30 23V25C32.7614 25 35 22.7614 35 20H33ZM30 1C31.6569 1 33 2.34315 33 4H35C35 1.23858 32."
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/americanexpress.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"24\" viewBox=\"0 0 34 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 4C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V20C34 22.2091 32.2091 24 30 24H4C1.79086 24 0 22.2091 0 20V4Z\" fill=\"#1F72CD\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.09542 8.5L2.91431 15.7467H6.72254L7.19465 14.5913H8.27379L8.7459 15.7467H12.9377V14.8649L13.3112 15.7467H15.4795L15.8531 14.8462V15.7467H24.5709L25.6309 14.6213L26.6235 15.7467L31.1011 15.7561L27.91 12.143"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/googlepay.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"24\" viewBox=\"0 0 34 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 4C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V20C34 22.2091 32.2091 24 30 24H4C1.79086 24 0 22.2091 0 20V4Z\" fill=\"white\"/>\n<path d=\"M4 1H30V-1H4V1ZM33 4V20H35V4H33ZM30 23H4V25H30V23ZM1 20V4H-1V20H1ZM4 23C2.34315 23 1 21.6569 1 20H-1C-1 22.7614 1.23858 25 4 25V23ZM33 20C33 21.6569 31.6569 23 30 23V25C32.7614 25 35 22.7614 35 20H33ZM30 1C31.6569 1 33 2.34315 33 4H35C35 1.23858 32.7"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/discover.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"24\" viewBox=\"0 0 34 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 4C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V20C34 22.2091 32.2091 24 30 24H4C1.79086 24 0 22.2091 0 20V4Z\" fill=\"white\"/>\n<path d=\"M4 1H30V-1H4V1ZM33 4V20H35V4H33ZM30 23H4V25H30V23ZM1 20V4H-1V20H1ZM4 23C2.34315 23 1 21.6569 1 20H-1C-1 22.7614 1.23858 25 4 25V23ZM33 20C33 21.6569 31.6569 23 30 23V25C32.7614 25 35 22.7614 35 20H33ZM30 1C31.6569 1 33 2.34315 33 4H35C35 1.23858 32.7"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189",
+      "status": 202,
+      "isAvailability": false,
+      "preview": "{\"request_id\":\"de54b54f-0b2e-4025-bd33-ea290585baaf\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/mastercard.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg width=\"34\" height=\"24\" viewBox=\"0 0 34 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 4C0 1.79086 1.79086 0 4 0H30C32.2091 0 34 1.79086 34 4V20C34 22.2091 32.2091 24 30 24H4C1.79086 24 0 22.2091 0 20V4Z\" fill=\"white\"/>\n<path d=\"M4 1H30V-1H4V1ZM33 4V20H35V4H33ZM30 23H4V25H30V23ZM1 20V4H-1V20H1ZM4 23C2.34315 23 1 21.6569 1 20H-1C-1 22.7614 1.23858 25 4 25V23ZM33 20C33 21.6569 31.6569 23 30 23V25C32.7614 25 35 22.7614 35 20H33ZM30 1C31.6569 1 33 2.34315 33 4H35C35 1.23858 32.7"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/cms/api/v1/users/143340576/customers/coordinates",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"postal_code\":\"22150\",\"latitude\":38.777,\"longitude\":-77.1895}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::getSquareStoreConfig]",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"Checkout::getSquareStoreConfig\",\"result\":{\"application_id\":\"sq0idp-w46nJ_NCNDMSOywaCY0mwA\",\"locations\":[{\"weebly_location_id\":\"11ed409f8acd4130b88dac1f6bbbcc9c\",\"square_location_id\":\"L6SV5MCXN00CB\"}],\"settings\":{\"apple_pay_checkout_enabled\":true,\"google_pay_checkout_enabled\":true,\"country_code\":\"US\",\"currency_code\":\"USD\",\"afterpay_enabled\":true,\"afterpay_restrictions\":{\"product_price_min\":{\"amount\":1000,\"currency\":\"USD\"},\"product_price_max\":{\"amount\":200000,\"cur"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/ping?lang=en",
+      "status": 204,
+      "isAvailability": false,
+      "preview": ""
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189",
+      "status": 202,
+      "isAvailability": false,
+      "preview": "{\"request_id\":\"637f2213-912c-4c03-9792-38b857ef80d7\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/customers/me?lang=en&updateSqCustomers=true&syncPrimaryCard=false",
+      "status": 401,
+      "isAvailability": false,
+      "preview": "{\"message\":\"Unauthenticated.\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/subscriptions/plans?lang=en",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"data\":{\"subscription_plans\":[]}}"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189",
+      "status": 202,
+      "isAvailability": false,
+      "preview": "{\"request_id\":\"f6514a35-c7f7-4f62-a15d-90e8439588b6\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" d=\"m6.71 18.71 5.29-5.3 5.29 5.3 1.42-1.42-5.3-5.29 5.3-5.29-1.42-1.42-5.29 5.3-5.29-5.3-1.42 1.42 5.3 5.29-5.3 5.29 1.42 1.42Z\"/></svg>\n"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" d=\"m6.71 18.71 5.29-5.3 5.29 5.3 1.42-1.42-5.3-5.29 5.3-5.29-1.42-1.42-5.29 5.3-5.29-5.3-1.42 1.42 5.3 5.29-5.3 5.29 1.42 1.42Z\"/></svg>\n"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/spinner.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M19 12a7 7 0 0 0-7-7V3a9 9 0 1 1-9 9h2a7 7 0 1 0 14 0Z\" clip-rule=\"evenodd\"/></svg>\n"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189",
+      "status": 202,
+      "isAvailability": false,
+      "preview": "{\"request_id\":\"a68e5164-b0c5-4bd7-a4e0-a71cc7553f36\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/menu.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M3 6h18v2H3V6Zm18 5H3v2h18v-2Zm0 5H3v2h18v-2Z\" clip-rule=\"evenodd\"/></svg>\n"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/cart.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M7 14a1 1 0 0 0-1 1 1 1 0 0 0 1 1h13v2H7a2.98 2.98 0 0 1-1.33-5.67L4 4H2V2h6v2h12l-2 10H7Zm9.36-2 1.2-6H6.44l1.2 6h8.72ZM7.5 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm9 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z\" clip-rule=\"evenodd\"/></svg>\n"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/user.svg",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M14 7a2 2 0 0 0-2-2 2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2ZM8 7a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm10 14h2a8.01 8.01 0 0 0-16 0h2a6 6 0 0 1 12 0Z\" clip-rule=\"evenodd\"/></svg>\n"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189",
+      "status": 202,
+      "isAvailability": false,
+      "preview": "{\"request_id\":\"9ddb2bc6-aa66-4a44-9d35-2101440bf310\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::hasCouponsAvailable]",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"Checkout::hasCouponsAvailable\",\"result\":true}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::getCurrentOrder]",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"jsonrpc\":\"2.0\",\"id\":0,\"method\":\"Checkout::getCurrentOrder\",\"result\":{\"success\":false,\"message\":\"Missing cart cookie.\",\"data\":{\"message\":\"Missing cart cookie.\",\"success\":false,\"http_response_code\":400,\"data\":[],\"tuba_errors\":[]},\"order\":null,\"issues\":[],\"tuba_errors\":[]}}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/locations",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "[{\"square_id\":\"L6SV5MCXN00CB\",\"weebly_id\":\"11ed409f8acd4130b88dac1f6bbbcc9c\"}]"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/cms/api/v1/users/143340576/customers/locale",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"country\":\"US\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/business-booking-profile",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"business_booking_profile\":{\"seller_id\":\"ML6JXAK0STY6V\",\"created_at\":\"2022-09-29T23:25:39Z\",\"booking_enabled\":true,\"customer_timezone_choice\":\"BUSINESS_LOCATION_TIMEZONE\",\"booking_policy\":\"ACCEPT_ALL\",\"allow_user_cancel\":true,\"business_appointment_settings\":{\"location_types\":[\"BUSINESS_LOCATION\"],\"alignment_time\":\"QUARTER_HOURLY\",\"min_booking_lead_time_seconds\":0,\"max_booking_lead_time_seconds\":7776000,\"any_team_member_booking_enabled\":true,\"multiple_service_booking_enabled\":true,\"cancellation_"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staff-members/L6SV5MCXN00CB",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"team_member_booking_profiles\":[{\"team_member_id\":\"TMj7QmPnKRn-qURa\",\"display_name\":\"Selina\",\"is_bookable\":false},{\"team_member_id\":\"TM27HMCzxSI6-cOe\",\"display_name\":\"Kim\",\"is_bookable\":true},{\"team_member_id\":\"TM9wEImS4axEcg3n\",\"display_name\":\"Lan\",\"is_bookable\":true},{\"team_member_id\":\"TMqhKz8evnQrrGMg\",\"display_name\":\"Le\",\"is_bookable\":true},{\"team_member_id\":\"TMMeuUuYNeI-fu1m\",\"display_name\":\"Kate\",\"is_bookable\":true},{\"team_member_id\":\"TMlkC9kXnlJI_fxd\",\"display_name\":\"Linhsy\",\"is_bookable"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/classes-profile",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"has_class_schedules_in_future\":false,\"is_using_classes\":false,\"errors\":[]}"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189",
+      "status": 202,
+      "isAvailability": false,
+      "preview": "{\"request_id\":\"479c56a7-45cf-45bc-b4fc-4c56bcb1561d\"}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staff-members/L6SV5MCXN00CB",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"team_member_booking_profiles\":[{\"team_member_id\":\"TMj7QmPnKRn-qURa\",\"display_name\":\"Selina\",\"is_bookable\":false},{\"team_member_id\":\"TM27HMCzxSI6-cOe\",\"display_name\":\"Kim\",\"is_bookable\":true},{\"team_member_id\":\"TM9wEImS4axEcg3n\",\"display_name\":\"Lan\",\"is_bookable\":true},{\"team_member_id\":\"TMqhKz8evnQrrGMg\",\"display_name\":\"Le\",\"is_bookable\":true},{\"team_member_id\":\"TMMeuUuYNeI-fu1m\",\"display_name\":\"Kate\",\"is_bookable\":true},{\"team_member_id\":\"TMlkC9kXnlJI_fxd\",\"display_name\":\"Linhsy\",\"is_bookable"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/services/L6SV5MCXN00CB?return_bookable=true",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"items\":[{\"type\":\"ITEM\",\"id\":\"LZLQ7PPX3SEN3AFOSS53YO2S\",\"updated_at\":\"2026-03-22T19:01:55.753Z\",\"created_at\":\"2022-09-30T08:29:33.123Z\",\"version\":1774206115753,\"is_deleted\":false,\"present_at_all_locations\":true,\"item_data\":{\"name\":\"10 Minute Massage\",\"is_taxable\":true,\"ordinal\":13,\"tax_ids\":[\"DHIS54BIKMNUCQCH55BF567K\"],\"variations\":[{\"type\":\"ITEM_VARIATION\",\"id\":\"FMVPN3LDZ5JMZVTPJTLULNCA\",\"updated_at\":\"2026-03-22T19:01:55.753Z\",\"created_at\":\"2022-09-30T08:29:33.123Z\",\"version\":1774206115753,\"is"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/services/L6SV5MCXN00CB?return_bookable=true",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"items\":[{\"type\":\"ITEM\",\"id\":\"LZLQ7PPX3SEN3AFOSS53YO2S\",\"updated_at\":\"2026-03-22T19:01:55.753Z\",\"created_at\":\"2022-09-30T08:29:33.123Z\",\"version\":1774206115753,\"is_deleted\":false,\"present_at_all_locations\":true,\"item_data\":{\"name\":\"10 Minute Massage\",\"is_taxable\":true,\"ordinal\":13,\"tax_ids\":[\"DHIS54BIKMNUCQCH55BF567K\"],\"variations\":[{\"type\":\"ITEM_VARIATION\",\"id\":\"FMVPN3LDZ5JMZVTPJTLULNCA\",\"updated_at\":\"2026-03-22T19:01:55.753Z\",\"created_at\":\"2022-09-30T08:29:33.123Z\",\"version\":1774206115753,\"is"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/replay?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Axhr%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e18",
+      "status": 202,
+      "isAvailability": false,
+      "preview": "{\"request_id\":\"31418fba-3dc6-49d3-8f29-96ce336b0317\"}"
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+      "status": 200,
+      "isAvailability": false,
+      "preview": ":root{--square-sans-text:\"Square Sans Text VF\",\"Square Sans Text\",helvetica,arial,sans-serif;--square-sans-display:\"Square Sans Display VF\",\"Square Sans Display\",helvetica,arial,sans-serif;--square-sans-mono:\"Square Sans Mono VF\",\"Square Sans Mono\",ui-monospace,menlo,\"Courier New\",monospace;--cash-sans:\"Cash Sans\",helvetica,arial,sans-serif;--cash-sans-mono:\"Cash Sans Mono\",ui-monospace,menlo,\"Courier New\",monospace}@font-face{font-family:\"Square Sans Text\";src:url(\"https://square-fonts-producti"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DEvkWYvb.css",
+      "status": 200,
+      "isAvailability": false,
+      "preview": ":root{--core-animation-enter-transition-easing: cubic-bezier(.26, .1, .48, 1);--core-animation-enter-transition-fast-speed-duration: .1s;--core-animation-enter-transition-moderate-speed-duration: .24s;--core-animation-enter-transition-slow-speed-duration: .4s;--core-animation-exit-transition-easing: cubic-bezier(.52, 0, .74, 0);--core-animation-exit-transition-fast-speed-duration: .1s;--core-animation-exit-transition-moderate-speed-duration: .16s;--core-animation-exit-transition-slow-speed-durat"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingHeader-BHPwhBAk.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]=\"d41d8cd9-8f00-4204-9980-0998ecf8427e\",e._sentryDebugIdIdentifier=\"sentry-dbid-d41d8cd9-8f00-4204-9980-0998ecf8427e\")}catch{}})();\n"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DbaL_rPj.js",
+      "status": 200,
+      "isAvailability": true,
+      "preview": "function __vite__mapDeps(indexes) {\n  if (!__vite__mapDeps.viteFileDeps) {\n    __vite__mapDeps.viteFileDeps = [\"assets/market-accordion-item.entry-C89Yyinj-BZ1wLURc.js\",\"assets/index-49581dff-DDAJ6Z1U-DDXtB6WH.js\",\"assets/index-2dc281eb-500a7VBn-0gQ3rZQI.js\",\"assets/market-action-card.entry-wD1d-QYF-lOtQeLiF.js\",\"assets/element-type-guard-08daa588-BeWd4FyO-sqsnXkfm.js\",\"assets/market-banner.entry-B479Q9GM-HPee5G42.js\",\"assets/classnames-7c1d9f20-C3e9H3gz-Dt30wMDX.js\",\"assets/v4-fa4bb814-DIiVhVff"
+    },
+    {
+      "url": "https://seller-brand-assets-f.squarecdn.com/ML6JXAK0STY6V/a6a146865ee23772bfa018ca021844ea.png?height=250",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "�PNG\r\n\u001a\n\u0000\u0000\u0000\rIHDR\u0000\u0000\u00022\u0000\u0000\u0000�\b\u0006\u0000\u0000\u0000�譩\u0000\u0000\u0000\u0001sRGB\u0000��\u001c�\u0000\u0000 \u0000IDATx���w|\u0014E�\u0007����T !@�\bRT��>V�!��kB�$$��U@zh!@\u0002\u0004�\u0000!�\"� �b\u0001�\u000fQQ�^B\b��k�3���.\u0010}���Ptޯ\u0017�h������wg�3\u0003H�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�$I�!r�\u000b �_6�^B\fF3�J�Bs�2�9G�\n��\\E�������k����]NI�"
+    },
+    {
+      "url": "https://book.squareup.com/appointments/zhyuoylr81g79j/location/L6SV5MCXN00CB?buttonTextColor=000000&color=ece9e4&locale=en&referrer=so&service_id=XA4S2WKU7HYBHTWNKCPBIBDJ",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<!doctype html>\n<html lang=\"en\">\n<script async type=\"module\" crossorigin src=\"https://booking-flow-production-c.squarecdn.com/assets/indexStreamingHeader-BHPwhBAk.js\"></script>\n\n\n<head>\n  <meta charset=\"UTF-8\" />\n  <link rel=\"icon\" type=\"image/svg+xml\" href=\"https://booking-flow-production-c.squarecdn.com/square.svg\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <meta name=\"description\" content=\"Square Bookings Flow\" />\n  <meta name=\"robots\" content=\"noindex,nof"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/en-CvVuN7b1.js",
+      "status": 200,
+      "isAvailability": true,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"117e8028-c705-4e2b-af59-c2f85a785874\",e._sentryDebugIdIdentifier=\"sentry-dbid-117e8028-c705-4e2b-af59-c2f85a785874\")}catch{}})();const o={\"address.placeholder.city.AU\":\"Suburb\",\"address.placeholder.city.CA\":\"City\",\"address.placeholder.city.ES\":\"City\",\"address.placeholder.city.FR\":\"City\",\"address.placeholder.city.GB\":"
+    },
+    {
+      "url": "https://app.squareup.com/1.0/features/get-flags",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"status\": \"SUCCESS\",\"flag_responses\": [{\"status\": \"SUCCESS\",\"flag_name\": \"appointments-group-booking-bbf-creates-enabled\",\"flag_type\": \"BOOLEAN\",\"user_token\": {\"token\": \"ML6JXAK0STY6V\",\"type\": \"MERCHANT\"},\"bool_value\": false,\"project\": \"PIE\",\"single_user_context\": {\"user_token\": {\"token\": \"ML6JXAK0STY6V\",\"type\": \"MERCHANT\"}},\"success_evaluation_reason\": {\"flag_targeting_off\": {}}},{\"status\": \"SUCCESS\",\"flag_name\": \"appointments-bbf-dd-sample-rate\",\"flag_type\": \"INTEGER\",\"user_token\": {\"token\": "
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-context-manager.entry-BhvtLBw6-DlAAZOrH.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as d,c as r,h as o,H as c,g as l}from\"./indexStreamingBody-DbaL_rPj.js\";import{g as a}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";import{a as u}from\"./raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"0e137e3d-ae4a-4a92-98ac-f1ac9a1325df\",e._sentryDebugIdIdentifier=\"sentry-dbid-0e137e3d-ae4a-4a92-98ac-f1ac9a1325df\")}catch{"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/index-2dc281eb-500a7VBn-0gQ3rZQI.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},n=new Error().stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]=\"f1551f01-85ca-4379-a570-bd0ce2970e41\",e._sentryDebugIdIdentifier=\"sentry-dbid-f1551f01-85ca-4379-a570-bd0ce2970e41\")}catch{}})();function a(e){return new Proxy(n=>n,{apply(n,d,t){return Reflect.apply(n,d,t)}})(e)}function f(e,n){var d,t;return((t=(d=e?.tagName)===null||d===void 0?void 0:d.toLowerCase)===null||t===voi"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},n=new Error().stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]=\"32fff520-1c85-4b5a-a698-b60d0fb54ec2\",e._sentryDebugIdIdentifier=\"sentry-dbid-32fff520-1c85-4b5a-a698-b60d0fb54ec2\")}catch{}})();function f(){return new Promise(e=>{var n;!((n=window?.requestAnimationFrame)===null||n===void 0)&&n.call(window,()=>e())||e()})}export{f as a};\n"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-activity-indicator.entry-DqdvkK2N-B-UiHLGj.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as i,h as e,H as a}from\"./indexStreamingBody-DbaL_rPj.js\";(function(){try{var t=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},r=new Error().stack;r&&(t._sentryDebugIds=t._sentryDebugIds||{},t._sentryDebugIds[r]=\"cf53913c-1efc-45ab-a59d-0125f8d5d53b\",t._sentryDebugIdIdentifier=\"sentry-dbid-cf53913c-1efc-45ab-a59d-0125f8d5d53b\")}catch{}})();const o=`:root{--animation-infinite-duration:1s;--animation-infinite-iteration-count:infinite;--animation-infinite-timing-"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-link.entry-ps3-IhYj-CTK7S0BQ.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as d,h as i,H as u,g as c}from\"./indexStreamingBody-DbaL_rPj.js\";import{o as b}from\"./aria-b15b1259-DLUSiWT4-DvPqcRIW.js\";(function(){try{var n=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},e=new Error().stack;e&&(n._sentryDebugIds=n._sentryDebugIds||{},n._sentryDebugIds[e]=\"1622f4dc-733b-4053-97aa-cb98552811e4\",n._sentryDebugIdIdentifier=\"sentry-dbid-1622f4dc-733b-4053-97aa-cb98552811e4\")}catch{}})();const h=`:host, ::slotted(*), * {\n  box-sizing: border-box"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/aria-b15b1259-DLUSiWT4-DvPqcRIW.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"5e63785a-0fbe-4f86-a605-612347dcf0f1\",e._sentryDebugIdIdentifier=\"sentry-dbid-5e63785a-0fbe-4f86-a605-612347dcf0f1\")}catch{}})();const u=e=>e.getAttributeNames().filter(t=>t.startsWith(\"aria-\")).reduce((t,n)=>{const r=e.getAttribute(n);return r!==null&&(t[n]=r),t},{}),d=(e,t)=>{const n=new MutationObserver(()=>{const"
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/cash-sans/CashSans-Regular.woff2",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "wOF2\u0000\u0001\u0000\u0000\u0000\u0000��\u0000\u0011\u0000\u0000\u0000\u0001�$\u0000\u0000�l\u0000\u0003�A\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0019:\u001b��p\u001c�@\u0006`\u0000�\n\b~\t�\f\u0011\b\n��x��\u0005\u00016\u0002$\u0003�J\u000b�p\u0000\u0004 \u0005�S\u0007�J\f�K[�^�\u0000�n��\u0004�\r�b)~7\u0019{\u00007w\u0010��7���$�Q\u0005;�!n\u0007��K�������\rIE�L3H�\r8�\u0002\u001eT��!��Y6J�0] \"�\u0010�\"ی,7��#�+\u000b\u0015B\u001e��W8\u001b�\\t\u0012��8�@��\u0015]m���Gm&\"�v\u0013A%*Q)����qRa�h�p�\u001d7�Lܩ&Z�.s�5+?���7G���\u0012D�>nCg�Ҿ��q<�Y���d�VV2\u0003\u0002��ͼ��g�m\t��6Ԧߍ��sL����G��moe�̯���\\��b�;�L��\u001a\b+��{ڙ~@LPk|���q\u001bXwMVz4q�Qo��{��۰���Ԓe`l��~Ī:U�ė�C;����$�\u0000|���\n�l��������_�\u0005�\rZ\u001c\u0015�D�h\u0001\u0003i�(90\u0011\u0001�\u0010G��؈��\u0018Q�������؈\bP�\u000fr3o��Mj\u0005\b��ו���V#��\u001b��\f���m��X�z�]���.�m�ZZ�\u0006�Ŭ\u0014�\u0002c�\u0015\u0018l"
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/cash-sans/CashSans-Bold.woff2",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "wOF2\u0000\u0001\u0000\u0000\u0000\u0000��\u0000\u0011\u0000\u0000\u0000\u0001��\u0000\u0000�K\u0000\u0003�A\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0019:\u001b��0\u001c�@\u0006`\u0000�\n\b~\t�\f\u0011\b\n��\u0000��U\u00016\u0002$\u0003�6\u000b�p\u0000\u0004 \u0005�X\u0007�J\f�K[\u0017fq\u0005ݶ]�\"JoV�rs0q]�6����mDU�.ҳW����ݪ�\tL�����oI*2f�A�nL\u0000D�_T��\u0017�\b�(<\"Hf\u0016:\n:�R��\u0010a��� ���\u001dΞ�8�y���\u000eK�\u0011}��\u000f���*���\u001dƣ4}��S[����r\u0010�Ѿf1|�\u0017W)l\u0012��vS(6%\f�X�A����\u001e�|`��弢��Qq�#�����Y�0�Ƅ�5+*(;\u0010�\u0005]PR�bC�����\u0016�S�\u001a[��ߗ0�f#'��K\u001a\u001bz�A���$��$a�&�\u001f9��`�\u001d��.!>\tU��r�\u0017T�0�`\"\u001bX\u0012���ħƅXP#�\u0014�u6Y�ih�206FZ?\"j���*�?�'��}��$U�\u0007�\u001f\u0006\u000b���s�s�{��d��\u0018\u001d\u000b`���X�\u0011��0h�\u0018=\u000b0\n�OZI���\u0001F!\"\"\f��\n�#Ubccccլ\u0012\u0016�\u0018k`\f\u0018,\u0019�cCZZ,\u0014����\u0018y�ޝw�\u001d�ݛy^�}�w��h�|"
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/cash-sans/CashSans-Medium.woff2",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "wOF2\u0000\u0001\u0000\u0000\u0000\u0000�\u0014\u0000\u0011\u0000\u0000\u0000\u0001�<\u0000\u0000��\u0000\u0003�A\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0019:\u001b��0\u001c�@\u0006`\u0000�\n\b~\t�\f\u0011\b\n��`��@\u00016\u0002$\u0003�6\u000b�p\u0000\u0004 \u0005�X\u0007�J\f�K[�^q\u0007�k'~DЛU�k�\u0007�u\u0000O6~�t\u001d]l\n빼Y���\u0000�\u0003����� �����N*2VI�I\u00072\u0014\u0005�\u001e\u0014\u001f�l#�5ͽ\u0007%z\u0019\t[P�r�5�\u0012�2\u001d�#e���\u0014�y�Ⱦ\u0007��h���\u001d��G\u001bg<��K�x�U�x\u001d�\u0012\u001b�n�P���-��E�� ��v�\u0005w�s����f>X���BF\tэ��ē\u0015|��0��DV:;�vw���A$4�V�\u0014\u001b\t�\u0016)z\u0005�\u001b��*��\u0012-�k�[7�.��������\u0017���G.���L���\u0016���\u000b���v�E\r5\u0012\u0014����QТ�\u0002���؏+N��x�\u001d�|\u001f\u0007��O3\u0016�}}���\t��W�c\u0007[�\n�]6#V�9U/��g��ڝt��/�z f�\u000f��z�/X�*\u0019c�T�hAB��F�8D�Ʀ�,l�(\u0001�\bmPD�,Z�\u0000\u000b'����jy�\u000b���B$\u0018\u0000\u0014@\u0005� ���\u000e!��\u000e�\t���\r�\u001a�\u0004���\u0003\u0007"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-footer.entry-BDMimwaB-CmwcckmG.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r,h as t,H as s}from\"./indexStreamingBody-DbaL_rPj.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},o=new Error().stack;o&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[o]=\"02f06c7b-d411-4a73-865e-17a02ef8ac0c\",e._sentryDebugIdIdentifier=\"sentry-dbid-02f06c7b-d411-4a73-865e-17a02ef8ac0c\")}catch{}})();const d=\":host,::slotted(*),*{box-sizing:border-box}:host([disabled]){cursor:not-allowed !important;}:host([disabled]) *,:host("
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-header.entry-B0iPWBfx-BF3qbi8F.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as l,c as r,h as o,H as c,g as h}from\"./indexStreamingBody-DbaL_rPj.js\";import{H as g}from\"./index-49581dff-DDAJ6Z1U-DDXtB6WH.js\";import{g as s}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";(function(){try{var t=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},a=new Error().stack;a&&(t._sentryDebugIds=t._sentryDebugIds||{},t._sentryDebugIds[a]=\"6d7b9bc9-f4ad-46b5-8d75-daebdb47f131\",t._sentryDebugIdIdentifier=\"sentry-dbid-6d7b9bc9-f4ad-46b5-8d75-daebdb47f131\")}catc"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/index-49581dff-DDAJ6Z1U-DDXtB6WH.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var _=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},O=new Error().stack;O&&(_._sentryDebugIds=_._sentryDebugIds||{},_._sentryDebugIds[O]=\"9e452529-4651-42e2-ac10-2fa0f3baa8ba\",_._sentryDebugIdIdentifier=\"sentry-dbid-9e452529-4651-42e2-ac10-2fa0f3baa8ba\")}catch{}})();const E=\"chevron-down\",I=\"chevron-down\",R=\"chevron-down\",s=\"ellipsis-horizontal\",T=16,N=240,L=100,n=160,a=\"rgb(0, 106, 255)\",o=599,t=\"rgb(102, 74, 46)\",D=\"rgb(153, 8, 56)\",C=\"rgb(25, 128, 4"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-list.entry-BbLZ7Oj3-BCppxhuC.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as _,c as v,h,H as x,g as F}from\"./indexStreamingBody-DbaL_rPj.js\";import{g as f}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";import{a as y}from\"./raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\";import{R as M}from\"./reorderable-b8935e88-DXp-SBng-Bg3qlYav.js\";import{i as O}from\"./draggable-d20865ad-C5abqCRA-GQ8mgPxk.js\";import{i as g,g as H,L as S,a as V}from\"./utils-642247e6-_Gqxcp_x-C1DWDTh2.js\";import{s as C,S as T,b as I,c as N,a as W,k as P}from\"./_baseIsEqual-efa577aa-CcEBxYX6-D18FOHw7.js\";impor"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/reorderable-b8935e88-DXp-SBng-Bg3qlYav.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{i as D,a as x,b as T}from\"./draggable-d20865ad-C5abqCRA-GQ8mgPxk.js\";import{a as _}from\"./raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\";(function(){try{var d=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},e=new Error().stack;e&&(d._sentryDebugIds=d._sentryDebugIds||{},d._sentryDebugIds[e]=\"9847a129-9454-4e7c-a2fd-647d4546f5f6\",d._sentryDebugIdIdentifier=\"sentry-dbid-9847a129-9454-4e7c-a2fd-647d4546f5f6\")}catch{}})();var h;function w(d){return!!(d&&[\"internal\",\"external\"].i"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/draggable-d20865ad-C5abqCRA-GQ8mgPxk.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{g as O}from\"./max-z-index-7a974719-BN5V-jxh-D6D5plXa.js\";import{a as w}from\"./raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\";import{g as E}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";(function(){try{var r=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(r._sentryDebugIds=r._sentryDebugIds||{},r._sentryDebugIds[t]=\"29450fbe-0207-47b8-b24d-7ffb00261ba6\",r._sentryDebugIdIdentifier=\"sentry-dbid-29450fbe-0207-47b8-b24d-7ffb00261ba6\")}catch{}})();async funct"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/max-z-index-7a974719-BN5V-jxh-D6D5plXa.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]=\"d4ac237f-e6d0-4ed4-b04e-24564b7a6c72\",e._sentryDebugIdIdentifier=\"sentry-dbid-d4ac237f-e6d0-4ed4-b04e-24564b7a6c72\")}catch{}})();function n(e){return Math.max(...[...e.querySelectorAll(\"*\")].map(d=>Number.parseFloat(window.getComputedStyle(d).zIndex)).filter(d=>!Number.isNaN(d)),0)}export{n as g};\n"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/utils-642247e6-_Gqxcp_x-C1DWDTh2.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{g as t,i as a}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},r=new Error().stack;r&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[r]=\"dfb60b8a-dda8-42ae-ae34-a12da6bbba88\",e._sentryDebugIdIdentifier=\"sentry-dbid-dfb60b8a-dda8-42ae-ae34-a12da6bbba88\")}catch{}})();var n;(function(e){e[e.RADIO=0]=\"RADIO\",e[e.CHECKBOX=1]=\"CHECKBOX\",e[e.SWITCH=2]=\"SWITCH\",e[e.SELECTABLE_WITHOUT_CONTROL=3]="
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_baseIsEqual-efa577aa-CcEBxYX6-D18FOHw7.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{M as H,L as b,e as z,i as F,a as q}from\"./_arrayPush-074dda83-D7MJbSIN-B3-lPlWc.js\";import{i as P,M as Y,a as Z}from\"./_Map-5d7abd2f-B5pRK3vC-DA-V9KHN.js\";import{r as J,S as $,a as R}from\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";import{g as D,i as S,a as N,b as Q,c as X}from\"./_getTag-40eee50c-CBeVfFM2-Dp8DX80O.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},n=new Error().stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugI"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_arrayPush-074dda83-D7MJbSIN-B3-lPlWc.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{g as p}from\"./_getNative-e422aac7-Ble8OEZC-gBLmhk2v.js\";import{M as c}from\"./_Map-5d7abd2f-B5pRK3vC-DA-V9KHN.js\";(function(){try{var t=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},e=new Error().stack;e&&(t._sentryDebugIds=t._sentryDebugIds||{},t._sentryDebugIds[e]=\"f95c945d-54c9-4f2f-9b8e-5085d4a3e7f8\",t._sentryDebugIdIdentifier=\"sentry-dbid-f95c945d-54c9-4f2f-9b8e-5085d4a3e7f8\")}catch{}})();var f=9007199254740991,l=/^(?:0|[1-9]\\d*)$/;function R(t,e){var a=typ"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_getNative-e422aac7-Ble8OEZC-gBLmhk2v.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as c,i as a,b as s}from\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";(function(){try{var r=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(r._sentryDebugIds=r._sentryDebugIds||{},r._sentryDebugIds[t]=\"b847462b-2425-4e35-b69a-115c362afdd4\",r._sentryDebugIdIdentifier=\"sentry-dbid-b847462b-2425-4e35-b69a-115c362afdd4\")}catch{}})();var i=\"[object AsyncFunction]\",u=\"[object Function]\",f=\"[object GeneratorFunction]\",d=\"[object Proxy]\";function y("
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/isObject-f305a0d7-6kmifcdD-CJxeGRoD.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var t=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},e=new Error().stack;e&&(t._sentryDebugIds=t._sentryDebugIds||{},t._sentryDebugIds[e]=\"4b192a49-15b9-4777-b088-424264198950\",t._sentryDebugIdIdentifier=\"sentry-dbid-4b192a49-15b9-4777-b088-424264198950\")}catch{}})();var f=typeof global==\"object\"&&global&&global.Object===Object&&global;const s=f;var l=typeof self==\"object\"&&self&&self.Object===Object&&self,g=s||l||Function(\"return this\")();const d=g;var"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_Map-5d7abd2f-B5pRK3vC-DA-V9KHN.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{a,b as s,r as o}from\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";import{g as i}from\"./_getNative-e422aac7-Ble8OEZC-gBLmhk2v.js\";(function(){try{var r=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},e=new Error().stack;e&&(r._sentryDebugIds=r._sentryDebugIds||{},r._sentryDebugIds[e]=\"5af548a6-3b3e-4aa8-8ef1-b94e40d4c619\",r._sentryDebugIdIdentifier=\"sentry-dbid-5af548a6-3b3e-4aa8-8ef1-b94e40d4c619\")}catch{}})();var b=Array.isArray;const A=b;var c=9007199254740991;fun"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/_getTag-40eee50c-CBeVfFM2-Dp8DX80O.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{g as i,t as n,i as B}from\"./_getNative-e422aac7-Ble8OEZC-gBLmhk2v.js\";import{M as f,b as S}from\"./_Map-5d7abd2f-B5pRK3vC-DA-V9KHN.js\";import{r as c,b as y,f as D,a as O}from\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"7b4ce899-c17c-4d49-aef5-f1c1a9e0ab5a\",e._sentryDebugIdIdentifier=\"sentry-dbid-7b4ce899-c17c-4d4"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/hasIn-91a6dab9-DP-E37XQ-DfNgn2ZF.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{i as a,b as m,a as b}from\"./_Map-5d7abd2f-B5pRK3vC-DA-V9KHN.js\";import{i as u}from\"./isSymbol-385885b1-B1FDXeDW-CclLOoQW.js\";import{M as h,i as I}from\"./_arrayPush-074dda83-D7MJbSIN-B3-lPlWc.js\";import{S as c}from\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";(function(){try{var n=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},r=new Error().stack;r&&(n._sentryDebugIds=n._sentryDebugIds||{},n._sentryDebugIds[r]=\"4bebf005-76ac-4724-a627-8eb6d7b8c88e\",n._sentryDebugIdI"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/isSymbol-385885b1-B1FDXeDW-CclLOoQW.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{a as b,b as n}from\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"2f658b8c-429f-4dc0-963e-b6a2ec8570a8\",e._sentryDebugIdIdentifier=\"sentry-dbid-2f658b8c-429f-4dc0-963e-b6a2ec8570a8\")}catch{}})();var o=\"[object Symbol]\";function f(e){return typeof e==\"symbol\"||b(e)&&n(e)==o}export{f as i};\n"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/identity-db011338-DuZT3TVp-CMJLyRP8.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]=\"d437fc1a-6af8-4821-8e2a-dba41c0749aa\",e._sentryDebugIdIdentifier=\"sentry-dbid-d437fc1a-6af8-4821-8e2a-dba41c0749aa\")}catch{}})();function a(e){return e}export{a as i};\n"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-row.entry-Dy9e6qDs-8AYRvMka.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as S,c as p,h as r,H as E,g as D}from\"./indexStreamingBody-DbaL_rPj.js\";import{R as T,G as I}from\"./index-49581dff-DDAJ6Z1U-DDXtB6WH.js\";import{c as f}from\"./classnames-7c1d9f20-C3e9H3gz-Dt30wMDX.js\";import{D as P}from\"./draggable-d20865ad-C5abqCRA-GQ8mgPxk.js\";import{g as i}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";import{a as _}from\"./raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\";import{a as R,b as A,c as M}from\"./element-type-guard-08daa588-BeWd4FyO-sqsnXkfm.js\";import{b as W,i as H,a as N,g "
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/classnames-7c1d9f20-C3e9H3gz-Dt30wMDX.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]=\"941ce3d5-34d1-495f-b3d2-222a9f2eade3\",e._sentryDebugIdIdentifier=\"sentry-dbid-941ce3d5-34d1-495f-b3d2-222a9f2eade3\")}catch{}})();function t(...e){return e.reduce((d,n)=>{if(typeof n==\"string\")d.push(n);else if(typeof n==\"object\")for(const f of Object.keys(n))n[f]&&d.push(f);return d},[]).join(\" \")}export{t as c};\n"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/element-type-guard-08daa588-BeWd4FyO-sqsnXkfm.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{g as n}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},d=new Error().stack;d&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[d]=\"c82f0348-fad4-40d5-b7c0-a80d6137fd70\",e._sentryDebugIdIdentifier=\"sentry-dbid-c82f0348-fad4-40d5-b7c0-a80d6137fd70\")}catch{}})();function r(e){return e?.tagName===n(\"market-checkbox\").toUpperCase()}function f(e){return e?.tagName===n(\"market-radio\").toUpperCas"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-radio.entry-BkbiAsrc-DjLRyRJK.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as l,c as s,h as r,H as c,g as v}from\"./indexStreamingBody-DbaL_rPj.js\";import{g as n}from\"./aria-b15b1259-DLUSiWT4-DvPqcRIW.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},o=new Error().stack;o&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[o]=\"cdee8181-2a89-49ca-85c6-b8d10695d9be\",e._sentryDebugIdIdentifier=\"sentry-dbid-cdee8181-2a89-49ca-85c6-b8d10695d9be\")}catch{}})();const u=\":host,::slotted(*),*{box-sizing:border-box"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-button-group.entry-CdLwOYKC-CobDbduL.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as f,h as s,H as h,g as b}from\"./indexStreamingBody-DbaL_rPj.js\";import{g as i}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";import{B as l,d as p}from\"./index-49581dff-DDAJ6Z1U-DDXtB6WH.js\";import{a as d}from\"./raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\";import{t as g}from\"./throttle-552e88ff-DLdg0ty--CMUQydFa.js\";import\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";import\"./isSymbol-385885b1-B1FDXeDW-CclLOoQW.js\";(function(){try{var t=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/throttle-552e88ff-DLdg0ty--CMUQydFa.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{i as y,r as $}from\"./isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\";import{i as w}from\"./isSymbol-385885b1-B1FDXeDW-CclLOoQW.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},n=new Error().stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]=\"a606976c-b316-43db-ae65-a8dea3d0a62c\",e._sentryDebugIdIdentifier=\"sentry-dbid-a606976c-b316-43db-ae65-a8dea3d0a62c\")}catch{}})();var C=/\\s/;function D(e){for(var n=e.length;n--&&C.test(e.ch"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-button.entry-BJlv9xfh-Co7mqq3h.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as y,h as e,H as p,g as f}from\"./indexStreamingBody-DbaL_rPj.js\";import{o as z}from\"./aria-b15b1259-DLUSiWT4-DvPqcRIW.js\";import{g as b}from\"./index-2dc281eb-500a7VBn-0gQ3rZQI.js\";(function(){try{var n=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},r=new Error().stack;r&&(n._sentryDebugIds=n._sentryDebugIds||{},n._sentryDebugIds[r]=\"a8f18b44-cc4b-489b-92c3-2bd033f1a489\",n._sentryDebugIdIdentifier=\"sentry-dbid-a8f18b44-cc4b-489b-92c3-2bd033f1a489\")}catch{}})();"
+    },
+    {
+      "url": "https://web.squarecdn.com/v1/square.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "\n!function(){try{var e=\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\"undefined\"!=typeof globalThis?globalThis:\"undefined\"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]=\"0813e028-c554-5b4a-abf6-2daf61602224\")}catch(e){}}();\n(()=>{\"use strict\";var e={9386:(e,t,n)=>{var r=n(6357),i=n(215),o=TypeError;e.exports=function(e){if(r(e))return e;throw new o(i(e)+\" is not a function\")}},5292:(e,t,n)=>{var r=n(6653),i=n(215"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-icon.entry-W9-g-5zq-B_qiwS4p.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as m,h as f,H as b,g as w}from\"./indexStreamingBody-DbaL_rPj.js\";(function(){try{var t=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},e=new Error().stack;e&&(t._sentryDebugIds=t._sentryDebugIds||{},t._sentryDebugIds[e]=\"511ab428-6709-4282-8982-6559b3057dff\",t._sentryDebugIdIdentifier=\"sentry-dbid-511ab428-6709-4282-8982-6559b3057dff\")}catch{}})();const L={icon:{expand:{\"fidelity:16\":{default:!0,asset:\"chevron-down\",size:16,width:16,height:16,tintable:!0}},coll"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/market-empty-state.entry-Dd3PgQzO-DL4ckTpK.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "import{r as o,h as t,H as r,g as s}from\"./indexStreamingBody-DbaL_rPj.js\";(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},a=new Error().stack;a&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[a]=\"7e910c72-672d-4c1a-b5ed-fcc39692f4f8\",e._sentryDebugIdIdentifier=\"sentry-dbid-7e910c72-672d-4c1a-b5ed-fcc39692f4f8\")}catch{}})();const i=':host,::slotted(*),*{box-sizing:border-box}:host([disabled]){cursor:not-allowed !important;}:host([disable"
+    },
+    {
+      "url": "https://web.squarecdn.com/1.83.0/main-iframe.html?applicationId=sq0idp-0WpGrONcXfCcfav3Lkd9Jg&hostname=book.squareup.com",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"/><title>Square Web Payments SDK</title><script defer=\"defer\" src=\"main-iframe.js\" integrity=\"sha256-KWqTA9whK5kD5e7INyNi/viV6p6lRhDrdYnaaj8aE2s=\" crossorigin=\"anonymous\"></script></head><body></body></html>"
+    },
+    {
+      "url": "https://web.squarecdn.com/1.83.0/main-iframe.js",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "\n!function(){try{var e=\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\"undefined\"!=typeof globalThis?globalThis:\"undefined\"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]=\"ce4596dc-15c1-52aa-abb7-505c98f4e98d\")}catch(e){}}();\n(()=>{\"use strict\";var e={9386:(e,t,r)=>{var n=r(6357),i=r(215),o=TypeError;e.exports=function(e){if(n(e))return e;throw new o(i(e)+\" is not a function\")}},5292:(e,t,r)=>{var n=r(6653),i=r(215"
+    },
+    {
+      "url": "https://pci-connect.squareup.com/payments/hydrate?applicationId=sq0idp-0WpGrONcXfCcfav3Lkd9Jg&hostname=book.squareup.com&locationId=L6SV5MCXN00CB&version=1.83.0",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"applePartnerInternalMerchantIdentifier\":\"merchant.com.squareup.sdk\",\"avt\":\"c961915a-d1a3-44e8-886d-e477d1730de3\",\"instanceId\":\"62839ddd-a6d2-4ea9-afda-b6dc73125549\",\"sessionId\":\"gbQw_1-YkcUTtUbH8up8KOlWCcsUctcV529ZIDAiwjpVd0GpONrGDzFLO8Fi4AFXLAJkKi4SHodt72FomLZfKnOAM2SwPbJS9idCMuEyJ_2RanlAea_o2wq8h9PMz3jsMBvpp-TIyA==\",\"paymentMethodSupportDetail\":{\"ACH\":{\"IsSupported\":true},\"AFTERPAY\":{\"IsSupported\":true},\"APPLE_PAY\":{\"IsSupported\":true},\"BITCOIN\":{\"IsSupported\":true},\"CASH_APP_PAY_V1\":{\"IsSup"
+    },
+    {
+      "url": "https://conversations-production-f.squarecdn.com/v2/messages-plugin.js",
+      "status": 200,
+      "isAvailability": true,
+      "preview": "/*! For license information please see bundle.js.LICENSE.txt */\n(()=>{\"use strict\";var t={24:(t,e,o)=>{o.d(e,{a:()=>v,t:()=>f});var r=o(249),a=o(3137),n=/\\s/;var i=/^\\s+/;function l(t){return t?t.slice(0,function(t){for(var e=t.length;e--&&n.test(t.charAt(e)););return e}(t)+1).replace(i,\"\"):t}var c=NaN,s=/^[-+]0x[0-9a-f]+$/i,d=/^0b[01]+$/i,m=/^0o[0-7]+$/i,u=parseInt;function v(t){if(\"number\"==typeof t)return t;if((0,a.i)(t))return c;if((0,r.i)(t)){var e=\"function\"==typeof t.valueOf?t.valueOf():t"
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+      "status": 200,
+      "isAvailability": false,
+      "preview": ":root{--square-sans-text:\"Square Sans Text VF\",\"Square Sans Text\",helvetica,arial,sans-serif;--square-sans-display:\"Square Sans Display VF\",\"Square Sans Display\",helvetica,arial,sans-serif;--square-sans-mono:\"Square Sans Mono VF\",\"Square Sans Mono\",ui-monospace,menlo,\"Courier New\",monospace;--cash-sans:\"Cash Sans\",helvetica,arial,sans-serif;--cash-sans-mono:\"Cash Sans Mono\",ui-monospace,menlo,\"Courier New\",monospace}@font-face{font-family:\"Square Sans Text\";src:url(\"https://square-fonts-producti"
+    },
+    {
+      "url": "https://pci-connect.squareup.com/payments/mtx/v2",
+      "status": 204,
+      "isAvailability": false,
+      "preview": ""
+    },
+    {
+      "url": "https://api.squareup.com/messenger/plugin-settings/L6SV5MCXN00CB",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"status\":\"SUCCESS\",\"isEnabled\":{\"APPTS\":true,\"INVOICES\":true,\"ESTIMATES\":true,\"PROJECTS\":true,\"CONTRACTS\":true},\"responseTimeText\":\"We'll respond as soon as we can\",\"logo\":\"https://square-web-production-f.squarecdn.com/files/b8d764e478e567f8b3babfa8ffb4eb0cd305fe88/original.png\",\"brandColour\":\"#D1B48B\",\"isMultiUnit\":false,\"locationName\":\"Shade Nail Spa\",\"businessName\":\"Shade Nail Spa\"}"
+    },
+    {
+      "url": "https://pci-connect.squareup.com/payments/mtx/v2",
+      "status": 204,
+      "isAvailability": false,
+      "preview": ""
+    },
+    {
+      "url": "https://api.squareup.com/v1/cdp/batch",
+      "status": 200,
+      "isAvailability": false,
+      "preview": "{\"message\":\"ok\"}"
+    }
+  ],
+  "availabilityEndpoints": [
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DbaL_rPj.js",
+      "preview": "function __vite__mapDeps(indexes) {\n  if (!__vite__mapDeps.viteFileDeps) {\n    __vite__mapDeps.viteFileDeps = [\"assets/market-accordion-item.entry-C89Yyinj-BZ1wLURc.js\",\"assets/index-49581dff-DDAJ6Z1U-DDXtB6WH.js\",\"assets/index-2dc281eb-500a7VBn-0gQ3rZQI.js\",\"assets/market-action-card.entry-wD1d-QYF-lOtQeLiF.js\",\"assets/element-type-guard-08daa588-BeWd4FyO-sqsnXkfm.js\",\"assets/market-banner.entry-B479Q9GM-HPee5G42.js\",\"assets/classnames-7c1d9f20-C3e9H3gz-Dt30wMDX.js\",\"assets/v4-fa4bb814-DIiVhVff-D9N2Bvnc.js\",\"assets/market-blade.entry-CEtyVf5W-DHtHVRhz.js\",\"assets/dialog-a99380bb-BRD4UeaE-D1f92Jm-.js\",\"assets/focus-trap-c7bc4d10-RrbEbdFN-BUrb9eDm.js\",\"assets/market-button-dropdown.entry-Dv3r_B1b-WTC8v-MS.js\",\"assets/aria-b15b1259-DLUSiWT4-DvPqcRIW.js\",\"assets/dropdown-7de2f73b-b7RUj4RA-5Yr-BDTX.js\",\"assets/market-button-group.entry-CdLwOYKC-CobDbduL.js\",\"assets/raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\",\"assets/throttle-552e88ff-DLdg0ty--CMUQydFa.js\",\"assets/isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\",\"assets/isSymbol-385885b1-B1FDXeDW-CclLOoQW.js\",\"assets/market-button.entry-BJlv9xfh-Co7mqq3h.js\",\"assets/market-checkbox.entry-BaiVAkkt-DUMHAUAs.js\",\"assets/market-color-picker-gradient.entry-CMPsXpkl-NJ8iR65h.js\",\"assets/utils-b57f24f5-OhscPYL9-xsgLLQ1u.js\",\"assets/color-687c3268-CHJGPylB-CM1HQMqi.js\",\"assets/market-color-picker-input.entry-DG2-xpRt-bJ2xnX2k.js\",\"assets/market-color-picker.entry-BMSZFZsn-DtwSFNUL.js\",\"assets/market-color-swatch-list.entry-CkN3ZAwp-C68RZMpj.js\",\"assets/market-color-swatch.entry-COhXUQOQ-D5yjRoUq.js\",\"assets/market-context-manager.entry-BhvtLBw6-DlAAZOrH.js\",\"assets/market-context.entry-dX6wPlbM-BYmfxIFq.js\",\"assets/market-date-picker-input-date.entry-CQwRHk7_-Np5ZVXQ8.js\",\"assets/index-b9ae40c9-CWAX8lFE-B_j8PbOT.js\",\"assets/index-33c9a13b-beMCvp3a-rwSUUHr9.js\",\"assets/index-559103aa-4X_ti2bJ-DJMJfKp1.js\",\"assets/market-date-picker-menu.entry-CdaDXpak-DBJ1I-nM.js\",\"assets/menu-e9c27d70-CMMAEOGG-D3yb3ULM.js\",\"assets/market-date-picker.entry-C7M5YBj"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/en-CvVuN7b1.js",
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"117e8028-c705-4e2b-af59-c2f85a785874\",e._sentryDebugIdIdentifier=\"sentry-dbid-117e8028-c705-4e2b-af59-c2f85a785874\")}catch{}})();const o={\"address.placeholder.city.AU\":\"Suburb\",\"address.placeholder.city.CA\":\"City\",\"address.placeholder.city.ES\":\"City\",\"address.placeholder.city.FR\":\"City\",\"address.placeholder.city.GB\":\"Town\",\"address.placeholder.city.IE\":\"Town/City\",\"address.placeholder.city.JP\":\"City/Ward/Village\",\"address.placeholder.city.US\":\"City\",\"address.placeholder.postalCode.AU\":\"Postal Code\",\"address.placeholder.postalCode.CA\":\"Postal Code\",\"address.placeholder.postalCode.ES\":\"Postal Code\",\"address.placeholder.postalCode.FR\":\"Postal Code\",\"address.placeholder.postalCode.GB\":\"Postcode\",\"address.placeholder.postalCode.IE\":\"Eircode\",\"address.placeholder.postalCode.JP\":\"000-0000 (Hankaku)\",\"address.placeholder.postalCode.US\":\"ZIP\",\"address.placeholder.street1.AU\":\"Street Address\",\"address.placeholder.street1.CA\":\"Street Address\",\"address.placeholder.street1.ES\":\"Address Line 1\",\"address.placeholder.street1.FR\":\"Address Line 1\",\"address.placeholder.street1.GB\":\"Address Line 1\",\"address.placeholder.street1.IE\":\"Address Line 1\",\"address.placeholder.street1.JP\":\"Street\",\"address.placeholder.street1.US\":\"Street Address\",\"address.placeholder.street2.AU\":\"Apt./Suite\",\"address.placeholder.street2.CA\":\"Apt./Suite\",\"address.placeholder.street2.ES\":\"Address Line 2\",\"address.placeholder.street2.FR\":\"Address Line 2\",\"address.placeholder.street2.GB\":\"Address Line 2\",\"address.placeholder.street2.IE\":\"Address Line 2\",\"address.placeholder.street2.JP\":\"Building name and room number (optional)\",\"address.placeholder.street2.US\":\"Apt./Suite\",\"address.validation.city\":\"Please enter a valid city\",\"address.validation.postalCode\":\"Please enter a valid postal code\",\"address.validation.state.AU\":\"Please choose "
+    },
+    {
+      "url": "https://conversations-production-f.squarecdn.com/v2/messages-plugin.js",
+      "preview": "/*! For license information please see bundle.js.LICENSE.txt */\n(()=>{\"use strict\";var t={24:(t,e,o)=>{o.d(e,{a:()=>v,t:()=>f});var r=o(249),a=o(3137),n=/\\s/;var i=/^\\s+/;function l(t){return t?t.slice(0,function(t){for(var e=t.length;e--&&n.test(t.charAt(e)););return e}(t)+1).replace(i,\"\"):t}var c=NaN,s=/^[-+]0x[0-9a-f]+$/i,d=/^0b[01]+$/i,m=/^0o[0-7]+$/i,u=parseInt;function v(t){if(\"number\"==typeof t)return t;if((0,a.i)(t))return c;if((0,r.i)(t)){var e=\"function\"==typeof t.valueOf?t.valueOf():t;t=(0,r.i)(e)?e+\"\":e}if(\"string\"!=typeof t)return 0===t?t:+t;t=l(t);var o=d.test(t);return o||m.test(t)?u(t.slice(2),o?2:8):s.test(t)?c:+t}const g=function(){return r.r.Date.now()};var h=\"Expected a function\",p=Math.max,b=Math.min;function k(t,e,o){var a,n,i,l,c,s,d=0,m=!1,u=!1,k=!0;if(\"function\"!=typeof t)throw new TypeError(h);function y(e){var o=a,r=n;return a=n=void 0,d=e,l=t.apply(r,o)}function f(t){var o=t-s;return void 0===s||o>=e||o<0||u&&t-d>=i}function w(){var t=g();if(f(t))return x(t);c=setTimeout(w,function(t){var o=e-(t-s);return u?b(o,i-(t-d)):o}(t))}function x(t){return c=void 0,k&&a?y(t):(a=n=void 0,l)}function z(){var t=g(),o=f(t);if(a=arguments,n=this,s=t,o){if(void 0===c)return function(t){return d=t,c=setTimeout(w,e),m?y(t):l}(s);if(u)return clearTimeout(c),c=setTimeout(w,e),y(s)}return void 0===c&&(c=setTimeout(w,e)),l}return e=v(e)||0,(0,r.i)(o)&&(m=!!o.leading,i=(u=\"maxWait\"in o)?p(v(o.maxWait)||0,e):i,k=\"trailing\"in o?!!o.trailing:k),z.cancel=function(){void 0!==c&&clearTimeout(c),d=0,a=s=n=c=void 0},z.flush=function(){return void 0===c?l:x(g())},z}var y=\"Expected a function\";function f(t,e,o){var a=!0,n=!0;if(\"function\"!=typeof t)throw new TypeError(y);return(0,r.i)(o)&&(a=\"leading\"in o?!!o.leading:a,n=\"trailing\"in o?!!o.trailing:n),k(t,e,{leading:a,maxWait:e,trailing:n})}},157:(t,e,o)=>{o.r(e),o.d(e,{market_input_text:()=>c});var r=o(3933),a=o(5558),n=o(5827),i=o(376),l=o(2762);const c=class{constructor(t){(0,r.r)(this,t),this.marketInputValueChange="
+    }
+  ]
+}

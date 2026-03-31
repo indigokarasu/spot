@@ -1,0 +1,57 @@
+{
+  "attempts": [
+    {
+      "method": "https_mobile",
+      "response": {
+        "status": 200,
+        "headers": {
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "ot-requestid": "f32a6523-6c43-46be-9e6a-b22eccc5ec28",
+          "x-content-type-options": "nosniff",
+          "x-xss-protection": "1; mode=block",
+          "origin-agent-cluster": "?1",
+          "x-dns-prefetch-control": "off",
+          "x-download-options": "noopen",
+          "x-frame-options": "SAMEORIGIN",
+          "reporting-endpoints": "csp-reports=/dapi/v1/csp-reports",
+          "content-security-policy": "report-uri /dapi/v1/csp-reports;report-to csp-reports;default-src 'nonce-f99294f1e3cefa39e1095075e8bf0b96' 'nonce-f99294f1e3cefa39e1095075e8bf0b96' 'nonce-f99294f1e3cefa39e1095075e8bf0b96' 'self';script-src 'nonce-f99294f1e3cefa39e1095075e8bf0b96' 'nonce-f99294f1e3cefa39e1095075e8bf0b96' 'nonce-f99294f1e3cefa39e1095075e8bf0b96' 'self' https://cdn.cookielaw.org/scripttemplates/ https://cdn.otstatic.com/ https://www.googletagmanager.com https://*.googletagmanager.com https://www.gstatic.com/recaptcha/ https://core.spreedly.com https://plugins.spreedly.com/ https://sift.opentable.com/s.js https://*.akamaihd.net/aksb.min.js https://maps.googleapis.com/maps-api-v3/api/js/ https://maps.googleapis.com/maps/api/js https://js.stripe.com/v3 'sha256-TQ0yP5r8buRNV43jdykX9U8X+5azpiajJCrnQEq9UK8=' 'sha256-fxSdBciYg9UbyNgONqSPLdD/V/O2UC+hA8/NfLLN910=' 'sha256-PXRqX2DO6As/nKZaB8/pL5TpNzfilr5TxhZ1wz1kxYc=' 'sha256-jOebLM1ksxZgbrFlf3g5Zep8PSxWzH2nXjMKOcFKoTs=' 'sha256-nYlJRcd28jpnjB+QNI67Y+0xIVXTdYX6hVvaaHNcJLk=' 'sha256-qlRLh+kezC1cW+qd8wMiuERLP/6V7Z8uBSAweq3Bo1U=' 'sha256-AoP+yecHU0+bh70Y8c8qJi3ymF1HnqMXZ/B76Pq1EM4=' 'sha256-WKvRO87r+nCs/yl6aDmv42lRmVOEvO5kPx8FfzewTWg=' 'sha256-cbVBz9Xxb/g56P+mcevlTWZstKVesJyvlym+ddD4FaU=' 'sha256-J4kgzj17iG8EfWSRXSfvE/GluTQl6B74Kt/D7w8EVqk=' 'report-sample' https://google.com https://www.google.com https://*.doubleclick.net https://www.googleadservices.com https://*.googlesyndication.com;style-src 'self' https://cdn.otstatic.com https://fonts.googleapis.com 'unsafe-inline' 'report-sample';object-src 'none';base-uri 'self';connect-src 'self' https://cdn.cookielaw.org https://p11.techlab-cdn.com https://geolocation.onetrust.com https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://*.googletagmanager.com https://privacyportal.onetrust.com https://core.spreedly.com https://*.googleapis.com https://*.akamaihd.net https://csi.gstatic.com https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://www.google.com https://google.com https://*.doubleclick.net https://*.googlesyndication.com https://www.googleadservices.com https://*.ingest.us.sentry.io;font-src 'self' https://cdn.otstatic.com https://fonts.gstatic.com;frame-src 'self' https://core.spreedly.com https://track.opentable.com https://cdn.otstatic.com https://hooks.stripe.com https://js.stripe.com https://opentable.hyperwallet.com https://opentable.uat.hyperwallet.com https://www.youtube.com https://staging.inline.app https://inline.app https://beta.inline.app https://opentable.com https://*.googlesyndication.com https://ep2.adtrafficquality.google https://*.doubleclick.net https://www.google.com https://google.com;img-src 'self' https://cdn.otstatic.com https://gc-cdn.otstatic.com https://resizer.otstatic.com https://media.otstatic.com https://cdn.cookielaw.org https://images.otstatic.com https://blog.opentable.com https://*.googleapis.com https://maps.gstatic.com/mapfiles/ https://*.akamaihd.net https://www.googletagmanager.com https://resizer-qa.otstatic.com data: blob: https://www.opentable.co.uk https://wp-otstatic.opentable.com https://prod-cdn.seekeasy.ai https://www.google.com https://google.com https://adservice.google.com https://*.doubleclick.net https://*.googlesyndication.com;manifest-src 'self';media-src 'self' https://prod-cdn.seekeasy.ai",
+          "content-type": "text/html",
+          "x-envoy-upstream-service-time": "222",
+          "x-akamai-transformed": "0 - 0 -",
+          "content-encoding": "gzip",
+          "expires": "Mon, 30 Mar 2026 23:15:55 GMT",
+          "cache-control": "max-age=0, no-cache, no-store",
+          "pragma": "no-cache",
+          "date": "Mon, 30 Mar 2026 23:15:55 GMT",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive, Transfer-Encoding",
+          "vary": "Accept-Encoding",
+          "set-cookie": [
+            "OT-Interactive-SessionId=19685862-800f-4728-a037-5c38ba015cad; Max-Age=1800; Domain=.opentable.com; Path=/; Expires=Mon, 30 Mar 2026 23:45:54 GMT; Secure; SameSite=None",
+            "ftc=x=2026-03-31T00%3A15%3A54&c=1&pt1=1&pt2=1&er=52849&p1ca=restaurant%2Fprofile%2F52849; Max-Age=10800; Domain=opentable.com; Path=/; Expires=Tue, 31 Mar 2026 02:15:54 GMT; Secure; SameSite=None",
+            "otuvid=D8BEF7B3-B8FE-48D7-AD9C-AB008F632A3A; Path=/; Domain=opentable.com; Max-Age=31536000; Expires=Tue, 30 Mar 2027 23:15:54 GMT; Secure; SameSite=None",
+            "OT-Session-Update-Date=1774912554; Path=/; Domain=opentable.com; Max-Age=1800; Expires=Mon, 30 Mar 2026 23:45:54 GMT; Secure; SameSite=None",
+            "OT-SessionId=19685862-800f-4728-a037-5c38ba015cad; Path=/; Domain=opentable.com; Max-Age=1800; Expires=Mon, 30 Mar 2026 23:45:54 GMT; Secure; SameSite=None",
+            "bm_ss=ab8e18ef4e; Secure; SameSite=None; Domain=.opentable.com; Path=/; HttpOnly; Max-Age=3600",
+            "ha_userSession=lastModified=2026-02-25T16%3A55%3A49.000Z&origin=prod-sc2; Path=/; Secure; SameSite=Strict",
+            "_abck=E194811DAA3CB758E85D7B236E20C6E1~-1~YAAQiZs+F5kdMPecAQAAW0gIQQ8kV3GHnMoS2caoWJlKDJC1TG88lw/p4RxpqrLXPNvndRugd+DelGheL15vf3DtxCDUWj1cM4uHCYnrBdJ8ORjCJ8UQE/9ABRvz6xUqnSthgvUmP/RUQL9vcobhCaxSpSFqBGeyA/SIEgKAd7DgYq4c7qrWIDUazuYEV9ydecs4fR9ONKraSsPLxrH7xc9AxtUSfIqsVywKHwhFr6edM0m78J8luuy75lipDE5jjnx/iIHzck8TnY2YgIhyK5if8MihkMZEAAURUq0cTu8C6nb/hR7ZoqhPRw5qYYQNCXxkFeZ7iQHWp8WxM/ImtN9LY0nJvJru7swCeXWbikAbf5JePkJCvRNgrNp379nuxao9grDry87gDhLD6hdCJZT0EABmG+6ESAGXdmB6z0kzmNUuQO+YXo8Uulg7m0bRcltfhiA0zDnELGK+~-1~-1~-1~-1~-1; Domain=.opentable.com; Path=/; Expires=Tue, 30 Mar 2027 23:15:55 GMT; Max-Age=31536000; SameSite=None; Secure",
+            "bm_mi=459A696BB202BC3353FC20DBCE3EF62E~YAAQiZs+F5odMPecAQAAW0gIQR8CYnGhlmYKdmFNGLqTOVhWn2vD1/Ss9QpNC+YHYMAOFDJwqpKNDMhi1AA4QUtLYLtFL8hKVaYLSjXhlSg4kCS40wQ8/HFJA7FRQEMJ5/tLsLEDvW8i9rLOixhZXmtxri+TxDLV/DpnTIbrp2s9PK4qiZy7M4gu3c0X2eeBYS0GJmfmE67dVIOrChdKWOO4HZ95Wta42TuXwY+4f1SqI5m1we+6Llgin0dRrqnOeS5twZbMe7MpHj0eifqZynWYyrKWWGnvNWWca0OIo3hcMw3ITqTPKo/m/oc5oNSi0AOZb6/MXFHzm3WEebi49w==~1; Domain=.opentable.com; Path=/; Expires=Mon, 30 Mar 2026 23:15:55 GMT; Max-Age=0; SameSite=None; Secure",
+            "bm_s=YAAQiZs+F5sdMPecAQAAW0gIQQWCX5kbHSkD6Gw7ahBiqQKgKGcO5RNpIyQXexc0FLtAyJHA9CNGDtEkmR3u+c/4H5Qrwa7o/XAy2pCkjhtrOUnWumpuWKVcmXye7wkbTMKwjldeWpSKrNUBb7Z0V4znK9ugdMTdVwJpqgUqltkUoWcOF0yB6bHk2ARlrTVFMrml8bNYQ/tqzswZaX8I1bYF3YKA7/LA6mSwgUjePQsff4E5WsoCEzhB9WPoL/39uHpaR9ZJ5SMXuSfbFdvbfcTY5AGCu9n1UxpN0g41hPwXlIU38jJjpdTpwz7psGmFzUegZpbR2mbecUQAopnUITBXUI7hHmOZ7AhZzteAZQuspftIHiBJ+my1pSFVbReHub/sRYdWx5LwjFevGbhlcmcYjNXJw4SSdTItDlZXdxFwL0/8VCpx7FzvSP9jD3X5IZzLPR4E0AIKjjVfqCqUzOVtTtDpqUtDPjSGqsiVS92T8lxwpG6yC3kVC/T/3yXFwRfnTlP2XO3c0O5Uz97sXRkYhSht1iRXY16ruXYA/Ba36vzoS/es0xP8QuNNDdIGRySvZHzKOYDgTR4B3wMTug1xWDm13nWRvmP0/+ps9RunXhzVxu9RQyXllgpLl7c7MkGqzv1OrdntI5bjFhC3Xku9BVTnPwCotuU6u179+oxQ032tP3J5U4t7xLXS+pkFmLdypsBPA5A1WGciYuPW+MmHxZGKUBgeHffeEYabYD3hwQDdwKEnSrVqX0zgsm1ROOSuZFoaGWhwaJWoSBSl6Z/rj5QrjFo1o9JM+RHDrwgfBDNa3fx+Zwl8wJlMhG025ONJHe87fOOCYhBTc+3SmJwfQenQOxtIV8Q=; Domain=.opentable.com; Path=/; Expires=Thu, 30 Apr 2026 23:15:55 GMT; Max-Age=2678400; SameSite=None; Secure; HttpOnly",
+            "bm_so=12709F283BCB1E2505BE8B2A5C3BEC413D7C8486248A0846546D317EDC45706C~YAAQiZs+F5wdMPecAQAAW0gIQQf+ElvBD2kYzRhYnJ8PKpQEp/x3TjlI9wiVw5Rz2kpoj1zgHROYWOo6p8qi+cksiMzQyKSUGUBNy9h8HIvm8l3hjS//Ljwd+yhj3f8dJNNR8sgrEinO3e8tMK7/WIgmwqwxP5JWVyRskgxkZU6STy1E0tlZNFZJwW2x3IMwU9q8vqH4hb2DQqjPlk2zdnAJ1/XMKHSpoaMkwWvlC4bm3JQc66VqCXL94IpdXUk9dMLQFPIq5Zwbg8nwNmxnBe+ujaVOJbLfdgW2xN/OdHPraUnSCTWlrWV4NjOsqHqVViGT5ucPNZSbU+RQICdH4YoNMNjj0oB48p2vGwMHJ+/2NLUESJNBDlE767U6ZMeKqvSJ85mHM9hMcxhpI99gXNtd8teigQdB816i9bcXf5udBnz6gshXvP3lrP6WWMQhF1lNczK0B/Ipo3xwSr51wPc=; Domain=.opentable.com; Path=/; Expires=Tue, 31 Mar 2026 23:15:55 GMT; Max-Age=86400; SameSite=None; Secure",
+            "bm_sz=D0547280F53DF38E73A82D57A1FE0BDC~YAAQiZs+F50dMPecAQAAW0gIQR8qOQmeT67on7232tx9g5OJZelJ2NfUViZKCOITLTI2DTDXnZyo548ehG39V/BNqJfxVN456ITgu+m5GMbZDwR7q+MTxgWztaM4QWAOKYJjX0lQ8vRqkIz9it3MGgHfjIAVkekWvwtNRC6f9rDIwKJP5GKX+Nof/+Oh3Hi7y4gjonq+UdO25Flp9url7j/zP7LT5qZB0OfNM7HuZ7lhM9hnn+AgMytoc9O6ZMzaTUJ1cXLpLtpXwRKt9ZYuiwYZ6V7TBufe3w0J9fJUdT7/tFuRwWlREuek23o9+JVJF9jK/QchaPV7nB95/gTJ+uqbtJMj7EsfTfxqNquchTD69vBIq62G93qjSZJJLbjKYRm1ot4Zdw==~3159603~4468792; Domain=.opentable.com; Path=/; Expires=Tue, 31 Mar 2026 03:15:54 GMT; Max-Age=14399; SameSite=None; Secure"
+          ],
+          "server-timing": "cdn-cache; desc=REVALIDATE-MISS"
+        },
+        "data": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0000\u0003��v�H� �+\u0018���t� ��]Y�,I�l�u+���.���@�D\n\u0004��H�=^�_�\u0017��9_p���y�?�/9{G\u0004�A2HQ��F3]N\u0011\b�eǾ�\u001d���?^]\u001e\r�vu�M���ß�_�!��e����A\r\u001eQb���\u0019��fNI0���Z\u001c��^mO<vɌ������������\u001bQ\u0017���V4}i�;ۤ:���ٮ\u001d���C�8�e\u0003;ql�V\u000b��fç5-�?��e��yhtj�4�㗵�0\"�m�c��h��32��ޘ��'z����\u001c�i�6Z��;Y�i�xh\u001aj�6\r�����O��\u0015��z\u000f��Z���>4\u000e�\u0007oN~^�i���i�u�i���v~��b��ӆ�{��)B���?]]\u001ft>\u001c��~#;r�\u000f\u0007\u0011ul\u001ahG\u0001u]�B7q@�Hӵ\u0001q�\u0013�۴C��ю\u000e���]��\u001d��C��ǿ��EC3����i��S\u001c�\u000e5\u0002�Rל¢��l�:�.L�X�\n�1���?Z4�ڌ��F\\K�^��\u001b�{Fn)�H�;�3\b5�\u0005�Qm�\u0005Za\u000e�%t��}\u001f�u\u0013�}��w6�p'�[�\u0003ol;tǥѽ\u0017�V�\n������F��mv"
+      }
+    },
+    {
+      "method": "playwright_mobile",
+      "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.opentable.com/r/atelier-crenn\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "method": "mobile_subdomain",
+      "error": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://m.opentable.com/r/atelier-crenn\nCall log:\n\u001b[2m  - navigating to \"https://m.opentable.com/r/atelier-crenn\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    }
+  ]
+}
