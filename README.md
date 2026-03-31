@@ -1,6 +1,6 @@
 # Spot
 
-Appointment booking automation research and scripts.
+Appointment and restaurant reservation automation research and scripts.
 
 ## Contents
 
@@ -11,6 +11,9 @@ Scheduling platform documentation and findings:
 - `acuity.md` / `acuity_scheduling.md` - Acuity Scheduling patterns (✅ Production ready)
 - `square.md` / `square_booking_pattern.md` - Square Appointments patterns (✅ Working)
 - `opentable.md` - OpenTable findings (❌ Blocked by CDN)
+- `sevenrooms.md` - SevenRooms patterns (✅ Production ready) **NEW**
+- `resy.md` - Resy patterns (⚠️ Browser automation) **NEW**
+- `tock.md` - Tock patterns (⚠️ Browser automation) **NEW**
 
 ### scripts/
 Automation scripts organized by platform:
@@ -32,6 +35,11 @@ Automation scripts organized by platform:
 - API intercept scripts for Acuity-based booking
 - Availability checking automation
 
+**Restaurant Platforms (NEW):**
+- `sevenrooms_availability.py` - SevenRooms API checker
+- `resy_availability.py` - Resy browser automation
+- `tock_availability.py` - Tock browser automation
+
 ### logs/
 Debug outputs, screenshots, and JSON traces from testing.
 
@@ -41,10 +49,21 @@ Debug outputs, screenshots, and JSON traces from testing.
 |----------|--------|--------|-------|
 | Acuity Scheduling | ✅ Working | REST API | Public endpoints, no auth |
 | Square Appointments | ✅ Working | Browser automation | Custom elements, DOM checks |
+| SevenRooms | ✅ Working | Browser automation | Modal dialogs, calendar nav |
+| Resy | ✅ Working | Browser automation | SPA, body text check |
+| Tock | ⚠️ Partial | Browser automation | Modal blocks, times not extracted |
 | OpenTable | ❌ Blocked | N/A | Akamai CDN bot detection |
 | Mindbody | ⏳ Untested | - | - |
 | Fresha | ⏳ Untested | - | - |
-| Resy | ⏳ Untested | - | - |
+
+## Restaurant Platform Comparison
+
+| Feature | SevenRooms | Resy | Tock |
+|---------|------------|------|------|
+| Public API | ✅ | ❌ | ❌ |
+| Browser automation | Not needed | ✅ | ✅ |
+| Bot detection | None | Medium | High (Cloudflare) |
+| Headless mode | N/A | ✅ | ❌ (headed required) |
 
 ## Universal Truth
 

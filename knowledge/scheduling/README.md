@@ -6,6 +6,8 @@ Systematic patterns for booking and availability automation. Organized for conti
 
 ## Platform Directory
 
+### Appointment/Spa Platforms
+
 | Platform | Status | Method | Last Tested |
 |----------|--------|--------|-------------|
 | [Acuity Scheduling](./acuity.md) | ✅ Production | REST API | 2026-03-30 |
@@ -14,6 +16,15 @@ Systematic patterns for booking and availability automation. Organized for conti
 | Fresha | ❌ Unknown | TBD | - |
 | StyleSeat | ❌ Unknown | TBD | - |
 | Calendly | ❌ Unknown | TBD | - |
+
+### Restaurant Reservation Platforms
+
+| Platform | Status | Method | Last Tested |
+|----------|--------|--------|-------------|
+| [SevenRooms](./sevenrooms.md) | ✅ Production | REST API | 2026-03-31 |
+| [Resy](./resy.md) | ⚠️ Working | Browser automation | 2026-03-31 |
+| [Tock](./tock.md) | ⚠️ Working | Browser automation | 2026-03-31 |
+| [OpenTable](./opentable.md) | ❌ Blocked | N/A | 2026-03-30 |
 
 ---
 
@@ -104,11 +115,23 @@ Systematic patterns for booking and availability automation. Organized for conti
 knowledge/scheduling/
 ├── README.md              # This file
 ├── NEW_PLATFORM.md        # Step-by-step guide for new platforms
+
+# Appointment/Spa Platforms
 ├── acuity.md              # Acuity: Happy path + pitfalls
 ├── square.md              # Square: Happy path + pitfalls
 ├── mindbody.md            # (future)
 ├── fresha.md              # (future)
-└── patterns/              # Reusable code patterns
+├── styleseat.md           # (future)
+├── calendly.md            # (future)
+
+# Restaurant Reservation Platforms
+├── sevenrooms.md          # SevenRooms: Public API
+├── resy.md                # Resy: Browser automation
+├── tock.md                # Tock: Browser automation
+├── opentable.md           # OpenTable: Blocked
+
+# Reusable patterns
+└── patterns/
     ├── dom-check.js
     ├── api-intercept.js
     └── custom-element.js
