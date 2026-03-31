@@ -1,0 +1,759 @@
+{
+  "timeSlots": [],
+  "requests": [
+    {
+      "url": "https://square.site/book/L6SV5MCXN00CB/shade-nail-spa-san-francisco-ca",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/cms/ping",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "blob:https://my-business-102000-107381.square.site/c8c7de5b-ce2b-4544-9cc9-e570bfbb367c",
+      "method": "GET",
+      "headers": {
+        "accept": "*/*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/chevron-left.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "8181859078115061048",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "1509515177504738906",
+        "traceparent": "00-000000000000000014f2e00e623b0e5a-718bcd7b715a6d38-01",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "1"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/cashapp.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/applepay.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/googlepay.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/visa.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/mastercard.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/americanexpress.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/discover.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/static/icons/payment-methods/jcb.svg",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::getSquareStoreConfig]",
+      "method": "POST",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3640746393359775266",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6InU3VG82Q2VLUE5YNlJPeEhkT1ljNVE9PSIsInZhbHVlIjoiYjNRRVNwdVNlWlpVUlBtUUtrc1dpOFlhTWxXYUgyZU0vY3JrTjU3T0Y2SzI0L3c1TFEvRnMycTg5QXdJSnpDdFJiSk1QcVN3S1VlMVBpemFSRUQwM0ExYmdsL1kxNytmVDFFRFJ4WmhoMER1emo5MzAweHpqVGVPMkZCRmVrLzciLCJtYWMiOiI1MmM0NTMwMzVkYTBhNDViNDVlODAyMWExYjliYTMzYWZjMmYwODM0ZDBlYTdkNTRkNzk4Mzk5ODA0OGNmYjk3IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "client-application-name": "prime-website",
+        "x-datadog-trace-id": "7824678033546378374",
+        "traceparent": "00-00000000000000006c96d736ef557c86-3286878e257e7622-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "x-datadog-sampling-priority": "0"
+      },
+      "postData": "{\"id\":0,\"jsonrpc\":\"2.0\",\"method\":\"Checkout::getSquareStoreConfig\",\"params\":[]}"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=de54b54f-0b2e-4025-bd33-ea290585baaf&batch_time=1774901131613",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901129773,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\"},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"0252e474-8e69-4f4f-80de-157aff14a7c7\",\"type\":\"document\",\"url\":\"https://my-business-102000-107381.square.site/\",\"status_code\":200,\"duration\":1491600000,\"render_blocking_status\":\"non-blocking\",\"size\":40582,\"encoded_body_size\":11960,\"decoded_body_size\":40582,\"transfer_size\":12260,\"download\":{\"duration\":1700000,\"start\":680600000},\"first_by"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/cms/api/v1/users/143340576/customers/coordinates",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "6863906960769614357",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6InU3VG82Q2VLUE5YNlJPeEhkT1ljNVE9PSIsInZhbHVlIjoiYjNRRVNwdVNlWlpVUlBtUUtrc1dpOFlhTWxXYUgyZU0vY3JrTjU3T0Y2SzI0L3c1TFEvRnMycTg5QXdJSnpDdFJiSk1QcVN3S1VlMVBpemFSRUQwM0ExYmdsL1kxNytmVDFFRFJ4WmhoMER1emo5MzAweHpqVGVPMkZCRmVrLzciLCJtYWMiOiI1MmM0NTMwMzVkYTBhNDViNDVlODAyMWExYjliYTMzYWZjMmYwODM0ZDBlYTdkNTRkNzk4Mzk5ODA0OGNmYjk3IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "8207033975802869506",
+        "traceparent": "00-000000000000000071e53deb134ab702-5f417f03a8010215-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/ping?lang=en",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "8510278086217724057",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "8064881990238281267",
+        "traceparent": "00-00000000000000006fec3770c7991e33-761a94d47ccc7099-00",
+        "square-merchant-token": "ML6JXAK0STY6V",
+        "accept": "application/json, text/plain, */*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=637f2213-912c-4c03-9792-38b857ef80d7&batch_time=1774901131848",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100}},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901131613,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\"},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\",\"in_foreground\":true},\"action\":{\"id\":\"732a8006-17b5-4dea-9dfc-06db80de6ba7\",\"target\":{\"name\":\"pubsite-router_before-resolve\"},\"type\":\"custom\"},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"type\":\"action\",\"context\":{\"type\":\"event\",\"toViewName\":\"home\",\"fromViewName\":null,\"toPathname\":\"/\",\"fromPathname\":\"/\",\"hostname\":\"my-business-102000-107381.square.site\"}}\n{\"_dd\":{\"format_version\":2,\"drift\":0,\"configuration\":{\"session_sample_rate\":100"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/customers/me?lang=en&updateSqCustomers=true&syncPrimaryCard=false",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3210494028243108143",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6ImM3K1BPUHltWWlGVHNTWDVMc2Y0NUE9PSIsInZhbHVlIjoiK3RyZjNGemdQWVI1MkJVb0xSQUR6aVJ3ckw2U3V2eFNvOW5HYlNOS3dLcXZHSDRGUXFFb2Nkako1aFlKajZXczk1bG9OZEdYUU1IdXlYWmlGaUIwR25abU5YQ29ua0d2cHFmdEFpMENoU05jdTJHQW0vZFZ2eiswcG1HRWt6V0ciLCJtYWMiOiI3NDIwNGM4YTNkOTZlMzJhNzFmZWM1OWJlYWMxOGVhMWM0NDNlMzdiZWYzNGY4MDY2MDY1OTU0NGQ0Mzk5MTg0IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "3192848582001831514",
+        "traceparent": "00-00000000000000002c4f46de6fd42e5a-2c8df74f0af1812f-00",
+        "square-merchant-token": "ML6JXAK0STY6V",
+        "accept": "application/json, text/plain, */*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/accounts/v1/subscriptions/plans?lang=en",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "7664540607265951077",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6ImM3K1BPUHltWWlGVHNTWDVMc2Y0NUE9PSIsInZhbHVlIjoiK3RyZjNGemdQWVI1MkJVb0xSQUR6aVJ3ckw2U3V2eFNvOW5HYlNOS3dLcXZHSDRGUXFFb2Nkako1aFlKajZXczk1bG9OZEdYUU1IdXlYWmlGaUIwR25abU5YQ29ua0d2cHFmdEFpMENoU05jdTJHQW0vZFZ2eiswcG1HRWt6V0ciLCJtYWMiOiI3NDIwNGM4YTNkOTZlMzJhNzFmZWM1OWJlYWMxOGVhMWM0NDNlMzdiZWYzNGY4MDY2MDY1OTU0NGQ0Mzk5MTg0IiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4288931808829780214",
+        "traceparent": "00-00000000000000003b8558c1a32c30f6-6a5deb12e6a4cd65-00",
+        "square-merchant-token": "ML6JXAK0STY6V",
+        "accept": "application/json, text/plain, */*",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=f6514a35-c7f7-4f62-a15d-90e8439588b6&batch_time=1774901132296",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901131619,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"44d9534a-e300-457b-a32c-f0610cb393cd\",\"type\":\"xhr\",\"duration\":227100000,\"method\":\"GET\",\"status_code\":204,\"url\":\"https://my-business-102000-107381.square.site/app/accounts/v1/ping?lang=en\",\"render_blocking_status\":\"non-blocking\",\"size\":0,\"encoded_body_size\":0,\"decoded_body_size\":0,\"transfer_size\":300,\"download\":{\"durat"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=a68e5164-b0c5-4bd7-a4e0-a71cc7553f36&batch_time=1774901132309",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":0,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901132247,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"92b032d1-c09c-4c1b-b846-e096ec6fc62d\",\"type\":\"js\",\"url\":\"https://cdn3.editmysite.com/app/website/js/95334.0c5a3018634d30e89356.js\",\"duration\":16400000,\"render_blocking_status\":\"non-blocking\"},\"type\":\"resource\"}\n{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\""
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2710755275883428141",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6801823053005610953",
+        "traceparent": "00-00000000000000005e64ee0773765fc9-259e898fac0c392d-01",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "1"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/spinner.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3450277584411036687",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6752798247268855418",
+        "traceparent": "00-00000000000000005db6c23a60572e7a-2fe1d92ec3500c0f-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2142235868920616822",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "8391450039178575373",
+        "traceparent": "00-000000000000000074746b59cfad3e0d-1dbac02c381d1776-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::getCurrentOrder]",
+      "method": "POST",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2167293225879041060",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "client-application-name": "prime-website",
+        "x-datadog-trace-id": "7711376337780013450",
+        "traceparent": "00-00000000000000006b044fec2ebaf98a-1e13c5b4c4a17424-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "x-datadog-sampling-priority": "0"
+      },
+      "postData": "{\"id\":0,\"jsonrpc\":\"2.0\",\"method\":\"Checkout::getCurrentOrder\",\"params\":[false,false,true]}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/ajax/api/JsonRPC/Commerce/?Commerce/[Checkout::hasCouponsAvailable]",
+      "method": "POST",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "2047303880469044631",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "client-application-name": "prime-website",
+        "x-datadog-trace-id": "5301738517849847740",
+        "traceparent": "00-000000000000000049938f17987237bc-1c697c083ea2dd97-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json",
+        "x-datadog-sampling-priority": "0"
+      },
+      "postData": "{\"id\":0,\"jsonrpc\":\"2.0\",\"method\":\"Checkout::hasCouponsAvailable\",\"params\":[]}"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/menu.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "1227222449963689924",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4024579040930447664",
+        "traceparent": "00-000000000000000037da2d5089244130-1107f850ee7867c4-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/user.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "8024150321085093246",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6282093716207312148",
+        "traceparent": "00-0000000000000000572e7af370401d14-6f5b8234089d157e-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/cart.svg",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "5743838879601010556",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "1986207932552620142",
+        "traceparent": "00-00000000000000001b906d975ddca86e-4fb6370761b2277c-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=9ddb2bc6-aa66-4a44-9d35-2101440bf310&batch_time=1774901132413",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":0,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901132292,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"14d8797b-7ec6-46b3-afd5-a2b53320df09\",\"type\":\"css\",\"url\":\"https://cdn3.editmysite.com/app/website/css/location-hours-side-by-side.ab733df9adfef54c900d.css\",\"duration\":11300000,\"render_blocking_status\":\"non-blocking\"},\"type\":\"resource\"}\n{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"se"
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/locations",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "5156618162249614933",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4999743913566686095",
+        "traceparent": "00-00000000000000004562a89980104b8f-478ffce5cb374655-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/services/L6SV5MCXN00CB?return_bookable=true",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "7723677319518199174",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "5902850528605271756",
+        "traceparent": "00-000000000000000051eb2347f7be76cc-6b300399ad9f9d86-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staff-members/L6SV5MCXN00CB",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "4109999438620913224",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "85909945782413001",
+        "traceparent": "00-0000000000000000013136a3f908a6c9-3909a6b6b60dee48-01",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "1"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/services/L6SV5MCXN00CB?return_bookable=true",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3716934079402119064",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "4035255314018607083",
+        "traceparent": "00-000000000000000038001b5412161feb-339533da204e8f98-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staff-members/L6SV5MCXN00CB",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "6042713621970250600",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "750408711997765305",
+        "traceparent": "00-00000000000000000a69fcbf6afc36b9-53dc080604f36b68-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/business-booking-profile",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "4785032692594966905",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "6917774902240695546",
+        "traceparent": "00-00000000000000006000df9f242b54fa-4267d9e1b8c10179-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/classes-profile",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "3485196691164718007",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "9206586287282640066",
+        "traceparent": "00-00000000000000007fc45d731f76d4c2-305de7ecdd3d63b7-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://my-business-102000-107381.square.site/app/website/cms/api/v1/users/143340576/customers/locale",
+      "method": "GET",
+      "headers": {
+        "x-datadog-origin": "rum",
+        "x-datadog-parent-id": "1250857493355598202",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-xsrf-token": "eyJpdiI6IkEzVXJEdTlWL2tMeTFHK3VqY0U4T3c9PSIsInZhbHVlIjoiRlFQTDJkZExsa2JhSjZwSVdoMUNFZnZmS1ZPcktiMzRnVmVtdjl1WGVTQXpVQzZIelh2ZFFRcWZNaEZYVys2UzlSMVQvbXROUGpNdlp4WTdhUnRtNThOSDhYWFVuWlVYTGMxbERuQUZPbHppVDN5NzA1UXl1RFhhZ05JcVJvTVgiLCJtYWMiOiJkOWI3MDY0ODFhOWM5ZTYzYmIzYzE1NTMyY2RmZWNjMTVmYzczMzA1ZWM1ODljYWI0NzdjYzRiMWFjZmUzOTExIiwidGFnIjoiIn0=",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-datadog-trace-id": "1754194998111784414",
+        "traceparent": "00-00000000000000001858270e81384dde-115bf0434c18917a-00",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "accept": "application/json, text/plain, */*",
+        "x-datadog-sampling-priority": "0"
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=479c56a7-45cf-45bc-b4fc-4c56bcb1561d&batch_time=1774901133460",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false,\"span_id\":\"2710755275883428141\",\"trace_id\":\"6801823053005610953\",\"rule_psr\":0.1},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901132323,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"8714e672-a60f-480c-8bd0-b024daf3de57\",\"type\":\"fetch\",\"duration\":88200000,\"method\":\"GET\",\"status_code\":200,\"url\":\"https://my-business-102000-107381.square.site/app/website/static/icons/sets/square/close.svg\",\"render_blocking_status\":\"non-bl"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/replay?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Axhr%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=31418fba-3dc6-49d3-8f29-96ce336b0317",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryQgHu3ljLnfepbpVk",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://app.squareup.com/appointments/book/L6SV5MCXN00CB/start?color=ece9e4&buttonTextColor=000000&service_id=XA4S2WKU7HYBHTWNKCPBIBDJ&locale=en&referrer=so",
+      "method": "GET",
+      "headers": {
+        "referer": "https://my-business-102000-107381.square.site/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/rum?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Abeacon%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=3ee99657-865f-42c9-89ec-ff4b34477c8e&batch_time=1774901146740",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "{\"_dd\":{\"format_version\":2,\"drift\":1,\"configuration\":{\"session_sample_rate\":100,\"session_replay_sample_rate\":100},\"discarded\":false,\"span_id\":\"4109999438620913224\",\"trace_id\":\"85909945782413001\",\"rule_psr\":0.1},\"application\":{\"id\":\"0a9b10e6-9671-4e1d-bd0b-2f283f0d29ee\"},\"date\":1774901133201,\"service\":\"spi-ecom-square-online-buyer-journey\",\"version\":\"prime-6f2e189\",\"source\":\"browser\",\"session\":{\"id\":\"7198cf08-b8ce-47e8-a492-409b6ddbe9a0\",\"type\":\"user\",\"has_replay\":true},\"view\":{\"id\":\"271002c4-b5f7-490b-bb02-593533ed60eb\",\"name\":\"home\",\"url\":\"https://my-business-102000-107381.square.site/\",\"referrer\":\"\"},\"action\":{\"id\":[]},\"display\":{\"viewport\":{\"width\":1920,\"height\":1080}},\"connectivity\":{\"status\":\"connected\",\"effective_type\":\"4g\"},\"resource\":{\"id\":\"71f13a68-1e7d-4b2e-bb93-90214c9ccdf4\",\"type\":\"xhr\",\"duration\":258599999,\"method\":\"GET\",\"status_code\":200,\"url\":\"https://my-business-102000-107381.square.site/app/square-sync/published/users/143340576/site/864887102346731255/appointments/staf"
+    },
+    {
+      "url": "https://browser-intake-datadoghq.com/api/v2/replay?ddsource=browser&ddtags=sdk_version%3A5.28.1%2Capi%3Afetch%2Cenv%3Aproduction%2Cservice%3Aspi-ecom-square-online-buyer-journey%2Cversion%3Aprime-6f2e189&dd-api-key=pubc6e7a7143c494f34f1366112ef7c1e2c&dd-evp-origin-version=5.28.1&dd-evp-origin=browser&dd-request-id=cc3e02d7-85d9-4869-b821-5a0aecbd3240",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://my-business-102000-107381.square.site/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundarydlHgIRX8NTAM26tq",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://book.squareup.com/appointments/zhyuoylr81g79j/location/L6SV5MCXN00CB?buttonTextColor=000000&color=ece9e4&locale=en&referrer=so&service_id=XA4S2WKU7HYBHTWNKCPBIBDJ",
+      "method": "GET",
+      "headers": {
+        "referer": "https://my-business-102000-107381.square.site/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingHeader-BHPwhBAk.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://square-fonts-production-f.squarecdn.com/square-sans.min.css",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DbaL_rPj.js",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DEvkWYvb.css",
+      "method": "GET",
+      "headers": {
+        "origin": "https://book.squareup.com",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    },
+    {
+      "url": "https://seller-brand-assets-f.squarecdn.com/ML6JXAK0STY6V/a6a146865ee23772bfa018ca021844ea.png?height=250",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0"
+      }
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DbaL_rPj.js",
+      "status": 200,
+      "isAvailability": true,
+      "preview": "function __vite__mapDeps(indexes) {\n  if (!__vite__mapDeps.viteFileDeps) {\n    __vite__mapDeps.viteFileDeps = [\"assets/market-accordion-item.entry-C89Yyinj-BZ1wLURc.js\",\"assets/index-49581dff-DDAJ6Z1U-DDXtB6WH.js\",\"assets/index-2dc281eb-500a7VBn-0gQ3rZQI.js\",\"assets/market-action-card.entry-wD1d-QYF-lOtQeLiF.js\",\"assets/element-type-guard-08daa588-BeWd4FyO-sqsnXkfm.js\",\"assets/market-banner.entry-B479Q9GM-HPee5G42.js\",\"assets/classnames-7c1d9f20-C3e9H3gz-Dt30wMDX.js\",\"assets/v4-fa4bb814-DIiVhVff"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/en-CvVuN7b1.js",
+      "status": 200,
+      "isAvailability": true,
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"117e8028-c705-4e2b-af59-c2f85a785874\",e._sentryDebugIdIdentifier=\"sentry-dbid-117e8028-c705-4e2b-af59-c2f85a785874\")}catch{}})();const o={\"address.placeholder.city.AU\":\"Suburb\",\"address.placeholder.city.CA\":\"City\",\"address.placeholder.city.ES\":\"City\",\"address.placeholder.city.FR\":\"City\",\"address.placeholder.city.GB\":"
+    },
+    {
+      "url": "https://conversations-production-f.squarecdn.com/v2/messages-plugin.js",
+      "status": 200,
+      "isAvailability": true,
+      "preview": "/*! For license information please see bundle.js.LICENSE.txt */\n(()=>{\"use strict\";var t={24:(t,e,o)=>{o.d(e,{a:()=>v,t:()=>f});var r=o(249),a=o(3137),n=/\\s/;var i=/^\\s+/;function l(t){return t?t.slice(0,function(t){for(var e=t.length;e--&&n.test(t.charAt(e)););return e}(t)+1).replace(i,\"\"):t}var c=NaN,s=/^[-+]0x[0-9a-f]+$/i,d=/^0b[01]+$/i,m=/^0o[0-7]+$/i,u=parseInt;function v(t){if(\"number\"==typeof t)return t;if((0,a.i)(t))return c;if((0,r.i)(t)){var e=\"function\"==typeof t.valueOf?t.valueOf():t"
+    }
+  ],
+  "availabilityEndpoints": [
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/indexStreamingBody-DbaL_rPj.js",
+      "preview": "function __vite__mapDeps(indexes) {\n  if (!__vite__mapDeps.viteFileDeps) {\n    __vite__mapDeps.viteFileDeps = [\"assets/market-accordion-item.entry-C89Yyinj-BZ1wLURc.js\",\"assets/index-49581dff-DDAJ6Z1U-DDXtB6WH.js\",\"assets/index-2dc281eb-500a7VBn-0gQ3rZQI.js\",\"assets/market-action-card.entry-wD1d-QYF-lOtQeLiF.js\",\"assets/element-type-guard-08daa588-BeWd4FyO-sqsnXkfm.js\",\"assets/market-banner.entry-B479Q9GM-HPee5G42.js\",\"assets/classnames-7c1d9f20-C3e9H3gz-Dt30wMDX.js\",\"assets/v4-fa4bb814-DIiVhVff-D9N2Bvnc.js\",\"assets/market-blade.entry-CEtyVf5W-DHtHVRhz.js\",\"assets/dialog-a99380bb-BRD4UeaE-D1f92Jm-.js\",\"assets/focus-trap-c7bc4d10-RrbEbdFN-BUrb9eDm.js\",\"assets/market-button-dropdown.entry-Dv3r_B1b-WTC8v-MS.js\",\"assets/aria-b15b1259-DLUSiWT4-DvPqcRIW.js\",\"assets/dropdown-7de2f73b-b7RUj4RA-5Yr-BDTX.js\",\"assets/market-button-group.entry-CdLwOYKC-CobDbduL.js\",\"assets/raf-ac8923ee-Dg9r7hoa-pY-8wFb1.js\",\"assets/throttle-552e88ff-DLdg0ty--CMUQydFa.js\",\"assets/isObject-f305a0d7-6kmifcdD-CJxeGRoD.js\",\"assets/isSymbol-385885b1-B1FDXeDW-CclLOoQW.js\",\"assets/market-button.entry-BJlv9xfh-Co7mqq3h.js\",\"assets/market-checkbox.entry-BaiVAkkt-DUMHAUAs.js\",\"assets/market-color-picker-gradient.entry-CMPsXpkl-NJ8iR65h.js\",\"assets/utils-b57f24f5-OhscPYL9-xsgLLQ1u.js\",\"assets/color-687c3268-CHJGPylB-CM1HQMqi.js\",\"assets/market-color-picker-input.entry-DG2-xpRt-bJ2xnX2k.js\",\"assets/market-color-picker.entry-BMSZFZsn-DtwSFNUL.js\",\"assets/market-color-swatch-list.entry-CkN3ZAwp-C68RZMpj.js\",\"assets/market-color-swatch.entry-COhXUQOQ-D5yjRoUq.js\",\"assets/market-context-manager.entry-BhvtLBw6-DlAAZOrH.js\",\"assets/market-context.entry-dX6wPlbM-BYmfxIFq.js\",\"assets/market-date-picker-input-date.entry-CQwRHk7_-Np5ZVXQ8.js\",\"assets/index-b9ae40c9-CWAX8lFE-B_j8PbOT.js\",\"assets/index-33c9a13b-beMCvp3a-rwSUUHr9.js\",\"assets/index-559103aa-4X_ti2bJ-DJMJfKp1.js\",\"assets/market-date-picker-menu.entry-CdaDXpak-DBJ1I-nM.js\",\"assets/menu-e9c27d70-CMMAEOGG-D3yb3ULM.js\",\"assets/market-date-picker.entry-C7M5YBj"
+    },
+    {
+      "url": "https://booking-flow-production-c.squarecdn.com/assets/en-CvVuN7b1.js",
+      "preview": "(function(){try{var e=typeof window<\"u\"?window:typeof global<\"u\"?global:typeof self<\"u\"?self:{},t=new Error().stack;t&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[t]=\"117e8028-c705-4e2b-af59-c2f85a785874\",e._sentryDebugIdIdentifier=\"sentry-dbid-117e8028-c705-4e2b-af59-c2f85a785874\")}catch{}})();const o={\"address.placeholder.city.AU\":\"Suburb\",\"address.placeholder.city.CA\":\"City\",\"address.placeholder.city.ES\":\"City\",\"address.placeholder.city.FR\":\"City\",\"address.placeholder.city.GB\":\"Town\",\"address.placeholder.city.IE\":\"Town/City\",\"address.placeholder.city.JP\":\"City/Ward/Village\",\"address.placeholder.city.US\":\"City\",\"address.placeholder.postalCode.AU\":\"Postal Code\",\"address.placeholder.postalCode.CA\":\"Postal Code\",\"address.placeholder.postalCode.ES\":\"Postal Code\",\"address.placeholder.postalCode.FR\":\"Postal Code\",\"address.placeholder.postalCode.GB\":\"Postcode\",\"address.placeholder.postalCode.IE\":\"Eircode\",\"address.placeholder.postalCode.JP\":\"000-0000 (Hankaku)\",\"address.placeholder.postalCode.US\":\"ZIP\",\"address.placeholder.street1.AU\":\"Street Address\",\"address.placeholder.street1.CA\":\"Street Address\",\"address.placeholder.street1.ES\":\"Address Line 1\",\"address.placeholder.street1.FR\":\"Address Line 1\",\"address.placeholder.street1.GB\":\"Address Line 1\",\"address.placeholder.street1.IE\":\"Address Line 1\",\"address.placeholder.street1.JP\":\"Street\",\"address.placeholder.street1.US\":\"Street Address\",\"address.placeholder.street2.AU\":\"Apt./Suite\",\"address.placeholder.street2.CA\":\"Apt./Suite\",\"address.placeholder.street2.ES\":\"Address Line 2\",\"address.placeholder.street2.FR\":\"Address Line 2\",\"address.placeholder.street2.GB\":\"Address Line 2\",\"address.placeholder.street2.IE\":\"Address Line 2\",\"address.placeholder.street2.JP\":\"Building name and room number (optional)\",\"address.placeholder.street2.US\":\"Apt./Suite\",\"address.validation.city\":\"Please enter a valid city\",\"address.validation.postalCode\":\"Please enter a valid postal code\",\"address.validation.state.AU\":\"Please choose "
+    },
+    {
+      "url": "https://conversations-production-f.squarecdn.com/v2/messages-plugin.js",
+      "preview": "/*! For license information please see bundle.js.LICENSE.txt */\n(()=>{\"use strict\";var t={24:(t,e,o)=>{o.d(e,{a:()=>v,t:()=>f});var r=o(249),a=o(3137),n=/\\s/;var i=/^\\s+/;function l(t){return t?t.slice(0,function(t){for(var e=t.length;e--&&n.test(t.charAt(e)););return e}(t)+1).replace(i,\"\"):t}var c=NaN,s=/^[-+]0x[0-9a-f]+$/i,d=/^0b[01]+$/i,m=/^0o[0-7]+$/i,u=parseInt;function v(t){if(\"number\"==typeof t)return t;if((0,a.i)(t))return c;if((0,r.i)(t)){var e=\"function\"==typeof t.valueOf?t.valueOf():t;t=(0,r.i)(e)?e+\"\":e}if(\"string\"!=typeof t)return 0===t?t:+t;t=l(t);var o=d.test(t);return o||m.test(t)?u(t.slice(2),o?2:8):s.test(t)?c:+t}const g=function(){return r.r.Date.now()};var h=\"Expected a function\",p=Math.max,b=Math.min;function k(t,e,o){var a,n,i,l,c,s,d=0,m=!1,u=!1,k=!0;if(\"function\"!=typeof t)throw new TypeError(h);function y(e){var o=a,r=n;return a=n=void 0,d=e,l=t.apply(r,o)}function f(t){var o=t-s;return void 0===s||o>=e||o<0||u&&t-d>=i}function w(){var t=g();if(f(t))return x(t);c=setTimeout(w,function(t){var o=e-(t-s);return u?b(o,i-(t-d)):o}(t))}function x(t){return c=void 0,k&&a?y(t):(a=n=void 0,l)}function z(){var t=g(),o=f(t);if(a=arguments,n=this,s=t,o){if(void 0===c)return function(t){return d=t,c=setTimeout(w,e),m?y(t):l}(s);if(u)return clearTimeout(c),c=setTimeout(w,e),y(s)}return void 0===c&&(c=setTimeout(w,e)),l}return e=v(e)||0,(0,r.i)(o)&&(m=!!o.leading,i=(u=\"maxWait\"in o)?p(v(o.maxWait)||0,e):i,k=\"trailing\"in o?!!o.trailing:k),z.cancel=function(){void 0!==c&&clearTimeout(c),d=0,a=s=n=c=void 0},z.flush=function(){return void 0===c?l:x(g())},z}var y=\"Expected a function\";function f(t,e,o){var a=!0,n=!0;if(\"function\"!=typeof t)throw new TypeError(y);return(0,r.i)(o)&&(a=\"leading\"in o?!!o.leading:a,n=\"trailing\"in o?!!o.trailing:n),k(t,e,{leading:a,maxWait:e,trailing:n})}},157:(t,e,o)=>{o.r(e),o.d(e,{market_input_text:()=>c});var r=o(3933),a=o(5558),n=o(5827),i=o(376),l=o(2762);const c=class{constructor(t){(0,r.r)(this,t),this.marketInputValueChange="
+    }
+  ],
+  "timestamp": "2026-03-30T20:06:12.350Z"
+}

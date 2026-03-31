@@ -1,0 +1,15 @@
+{
+  "initialUrl": "https://square.site/book/L6SV5MCXN00CB/shade-nail-spa-san-francisco-ca",
+  "finalUrl": "https://book.squareup.com/appointments/zhyuoylr81g79j/location/L6SV5MCXN00CB/services/XA4S2WKU7HYBHTWNKCPBIBDJ",
+  "hasPepmintPedi": true,
+  "clicked": true,
+  "strategies": [
+    "exact-text",
+    "case-insensitive",
+    "button-text",
+    "div-text",
+    "role-button",
+    "any-element"
+  ],
+  "timestamp": "2026-03-30T19:39:16.800Z"
+}

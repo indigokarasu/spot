@@ -1,0 +1,5 @@
+{
+  "phase": "discovery_stealth",
+  "steps": [],
+  "error": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.opentable.com/r/atelier-crenn\nCall log:\n\u001b[2m  - navigating to \"https://www.opentable.com/r/atelier-crenn\", waiting until \"domcontentloaded\"\u001b[22m\n"
+}
