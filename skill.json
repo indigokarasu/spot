@@ -1,6 +1,6 @@
 {
   "name": "ocas-spot",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Use when checking appointment availability, booking services, or monitoring for openings at salons, spas, and restaurants. Supports Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, and OpenTable (session required). Trigger phrases: 'book an appointment at', 'check availability at', 'when can I get a [service]', 'find me a slot at', 'is [venue] available', 'watch [venue] for openings', 'monitor [venue]', 'alert me when [venue] has availability'.",
   "author": "Indigo Karasu",
   "email": "mx.indigo.karasu@gmail.com",
@@ -22,12 +22,23 @@
     "source": "https://github.com/indigokarasu/ocas-spot",
     "mechanism": "version-checked tarball from GitHub via gh CLI",
     "command": "spot.update",
-    "requires_binaries": ["gh", "tar", "python3"]
+    "requires_binaries": [
+      "gh",
+      "tar",
+      "python3"
+    ]
   },
   "requires": {
-    "bins": ["node", "python3"],
-    "npm": ["playwright"],
-    "pip": ["playwright"]
+    "bins": [
+      "node",
+      "python3"
+    ],
+    "npm": [
+      "playwright"
+    ],
+    "pip": [
+      "playwright"
+    ]
   },
   "scheduled_tasks": [
     {
@@ -43,5 +54,12 @@
       "description": "Self-update from GitHub source"
     }
   ],
-  "tags": ["booking", "appointments", "scheduling", "reservations", "restaurants", "monitoring"]
+  "tags": [
+    "booking",
+    "appointments",
+    "scheduling",
+    "reservations",
+    "restaurants",
+    "monitoring"
+  ]
 }
