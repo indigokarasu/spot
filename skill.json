@@ -1,6 +1,6 @@
 {
   "name": "ocas-spot",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Use when checking appointment availability, booking services, or monitoring for openings at salons, spas, and restaurants. Supports Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, and OpenTable (session required). Trigger phrases: 'book an appointment at', 'check availability at', 'when can I get a [service]', 'find me a slot at', 'is [venue] available', 'watch [venue] for openings', 'monitor [venue]', 'alert me when [venue] has availability'.",
   "author": "Indigo Karasu",
   "email": "mx.indigo.karasu@gmail.com",
