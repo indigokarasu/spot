@@ -1,128 +1,103 @@
 # OpenTable
 
-**Status:** ❌ BLOCKED - Not automatable with current tools
-**Method:** N/A - CDN-level bot detection
-**Last Tested:** 2026-03-30
-**Example Site:** Atelier Crenn (opentable.com)
+**Status:** ⚠️ Working (session required)
+**Method:** One-time manual browser login + Playwright session persistence
+**Previously:** ❌ Blocked by Akamai CDN bot detection on direct requests
 
 ---
 
-## Block Details
+## Overview
 
-**Detection Layer:** Akamai CDN (before application layer)
-
-**Error Pattern:**
-- `net::ERR_HTTP2_PROTOCOL_ERROR`
-- TLS handshake fingerprinting
-- HTTP/2 connection refused
-- Returns gzip-encoded binary instead of HTML
-
-**Root Cause:** 
-Akamai's bot management profiles TLS handshakes and HTTP headers to detect automation tools. This happens at the edge, before any application code runs.
+OpenTable's Akamai CDN blocks headless browser automation and direct HTTP requests. The
+workaround: run a **visible (headed) browser once** for manual login, save the session state,
+then reuse it for subsequent headless checks. The saved session satisfies Akamai's
+human-verification requirement.
 
 ---
 
-## What Does NOT Work (Tested and Failed)
+## One-Time Login (spot.opentable.login)
 
-### ❌ Standard Playwright
-```javascript
-// Fails with HTTP/2 protocol error
-await page.goto('https://www.opentable.com/r/atelier-crenn');
-// ERR_HTTP2_PROTOCOL_ERROR
-```
+Opens a visible browser window. The user logs in manually, then confirms in the terminal.
+Session cookies and storage are saved to `~/openclaw/data/ocas-spot/opentable-session.json`.
 
-### ❌ Mobile Viewport
-```javascript
-// Still times out - Akamai detects Playwright's TLS fingerprint
-const context = await browser.newContext({
-  viewport: { width: 390, height: 844 },
-  userAgent: 'Mozilla/5.0 (iPhone...'
-});
-```
+```python
+from playwright.sync_api import sync_playwright
+import json, os
 
-### ❌ Mobile Subdomain (m.opentable.com)
-```javascript
-// Same HTTP/2 error
-await page.goto('https://m.opentable.com/r/atelier-crenn');
-```
+SESSION_PATH = os.path.expanduser("~/openclaw/data/ocas-spot/opentable-session.json")
 
-### ❌ Disabling HTTP/2
-```javascript
-// Chrome ignores --disable-http2 for some connections
-args: ['--disable-http2', '--disable-quic']
-// Still fails
-```
-
-### ❌ Stealth Plugins
-```javascript
-// puppeteer-extra-plugin-stealth not installed
-// Even with stealth, TLS fingerprint detection persists
-```
-
-### ❌ Direct HTTPS Request
-```javascript
-// Returns binary/garbage data (still blocked)
-https.get('https://www.opentable.com/r/atelier-crenn', ...)
+def save_opentable_session():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)  # Headed — user sees it
+        ctx = browser.new_context()
+        page = ctx.new_page()
+        page.goto("https://www.opentable.com/login")
+        input("Log in to OpenTable in the browser window, then press Enter here...")
+        storage = ctx.storage_state()
+        os.makedirs(os.path.dirname(SESSION_PATH), exist_ok=True)
+        with open(SESSION_PATH, "w") as f:
+            json.dump(storage, f)
+        browser.close()
+        print(f"Session saved to {SESSION_PATH}")
 ```
 
 ---
 
-## Hypothetical Workarounds (Untested)
+## Availability Check (with saved session)
 
-### ⚠️ Residential Proxy
-Route traffic through residential ISP IP (not datacenter):
-```javascript
-// Would require proxy service like Bright Data, Oxylabs
-const browser = await chromium.launch({
-  proxy: { server: 'residential-proxy:8080' }
-});
-```
+```python
+from playwright.sync_api import sync_playwright
+import json, os
 
-### ⚠️ Real Browser Debugging
-Use your actual Chrome instance via remote debugging:
-```bash
-# Start Chrome with debug port
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
-  --remote-debugging-port=9222
+SESSION_PATH = os.path.expanduser("~/openclaw/data/ocas-spot/opentable-session.json")
 
-# Connect Playwright to real browser
-const browser = await chromium.connectOverCDP('http://localhost:9222');
-```
+def check_opentable_availability(restaurant_slug: str, date: str, party_size: int = 2) -> dict:
+    if not os.path.exists(SESSION_PATH):
+        raise RuntimeError("No OpenTable session found. Run spot.opentable.login first.")
 
-### ⚠️ Browser-as-a-Service
-Use services like Browserless, ScrapingBee, or Playwright Cloud that handle bot detection:
-```javascript
-// Would require external service account
-const browser = await chromium.connect('wss://browserless.io/...');
+    with open(SESSION_PATH) as f:
+        storage_state = json.load(f)
+
+    url = f"https://www.opentable.com/{restaurant_slug}"
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        ctx = browser.new_context(storage_state=storage_state)
+        page = ctx.new_page()
+        page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        page.wait_for_timeout(3000)
+
+        times = page.evaluate("""() => {
+            return [...document.querySelectorAll('[data-test="available-time"]')]
+                .map(el => el.textContent.trim());
+        }""")
+
+        browser.close()
+        return {
+            "venue": restaurant_slug,
+            "date": date,
+            "party_size": party_size,
+            "available": len(times) > 0,
+            "times": times,
+            "note": "Session-based check — re-run spot.opentable.login if blocked",
+        }
 ```
 
 ---
 
-## Why This Platform is Different
+## Session Maintenance
 
-| Platform | Bot Detection | Bypass Difficulty |
-|----------|--------------|-------------------|
-| **Acuity** | None | Easy |
-| **Square** | Application-level (custom elements) | Medium |
-| **OpenTable** | **CDN-level (Akamai)** | **Hard/Impossible** |
-
-**Key insight:** CDN-level blocking happens before Playwright can execute any code. No amount of JavaScript injection, viewport spoofing, or user-agent rotation helps.
+- Session cookies expire. If checks start failing with redirects to login, re-run `spot.opentable.login`.
+- Session file path: `~/openclaw/data/ocas-spot/opentable-session.json`
+- This file is in `.gitignore` — do not commit it.
 
 ---
 
-## Recommendation
+## Rejected Methods
 
-**Do not attempt further automation.** OpenTable's bot protection is enterprise-grade and actively maintained. The effort required to bypass (residential proxies, real browser farms) exceeds value for single-restaurant checks.
-
-**Alternative:**
-- Use OpenTable mobile app APIs (if accessible)
-- Monitor via email alerts if restaurant offers notifications
-- Manual checking for high-value reservations
-
----
-
-## References
-
-- Akamai Bot Manager: https://www.akamai.com/products/bot-manager
-- TLS Fingerprinting: https://fingerprintsjs.com/blog/what-is-tls-fingerprinting
-- Bot detection bypass difficulty: Very Hard (requires infrastructure investment)
+| Method | Result |
+|--------|--------|
+| Direct HTTP requests | Akamai 403 / HTTP2 protocol error |
+| Headless browser (no session) | Akamai CAPTCHA/block |
+| Mobile viewport / user-agent spoofing | TLS fingerprint still detected |
+| Stealth scripts alone | Insufficient without prior human session |
+| Disabling HTTP/2 | Chrome ignores flag; still fails |
