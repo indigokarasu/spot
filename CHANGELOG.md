@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.1] - 2026-04-03
+
+### Fixed
+- Resy: switch from browser-only to REST API with token auth for auth-gated restaurants (e.g. Copra)
+- Resy: add credential-based token flow (RESY_API_KEY, RESY_EMAIL, RESY_PASSWORD env vars)
+- Resy: 12-hour token cache in `~/openclaw/data/ocas-spot/resy-token.json` — portable across machines
+- Resy: browser automation retained as fallback for unauthenticated venues; warns when credentials not set
+
+### Changed
+- `references/platforms/resy.md` — updated status to ⚠️ Working (auth-dependent), documented env vars, token flow, API endpoints
+- SKILL.md platform table — Resy row updated to reflect auth requirement
+- Version 2.0.0 → 2.0.1
+
+---
+
 ## [2.0.0] - 2026-04-04
 
 ### Added

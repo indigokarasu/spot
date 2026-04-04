@@ -80,7 +80,7 @@ When `time_window` is extracted, filter returned times to that window before pre
    - **Acuity**: `node scripts/acuity.js` — REST API, no auth
    - **Square**: `node scripts/square.js` — Playwright; `hasAttribute('disabled')` on `market-button` (never `isEnabled()`)
    - **SevenRooms**: `python3 scripts/sevenrooms.py` — Playwright, widget UI
-   - **Resy**: `python3 scripts/resy.py` — Playwright; URL params + body text check
+   - **Resy**: `python3 scripts/resy.py` — REST API (set RESY_API_KEY/EMAIL/PASSWORD); browser fallback for unauthenticated venues
    - **Tock**: `python3 scripts/tock.py` — Playwright + stealth; URL-based date iteration (never click calendar)
    - **OpenTable**: inline Python using saved session from `opentable-session.json`
 3. **Slot selection** — Present available dates/times to user. Wait for confirmation.
@@ -94,7 +94,7 @@ When `time_window` is extracted, filter returned times to that window before pre
 | Acuity Scheduling | REST API | ✅ Production | Domains: `*.acuityscheduling.com`, `*.as.me` |
 | Square Appointments | Browser automation | ⚠️ Working | `market-button` custom elements; `hasAttribute('disabled')` only |
 | SevenRooms | Browser automation | ✅ Production | Widget API returns empty; browser required |
-| Resy | Browser automation | ✅ Production | Direct API returns 419; URL params + body text check |
+| Resy | REST API + browser fallback | ⚠️ Working (auth-dependent) | Set RESY_API_KEY/EMAIL/PASSWORD env vars; browser fallback for open venues |
 | Tock | Browser automation + stealth | ⚠️ Working | CF Turnstile on calendar clicks; use URL-based iteration |
 | OpenTable | Browser automation + session | ⚠️ Working | Run `spot.opentable.login` once; re-run if session expires |
 | Mindbody | — | ❌ Unknown | Not yet tested |
