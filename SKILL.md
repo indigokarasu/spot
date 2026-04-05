@@ -13,7 +13,7 @@ Spot owns: availability checks, appointment bookings, venue registry management,
 
 Spot does not own: general travel planning (Voyage), calendar sync, restaurant reservations on unsupported platforms, or platforms requiring authentication Spot does not hold.
 
-## Ontology mapping
+## Ontology types
 
 - **Place** — venues where appointments or reservations are made. Emitted to Elephas on first booking or first watch entry for a new venue.
 - **Concept/Event** — confirmed appointments and reservations. Emitted to Elephas after booking confirmation.
