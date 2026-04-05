@@ -1,3 +1,19 @@
+## [2026-04-05] Yelp discovery layer
+
+### Added
+- `spot.discover [type] [location]` — parallel Yelp discovery workflow (API business search + delivery eligibility + page verification, top-3 reviews fetched in parallel). Returns ranked shortlist with decision signals. Flows into `spot.venue.add` → `spot.check` → `spot.book`.
+- Yelp storage: `~/openclaw/data/ocas-spot/yelp/` (alias-cache, shortlists, request-log)
+- `spot.init` step 4: optional Yelp API key setup with public page fallback
+- `yelp_api_key` optional credential in skill.json
+- `discovery` and `yelp` tags added
+
+### Changed
+- `description` updated to include discovery trigger phrases
+- `filesystem.write` extended to include `yelp/` subdirectory
+
+### Validation
+- ✓ Version: 2.0.2 → 2.1.0
+
 ## [2026-04-04] Spec Compliance Update
 
 ### Changes

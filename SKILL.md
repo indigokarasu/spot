@@ -20,6 +20,22 @@ Spot does not own: general travel planning (Voyage), calendar sync, restaurant r
 
 ## Commands
 
+### Discovery
+
+`spot.discover [type] [location] [--open-now] [--price 1|2|3|4] [--min-rating N]` — find and compare venues using Yelp before adding one to the registry. Fans out in parallel: Yelp API business search, delivery eligibility check (where applicable), and public page verification. Fetches reviews for the top 3 candidates in parallel. Returns a ranked shortlist with decision signals. Flows into `spot.venue.add` → `spot.check` → `spot.book`.
+
+| Signal | Weight |
+|--------|--------|
+| Rating stability (not just star average) | High |
+| Review recency (newest reviews matter more) | High |
+| Complaint theme clusters | High |
+| Review volume | Medium |
+| Price fit | Medium |
+| Category match | Medium |
+| Delivery/takeout eligibility | Low (if relevant) |
+
+After discovery, user selects from shortlist. Selected venue is auto-populated into `spot.venue.add` using the Yelp alias. If `YELP_API_KEY` is not set, Spot falls back to public Yelp page navigation — same output, slower, less structured.
+
 ### Availability and booking
 
 `spot.check [venue] [service] [date_range]` — Check availability at a venue. `venue` may be a registered name or booking URL. `date_range` defaults to next 30 days. Returns available dates and time slots.
@@ -165,6 +181,10 @@ Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run wr
   bookings.jsonl            — booking history (past and upcoming)
   watch.jsonl               — watchlist records (active and inactive)
   opentable-session.json    — OpenTable session state (not in repo, gitignored)
+  yelp/
+    alias-cache.md          — name+location → Yelp alias/ID (avoids redundant lookups)
+    shortlists.md           — saved discovery sessions with accepted/rejected reasons
+    request-log.md          — redacted endpoint logs (path, safe params, status, timestamp)
 
 ~/openclaw/journals/ocas-spot/
   YYYY-MM-DD/
@@ -258,6 +278,12 @@ spot:check-upcoming: spot.list --upcoming
    { "timezone": "America/Los_Angeles", "name": null, "email": null, "phone": null }
    ```
 3. Register cron and heartbeat (see Background Tasks above).
+4. **Yelp setup** (run once; optional):
+   - Check environment: `echo $YELP_API_KEY`
+   - If empty: note that `spot.discover` works in page mode without a key
+   - To enable full API mode: create a free Yelp developer app at `https://www.yelp.com/developers/v3/manage_app`
+   - Store key: add `YELP_API_KEY=<key>` to OpenClaw environment config
+   - Create Yelp storage dirs: `mkdir -p ~/openclaw/data/ocas-spot/yelp/`
 
 ## Support file map
 

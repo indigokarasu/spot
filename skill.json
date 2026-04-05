@@ -1,10 +1,35 @@
 {
   "name": "ocas-spot",
-  "version": "2.0.2",
-  "description": "Use when checking appointment availability, booking services, or monitoring for openings at salons, spas, and restaurants. Supports Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, and OpenTable (session required). Trigger phrases: 'book an appointment at', 'check availability at', 'when can I get a [service]', 'find me a slot at', 'is [venue] available', 'watch [venue] for openings', 'monitor [venue]', 'alert me when [venue] has availability'.",
+  "version": "2.1.0",
+  "description": "Use when checking appointment availability, booking services, monitoring for openings, or discovering venues at salons, spas, and restaurants. spot.discover finds and compares venues via Yelp before booking. Supports Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, and OpenTable (session required). Trigger phrases: 'book an appointment at', 'check availability at', 'when can I get a [service]', 'find me a slot at', 'is [venue] available', 'watch [venue] for openings', 'alert me when [venue] has availability', 'monitor [venue]', 'find a restaurant in', 'compare salons near', 'discover [type] near'.",
   "author": "Indigo Karasu",
   "email": "mx.indigo.karasu@gmail.com",
   "skill_type": "system",
+  "requires": {
+    "bins": [
+      "node",
+      "python3"
+    ],
+    "npm": [
+      "playwright"
+    ],
+    "pip": [
+      "playwright"
+    ],
+    "credentials": [
+      {
+        "name": "yelp_api_key",
+        "description": "Yelp Fusion API key for structured business discovery and review data",
+        "required": false,
+        "note": "Free developer access at yelp.com/developers. Falls back to public page navigation if not set."
+      },
+      {
+        "name": "resy_api_key",
+        "description": "Resy API key for authenticated reservation lookups",
+        "required": false
+      }
+    ]
+  },
   "filesystem": {
     "read": [
       "~/openclaw/data/ocas-spot/",
@@ -13,6 +38,7 @@
     ],
     "write": [
       "~/openclaw/data/ocas-spot/",
+      "~/openclaw/data/ocas-spot/yelp/",
       "~/openclaw/journals/ocas-spot/",
       "~/openclaw/db/ocas-elephas/intake/",
       "~/openclaw/data/ocas-vesper/intake/"
@@ -26,18 +52,6 @@
       "gh",
       "tar",
       "python3"
-    ]
-  },
-  "requires": {
-    "bins": [
-      "node",
-      "python3"
-    ],
-    "npm": [
-      "playwright"
-    ],
-    "pip": [
-      "playwright"
     ]
   },
   "scheduled_tasks": [
@@ -60,6 +74,8 @@
     "scheduling",
     "reservations",
     "restaurants",
-    "monitoring"
+    "monitoring",
+    "discovery",
+    "yelp"
   ]
 }
