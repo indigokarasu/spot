@@ -18,13 +18,13 @@ human-verification requirement.
 ## One-Time Login (spot.opentable.login)
 
 Opens a visible browser window. The user logs in manually, then confirms in the terminal.
-Session cookies and storage are saved to `~/openclaw/data/ocas-spot/opentable-session.json`.
+Session cookies and storage are saved to `$OCAS_DATA_ROOT/data/ocas-spot/opentable-session.json`.
 
 ```python
 from playwright.sync_api import sync_playwright
 import json, os
 
-SESSION_PATH = os.path.expanduser("~/openclaw/data/ocas-spot/opentable-session.json")
+SESSION_PATH = os.path.expanduser("$OCAS_DATA_ROOT/data/ocas-spot/opentable-session.json")
 
 def save_opentable_session():
     with sync_playwright() as p:
@@ -49,7 +49,7 @@ def save_opentable_session():
 from playwright.sync_api import sync_playwright
 import json, os
 
-SESSION_PATH = os.path.expanduser("~/openclaw/data/ocas-spot/opentable-session.json")
+SESSION_PATH = os.path.expanduser("$OCAS_DATA_ROOT/data/ocas-spot/opentable-session.json")
 
 def check_opentable_availability(restaurant_slug: str, date: str, party_size: int = 2) -> dict:
     if not os.path.exists(SESSION_PATH):
@@ -87,7 +87,7 @@ def check_opentable_availability(restaurant_slug: str, date: str, party_size: in
 ## Session Maintenance
 
 - Session cookies expire. If checks start failing with redirects to login, re-run `spot.opentable.login`.
-- Session file path: `~/openclaw/data/ocas-spot/opentable-session.json`
+- Session file path: `$OCAS_DATA_ROOT/data/ocas-spot/opentable-session.json`
 - This file is in `.gitignore` — do not commit it.
 
 ---

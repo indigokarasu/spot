@@ -1,6 +1,70 @@
 ---
 name: ocas-spot
-description: Use when checking appointment availability, booking services, or monitoring for openings at salons, spas, and restaurants. Supports Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, and OpenTable (session required). Trigger phrases: "book an appointment at", "check availability at", "when can I get a [service]", "find me a slot at", "is [venue] available", "watch [venue] for openings", "alert me when [venue] has availability", "monitor [venue]".
+description: >
+  Use when checking appointment availability, booking services, monitoring for
+  openings, or discovering venues at salons, spas, and restaurants.
+  spot.discover finds and compares venues via Yelp before booking. Supports
+  Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, and
+  OpenTable (session required). Trigger phrases: 'book an appointment at',
+  'check availability at', 'when can I get a [service]', 'find me a slot at',
+  'is [venue] available', 'watch [venue] for openings', 'alert me when [venue]
+  has availability', 'monitor [venue]', 'find a restaurant in', 'compare
+  salons near', 'discover [type] near'.
+metadata:
+  author: Indigo Karasu
+  email: mx.indigo.karasu@gmail.com
+  version: "2.2.0"
+  hermes:
+    tags: [booking, appointments, discovery]
+    category: execution
+    cron:
+      - name: "spot:watch-sweep"
+        schedule: "every 15m"
+        command: "spot.watch.sweep"
+      - name: "spot:update"
+        schedule: "0 0 * * *"
+        command: "spot.update"
+  openclaw:
+    skill_type: system
+    visibility: public
+    filesystem:
+      read:
+        - "$OCAS_DATA_ROOT/data/ocas-spot/"
+        - "$OCAS_DATA_ROOT/journals/ocas-spot/"
+        - "$OCAS_DATA_ROOT/data/ocas-voyage/itineraries/"
+      write:
+        - "$OCAS_DATA_ROOT/data/ocas-spot/"
+        - "$OCAS_DATA_ROOT/data/ocas-spot/yelp/"
+        - "$OCAS_DATA_ROOT/journals/ocas-spot/"
+        - "$OCAS_DATA_ROOT/db/ocas-elephas/intake/"
+        - "$OCAS_DATA_ROOT/data/ocas-vesper/intake/"
+    self_update:
+      source: "https://github.com/indigokarasu/ocas-spot"
+      mechanism: "version-checked tarball from GitHub via gh CLI"
+      command: "spot.update"
+      requires_binaries: [gh, tar, python3]
+    requires:
+      bins:
+        - "node"
+        - "python3"
+      npm:
+        - "playwright"
+      pip:
+        - "playwright"
+      credentials:
+        - name: "yelp_api_key"
+          description: "Yelp Fusion API key for structured business discovery and review data"
+          required: false
+        - name: "resy_api_key"
+          description: "Resy API key for authenticated reservation lookups"
+          required: false
+    cron:
+      - name: "spot:watch-sweep"
+        schedule: "every 15m"
+        command: "spot.watch.sweep"
+      - name: "spot:update"
+        schedule: "0 0 * * *"
+        command: "spot.update"
 ---
 
 # Spot
@@ -64,11 +128,11 @@ After discovery, user selects from shortlist. Selected venue is auto-populated i
 
 ### Platform-specific
 
-`spot.opentable.login` — Open a visible browser window for manual OpenTable login. Saves session state to `~/openclaw/data/ocas-spot/opentable-session.json`. Run once; re-run if checks start failing. See `references/platforms/opentable.md`.
+`spot.opentable.login` — Open a visible browser window for manual OpenTable login. Saves session state to `$OCAS_DATA_ROOT/data/ocas-spot/opentable-session.json`. Run once; re-run if checks start failing. See `references/platforms/opentable.md`.
 
 ### Maintenance
 
-`spot.update` — Pull latest release from GitHub. Preserves `~/openclaw/data/ocas-spot/` and journals.
+`spot.update` — Pull latest release from GitHub. Preserves `$OCAS_DATA_ROOT/data/ocas-spot/` and journals.
 
 ## NLP parsing
 
@@ -126,7 +190,7 @@ During `spot.watch.sweep`:
 2. For each record, call the platform script with venue, dates/range, and party_size.
 3. Filter results to the record's `time_window` if set.
 4. Compare found times against `last_found`. If new times exist:
-   - Write InsightProposal to `~/openclaw/data/ocas-vesper/intake/{proposal_id}.json`:
+   - Write InsightProposal to `$OCAS_DATA_ROOT/data/ocas-vesper/intake/{proposal_id}.json`:
      ```json
      {
        "proposal_id": "prop_{hash}",
@@ -143,13 +207,13 @@ During `spot.watch.sweep`:
 
 ## Optional skill cooperation
 
-- **Elephas** — Spot emits Place and Concept/Event Signals to `~/openclaw/db/ocas-elephas/intake/` after confirmed bookings and on first watch-add for a new venue. Format: `{signal_id}.signal.json`.
-- **Vesper** — Spot writes InsightProposals to `~/openclaw/data/ocas-vesper/intake/` when watch-sweep finds new availability and after confirmed bookings. Vesper surfaces these in briefings.
-- **Voyage** — Cooperative read: Spot may check `~/openclaw/data/ocas-voyage/itineraries/` to associate a booking with an active travel plan when venue location matches a trip destination.
+- **Elephas** — Spot emits Place and Concept/Event Signals to `$OCAS_DATA_ROOT/db/ocas-elephas/intake/` after confirmed bookings and on first watch-add for a new venue. Format: `{signal_id}.signal.json`.
+- **Vesper** — Spot writes InsightProposals to `$OCAS_DATA_ROOT/data/ocas-vesper/intake/` when watch-sweep finds new availability and after confirmed bookings. Vesper surfaces these in briefings.
+- **Voyage** — Cooperative read: Spot may check `$OCAS_DATA_ROOT/data/ocas-voyage/itineraries/` to associate a booking with an active travel plan when venue location matches a trip destination.
 
 ## Journal outputs
 
-Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run writes a journal to `~/openclaw/journals/ocas-spot/YYYY-MM-DD/{run_id}.json`.
+Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run writes a journal to `$OCAS_DATA_ROOT/journals/ocas-spot/YYYY-MM-DD/{run_id}.json`.
 
 - **Observation Journal** — `spot.check`, `spot.watch.sweep` with no new availability
 - **Action Journal** — `spot.book`, `spot.watch.sweep` when an InsightProposal is written
@@ -175,7 +239,7 @@ Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run wr
 ## Storage layout
 
 ```
-~/openclaw/data/ocas-spot/
+$OCAS_DATA_ROOT/data/ocas-spot/
   config.json               — defaults (timezone, name, email, phone)
   venues.jsonl              — registered venues with platform configs
   bookings.jsonl            — booking history (past and upcoming)
@@ -186,7 +250,7 @@ Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run wr
     shortlists.md           — saved discovery sessions with accepted/rejected reasons
     request-log.md          — redacted endpoint logs (path, safe params, status, timestamp)
 
-~/openclaw/journals/ocas-spot/
+$OCAS_DATA_ROOT/journals/ocas-spot/
   YYYY-MM-DD/
     {run_id}.json
 ```
@@ -246,13 +310,13 @@ Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run wr
 During `spot.init`, register the following cron job (check first to ensure idempotence):
 
 ```bash
-openclaw cron list  # verify spot:watch-sweep not already present
-openclaw cron add --name "spot:watch-sweep" --every "15m" \
+# Check platform scheduling registry for existing tasks
+# Task declared in SKILL.md frontmatter metadata.{platform}.cron
   --session isolated --message "spot.watch.sweep" \
   --light-context --tz America/Los_Angeles
 ```
 
-During `spot.init`, also append to `~/.openclaw/workspace/HEARTBEAT.md` if not already present (check before appending to ensure idempotence):
+During `spot.init`, also append to `$OCAS_WORKSPACE_ROOT/HEARTBEAT.md` if not already present (check before appending to ensure idempotence):
 ```
 spot:check-upcoming: spot.list --upcoming
 ```
@@ -272,7 +336,7 @@ spot:check-upcoming: spot.list --upcoming
 
 `spot.init`:
 
-1. Create `~/openclaw/data/ocas-spot/` and `~/openclaw/journals/ocas-spot/` if not present.
+1. Create `$OCAS_DATA_ROOT/data/ocas-spot/` and `$OCAS_DATA_ROOT/journals/ocas-spot/` if not present.
 2. Write `config.json` with defaults if not present:
    ```json
    { "timezone": "America/Los_Angeles", "name": null, "email": null, "phone": null }
@@ -283,7 +347,7 @@ spot:check-upcoming: spot.list --upcoming
    - If empty: note that `spot.discover` works in page mode without a key
    - To enable full API mode: create a free Yelp developer app at `https://www.yelp.com/developers/v3/manage_app`
    - Store key: add `YELP_API_KEY=<key>` to OpenClaw environment config
-   - Create Yelp storage dirs: `mkdir -p ~/openclaw/data/ocas-spot/yelp/`
+   - Create Yelp storage dirs: `mkdir -p $OCAS_DATA_ROOT/data/ocas-spot/yelp/`
 
 ## Support file map
 
@@ -306,4 +370,4 @@ spot:check-upcoming: spot.list --upcoming
 
 ## Update command
 
-`spot.update`: Fetch latest release tarball from `https://github.com/indigokarasu/ocas-spot` via `gh release download`. Verify version is newer than installed. Extract to skill directory. Preserve `~/openclaw/data/ocas-spot/` and journals.
+`spot.update`: Fetch latest release tarball from `https://github.com/indigokarasu/ocas-spot` via `gh release download`. Verify version is newer than installed. Extract to skill directory. Preserve `$OCAS_DATA_ROOT/data/ocas-spot/` and journals.

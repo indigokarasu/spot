@@ -2,7 +2,7 @@
 
 ### Added
 - `spot.discover [type] [location]` — parallel Yelp discovery workflow (API business search + delivery eligibility + page verification, top-3 reviews fetched in parallel). Returns ranked shortlist with decision signals. Flows into `spot.venue.add` → `spot.check` → `spot.book`.
-- Yelp storage: `~/openclaw/data/ocas-spot/yelp/` (alias-cache, shortlists, request-log)
+- Yelp storage: `$OCAS_DATA_ROOT/data/ocas-spot/yelp/` (alias-cache, shortlists, request-log)
 - `spot.init` step 4: optional Yelp API key setup with public page fallback
 - `yelp_api_key` optional credential in skill.json
 - `discovery` and `yelp` tags added
@@ -31,12 +31,24 @@
 
 # Changelog
 
+## [2.2.0] - 2026-04-08
+
+### Multi-Platform Compatibility Migration
+
+- Adopted agentskills.io open standard for skill packaging
+- Replaced skill.json with YAML frontmatter in SKILL.md
+- Replaced hardcoded ~/openclaw/ paths with $OCAS_DATA_ROOT/ for platform portability
+- Abstracted cron/heartbeat registration to declarative metadata pattern
+- Added metadata.hermes and metadata.openclaw extension points
+- Compatible with both OpenClaw and Hermes Agent
+
+
 ## [2.0.1] - 2026-04-03
 
 ### Fixed
 - Resy: switch from browser-only to REST API with token auth for auth-gated restaurants (e.g. Copra)
 - Resy: add credential-based token flow (RESY_API_KEY, RESY_EMAIL, RESY_PASSWORD env vars)
-- Resy: 12-hour token cache in `~/openclaw/data/ocas-spot/resy-token.json` — portable across machines
+- Resy: 12-hour token cache in `$OCAS_DATA_ROOT/data/ocas-spot/resy-token.json` — portable across machines
 - Resy: browser automation retained as fallback for unauthenticated venues; warns when credentials not set
 
 ### Changed
@@ -64,7 +76,7 @@
 - Platform table updated: SevenRooms ✅, Resy ✅, Tock ⚠️, OpenTable ⚠️ (session required)
 - `self_update.source` updated to `indigokarasu/ocas-spot`
 - `skill.json` `requires` now lists `npm` and `pip` dependencies explicitly
-- `filesystem.write` updated: `ocas-elephas` intake path corrected to `~/openclaw/db/ocas-elephas/intake/`
+- `filesystem.write` updated: `ocas-elephas` intake path corrected to `$OCAS_DATA_ROOT/db/ocas-elephas/intake/`
 - `filesystem.read` extended to include `ocas-voyage/itineraries/`
 - Version 1.0.0 → 2.0.0
 

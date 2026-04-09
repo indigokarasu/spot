@@ -2,7 +2,7 @@
 
 ## VenueRecord
 
-Stored in `~/openclaw/data/ocas-spot/venues.jsonl`. One record per venue.
+Stored in `$OCAS_DATA_ROOT/data/ocas-spot/venues.jsonl`. One record per venue.
 
 ```json
 {
@@ -28,7 +28,7 @@ Stored in `~/openclaw/data/ocas-spot/venues.jsonl`. One record per venue.
 
 ## BookingRecord
 
-Stored in `~/openclaw/data/ocas-spot/bookings.jsonl`. One record per booking attempt.
+Stored in `$OCAS_DATA_ROOT/data/ocas-spot/bookings.jsonl`. One record per booking attempt.
 
 ```json
 {
@@ -71,7 +71,7 @@ Embedded in VenueRecord under `platform_config`. Platform-specific fields:
 
 ## config.json
 
-Stored at `~/openclaw/data/ocas-spot/config.json`.
+Stored at `$OCAS_DATA_ROOT/data/ocas-spot/config.json`.
 
 ```json
 {

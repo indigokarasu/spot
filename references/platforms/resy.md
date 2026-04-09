@@ -34,7 +34,7 @@ Without these, `scripts/resy.py` falls back to unauthenticated browser automatio
 
 ## Token flow
 
-1. Check for cached token in `~/openclaw/data/ocas-spot/resy-token.json`
+1. Check for cached token in `$OCAS_DATA_ROOT/data/ocas-spot/resy-token.json`
 2. If cached and not expired (12h TTL), use it
 3. Otherwise: `POST api.resy.com/3/auth/password` → token string
 4. Cache token with `expires_at = now + 43200`
@@ -109,7 +109,7 @@ result = _check_browser(slug, date, party_size, city)
 
 1. **Browser automation unreliable for popular venues** — auth-gated restaurants return no slots
 2. **API auth works** — `POST /3/auth/password` returns a long-lived token (~12h)
-3. **Token is portable** — stored in `~/openclaw/data/ocas-spot/resy-token.json`, valid across machines when credentials are set
+3. **Token is portable** — stored in `$OCAS_DATA_ROOT/data/ocas-spot/resy-token.json`, valid across machines when credentials are set
 4. **Venue ID required for API** — slug alone is not enough; use `/3/venue?url_slug=...` to resolve
 5. **URL parameters still needed for browser fallback** — `?date=YYYY-MM-DD&seats=N`
 
