@@ -13,7 +13,7 @@ description: >
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "2.2.0"
+  version: "2.2.1"
   hermes:
     tags: [booking, appointments, discovery]
     category: execution
@@ -29,15 +29,13 @@ metadata:
     visibility: public
     filesystem:
       read:
-        - "$OCAS_DATA_ROOT/data/ocas-spot/"
-        - "$OCAS_DATA_ROOT/journals/ocas-spot/"
-        - "$OCAS_DATA_ROOT/data/ocas-voyage/itineraries/"
+        - "{agent_root}/commons/data/ocas-spot/"
+        - "{agent_root}/commons/journals/ocas-spot/"
+        - "{agent_root}/commons/data/ocas-voyage/itineraries/"
       write:
-        - "$OCAS_DATA_ROOT/data/ocas-spot/"
-        - "$OCAS_DATA_ROOT/data/ocas-spot/yelp/"
-        - "$OCAS_DATA_ROOT/journals/ocas-spot/"
-        - "$OCAS_DATA_ROOT/db/ocas-elephas/intake/"
-        - "$OCAS_DATA_ROOT/data/ocas-vesper/intake/"
+        - "{agent_root}/commons/data/ocas-spot/"
+        - "{agent_root}/commons/data/ocas-spot/yelp/"
+        - "{agent_root}/commons/journals/ocas-spot/"
     self_update:
       source: "https://github.com/indigokarasu/ocas-spot"
       mechanism: "version-checked tarball from GitHub via gh CLI"
@@ -104,7 +102,7 @@ After discovery, user selects from shortlist. Selected venue is auto-populated i
 
 `spot.check [venue] [service] [date_range]` — Check availability at a venue. `venue` may be a registered name or booking URL. `date_range` defaults to next 30 days. Returns available dates and time slots.
 
-`spot.book [venue] [service] [datetime] [--name NAME] [--email EMAIL] [--phone PHONE]` — Book an appointment. Reads contact defaults from `config.json` if flags omitted. Writes BookingRecord to `bookings.jsonl`. Emits Place + Concept/Event Signals to Elephas and an InsightProposal to Vesper intake.
+`spot.book [venue] [service] [datetime] [--name NAME] [--email EMAIL] [--phone PHONE]` — Book an appointment. Reads contact defaults from `config.json` if flags omitted. Writes BookingRecord to `bookings.jsonl`. Emits Place + Concept/Event Signals to Elephas and an InsightProposal to Vesper (via journal briefing payload).
 
 `spot.list [--upcoming] [--all]` — List bookings from `bookings.jsonl`. Default: next 30 days.
 
@@ -116,7 +114,7 @@ After discovery, user selects from shortlist. Selected venue is auto-populated i
 
 `spot.watch.remove [watch_id]` — Mark a WatchRecord as inactive (sets `active: false`). Does not delete.
 
-`spot.watch.sweep [--platform PLATFORM]` — Check all active WatchRecords for new availability. For each entry, calls the appropriate platform script. On new availability (times found that were not present at `last_found`), writes an InsightProposal to Vesper intake and updates the record. Always updates `last_checked`.
+`spot.watch.sweep [--platform PLATFORM]` — Check all active WatchRecords for new availability. For each entry, calls the appropriate platform script. On new availability (times found that were not present at `last_found`), writes an InsightProposal to Vesper (via journal briefing payload) and updates the record. Always updates `last_checked`.
 
 ### Venue management
 
@@ -128,11 +126,11 @@ After discovery, user selects from shortlist. Selected venue is auto-populated i
 
 ### Platform-specific
 
-`spot.opentable.login` — Open a visible browser window for manual OpenTable login. Saves session state to `$OCAS_DATA_ROOT/data/ocas-spot/opentable-session.json`. Run once; re-run if checks start failing. See `references/platforms/opentable.md`.
+`spot.opentable.login` — Open a visible browser window for manual OpenTable login. Saves session state to `{agent_root}/commons/data/ocas-spot/opentable-session.json`. Run once; re-run if checks start failing. See `references/platforms/opentable.md`.
 
 ### Maintenance
 
-`spot.update` — Pull latest release from GitHub. Preserves `$OCAS_DATA_ROOT/data/ocas-spot/` and journals.
+`spot.update` — Pull latest release from GitHub. Preserves `{agent_root}/commons/data/ocas-spot/` and journals.
 
 ## NLP parsing
 
@@ -165,7 +163,7 @@ When `time_window` is extracted, filter returned times to that window before pre
    - **OpenTable**: inline Python using saved session from `opentable-session.json`
 3. **Slot selection** — Present available dates/times to user. Wait for confirmation.
 4. **Booking** — Execute booking flow. Capture confirmation reference.
-5. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper intake.
+5. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper (via journal briefing payload).
 
 ## Platform support
 
@@ -190,7 +188,7 @@ During `spot.watch.sweep`:
 2. For each record, call the platform script with venue, dates/range, and party_size.
 3. Filter results to the record's `time_window` if set.
 4. Compare found times against `last_found`. If new times exist:
-   - Write InsightProposal to `$OCAS_DATA_ROOT/data/ocas-vesper/intake/{proposal_id}.json`:
+   - Write InsightProposal to the `briefing` payload field in the journal entry:
      ```json
      {
        "proposal_id": "prop_{hash}",
@@ -207,13 +205,13 @@ During `spot.watch.sweep`:
 
 ## Optional skill cooperation
 
-- **Elephas** — Spot emits Place and Concept/Event Signals to `$OCAS_DATA_ROOT/db/ocas-elephas/intake/` after confirmed bookings and on first watch-add for a new venue. Format: `{signal_id}.signal.json`.
-- **Vesper** — Spot writes InsightProposals to `$OCAS_DATA_ROOT/data/ocas-vesper/intake/` when watch-sweep finds new availability and after confirmed bookings. Vesper surfaces these in briefings.
-- **Voyage** — Cooperative read: Spot may check `$OCAS_DATA_ROOT/data/ocas-voyage/itineraries/` to associate a booking with an active travel plan when venue location matches a trip destination.
+- **Elephas** — Spot emits Place and Concept/Event Signals to journal payload fields (see interfaces specification) after confirmed bookings and on first watch-add for a new venue. Format: `{signal_id}.signal.json`.
+- **Vesper** — Spot writes InsightProposals to journal payload fields (see interfaces specification) when watch-sweep finds new availability and after confirmed bookings. Vesper surfaces these in briefings.
+- **Voyage** — Cooperative read: Spot may check `{agent_root}/commons/data/ocas-voyage/itineraries/` to associate a booking with an active travel plan when venue location matches a trip destination.
 
 ## Journal outputs
 
-Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run writes a journal to `$OCAS_DATA_ROOT/journals/ocas-spot/YYYY-MM-DD/{run_id}.json`.
+Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run writes a journal to `{agent_root}/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json`.
 
 - **Observation Journal** — `spot.check`, `spot.watch.sweep` with no new availability
 - **Action Journal** — `spot.book`, `spot.watch.sweep` when an InsightProposal is written
@@ -239,7 +237,7 @@ Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run wr
 ## Storage layout
 
 ```
-$OCAS_DATA_ROOT/data/ocas-spot/
+{agent_root}/commons/data/ocas-spot/
   config.json               — defaults (timezone, name, email, phone)
   venues.jsonl              — registered venues with platform configs
   bookings.jsonl            — booking history (past and upcoming)
@@ -250,7 +248,7 @@ $OCAS_DATA_ROOT/data/ocas-spot/
     shortlists.md           — saved discovery sessions with accepted/rejected reasons
     request-log.md          — redacted endpoint logs (path, safe params, status, timestamp)
 
-$OCAS_DATA_ROOT/journals/ocas-spot/
+{agent_root}/commons/journals/ocas-spot/
   YYYY-MM-DD/
     {run_id}.json
 ```
@@ -316,7 +314,7 @@ During `spot.init`, register the following cron job (check first to ensure idemp
   --light-context --tz America/Los_Angeles
 ```
 
-During `spot.init`, also append to `$OCAS_WORKSPACE_ROOT/HEARTBEAT.md` if not already present (check before appending to ensure idempotence):
+During `spot.init`, also append to `{agent_root}/HEARTBEAT.md` if not already present (check before appending to ensure idempotence):
 ```
 spot:check-upcoming: spot.list --upcoming
 ```
@@ -336,7 +334,7 @@ spot:check-upcoming: spot.list --upcoming
 
 `spot.init`:
 
-1. Create `$OCAS_DATA_ROOT/data/ocas-spot/` and `$OCAS_DATA_ROOT/journals/ocas-spot/` if not present.
+1. Create `{agent_root}/commons/data/ocas-spot/` and `{agent_root}/commons/journals/ocas-spot/` if not present.
 2. Write `config.json` with defaults if not present:
    ```json
    { "timezone": "America/Los_Angeles", "name": null, "email": null, "phone": null }
@@ -347,7 +345,7 @@ spot:check-upcoming: spot.list --upcoming
    - If empty: note that `spot.discover` works in page mode without a key
    - To enable full API mode: create a free Yelp developer app at `https://www.yelp.com/developers/v3/manage_app`
    - Store key: add `YELP_API_KEY=<key>` to OpenClaw environment config
-   - Create Yelp storage dirs: `mkdir -p $OCAS_DATA_ROOT/data/ocas-spot/yelp/`
+   - Create Yelp storage dirs: `mkdir -p {agent_root}/commons/data/ocas-spot/yelp/`
 
 ## Support file map
 
@@ -370,4 +368,4 @@ spot:check-upcoming: spot.list --upcoming
 
 ## Update command
 
-`spot.update`: Fetch latest release tarball from `https://github.com/indigokarasu/ocas-spot` via `gh release download`. Verify version is newer than installed. Extract to skill directory. Preserve `$OCAS_DATA_ROOT/data/ocas-spot/` and journals.
+`spot.update`: Fetch latest release tarball from `https://github.com/indigokarasu/ocas-spot` via `gh release download`. Verify version is newer than installed. Extract to skill directory. Preserve `{agent_root}/commons/data/ocas-spot/` and journals.
