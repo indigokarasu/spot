@@ -13,7 +13,7 @@ description: >
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "2.2.1"
+  version: "2.2.2"
   hermes:
     tags: [booking, appointments, discovery]
     category: execution
@@ -344,7 +344,7 @@ spot:check-upcoming: spot.list --upcoming
    - Check environment: `echo $YELP_API_KEY`
    - If empty: note that `spot.discover` works in page mode without a key
    - To enable full API mode: create a free Yelp developer app at `https://www.yelp.com/developers/v3/manage_app`
-   - Store key: add `YELP_API_KEY=<key>` to OpenClaw environment config
+   - Store key: add `YELP_API_KEY=<key>` to platform environment config
    - Create Yelp storage dirs: `mkdir -p {agent_root}/commons/data/ocas-spot/yelp/`
 
 ## Support file map
