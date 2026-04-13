@@ -36,18 +36,16 @@ metadata:
         - "{agent_root}/commons/data/ocas-spot/"
         - "{agent_root}/commons/data/ocas-spot/yelp/"
         - "{agent_root}/commons/journals/ocas-spot/"
+        - "{agent_root}/commons/data/ocas-voyage/itineraries/"
     self_update:
       source: "https://github.com/indigokarasu/ocas-spot"
       mechanism: "version-checked tarball from GitHub via gh CLI"
       command: "spot.update"
-      requires_binaries: [gh, tar, python3]
+      requires_binaries: [gh, tar]
     requires:
       bins:
         - "node"
-        - "python3"
       npm:
-        - "playwright"
-      pip:
         - "playwright"
       credentials:
         - name: "yelp_api_key"
@@ -102,7 +100,7 @@ After discovery, user selects from shortlist. Selected venue is auto-populated i
 
 `spot.check [venue] [service] [date_range]` — Check availability at a venue. `venue` may be a registered name or booking URL. `date_range` defaults to next 30 days. Returns available dates and time slots.
 
-`spot.book [venue] [service] [datetime] [--name NAME] [--email EMAIL] [--phone PHONE]` — Book an appointment. Reads contact defaults from `config.json` if flags omitted. Writes BookingRecord to `bookings.jsonl`. Emits Place + Concept/Event Signals to Elephas and an InsightProposal to Vesper (via journal briefing payload).
+`spot.book [venue] [service] [datetime] [--name NAME] [--email EMAIL] [--phone PHONE]` — Book an appointment. Reads contact defaults from `config.json` if flags omitted. Writes BookingRecord to `bookings.jsonl`. Emits Place + Concept/Event Signals to Elephas and an InsightProposal to Vesper (via journal briefing payload). If the venue location matches an active Voyage itinerary destination (checked via `{agent_root}/commons/data/ocas-voyage/itineraries/`), appends a Travel Context entry to that itinerary record so Voyage surfaces the confirmed booking in plan status.
 
 `spot.list [--upcoming] [--all]` — List bookings from `bookings.jsonl`. Default: next 30 days.
 
@@ -154,16 +152,16 @@ When `time_window` is extracted, filter returned times to that window before pre
 ## Booking workflow
 
 1. **Venue lookup** — Check `venues.jsonl` for a config match. If no match, run `spot.platform.probe` on the provided URL.
-2. **Availability check** — Call platform-appropriate script from `scripts/`:
+2. **Availability check** — Use the platform-appropriate method:
    - **Acuity**: `node scripts/acuity.js` — REST API, no auth
-   - **Square**: `node scripts/square.js` — Playwright; `hasAttribute('disabled')` on `market-button` (never `isEnabled()`)
-   - **SevenRooms**: `python3 scripts/sevenrooms.py` — Playwright, widget UI
-   - **Resy**: `python3 scripts/resy.py` — REST API (set RESY_API_KEY/EMAIL/PASSWORD); browser fallback for unauthenticated venues
-   - **Tock**: `python3 scripts/tock.py` — Playwright + stealth; URL-based date iteration (never click calendar)
-   - **OpenTable**: inline Python using saved session from `opentable-session.json`
+   - **Square**: `node scripts/square.js` — Playwright; `hasAttribute('disabled')` on `market-button` (never `isEnabled()`). Edge cases: (a) wait for `market-loading-indicator` to disappear before reading disabled state — buttons may appear enabled before the page finishes hydrating; (b) if `market-button` lacks the `disabled` attribute but has `aria-disabled="true"`, treat as disabled; (c) shadow DOM: query from the host element, not document root
+   - **SevenRooms**: Direct browser automation — navigate the SevenRooms widget UI; see `references/platforms/sevenrooms.md`
+   - **Resy**: Direct REST API calls (set RESY_API_KEY/EMAIL/PASSWORD); browser fallback for unauthenticated venues; see `references/platforms/resy.md`
+   - **Tock**: Direct browser automation with stealth; URL-based date iteration (never click calendar); see `references/platforms/tock.md`
+   - **OpenTable**: Direct browser automation using saved session from `opentable-session.json`; see `references/platforms/opentable.md`
 3. **Slot selection** — Present available dates/times to user. Wait for confirmation.
 4. **Booking** — Execute booking flow. Capture confirmation reference.
-5. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper (via journal briefing payload).
+5. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper (via journal briefing payload). Check `{agent_root}/commons/data/ocas-voyage/itineraries/` for active itineraries; if the booked venue's location matches a trip destination, append a Travel Context entry to that itinerary record.
 
 ## Platform support
 
@@ -207,7 +205,7 @@ During `spot.watch.sweep`:
 
 - **Elephas** — Spot emits Place and Concept/Event Signals to journal payload fields (see interfaces specification) after confirmed bookings and on first watch-add for a new venue. Format: `{signal_id}.signal.json`.
 - **Vesper** — Spot writes InsightProposals to journal payload fields (see interfaces specification) when watch-sweep finds new availability and after confirmed bookings. Vesper surfaces these in briefings.
-- **Voyage** — Cooperative read: Spot may check `{agent_root}/commons/data/ocas-voyage/itineraries/` to associate a booking with an active travel plan when venue location matches a trip destination.
+- **Voyage** — Cooperative read+write: On confirmed booking, Spot checks `{agent_root}/commons/data/ocas-voyage/itineraries/` for active itineraries. If the booked venue's location matches a trip destination, Spot appends a Travel Context entry to that itinerary record so Voyage surfaces the confirmed booking in plan status and reservation checklist.
 
 ## Journal outputs
 
@@ -362,9 +360,6 @@ spot:check-upcoming: spot.list --upcoming
 | `references/schemas.md` | Full schema definitions |
 | `scripts/acuity.js` | Acuity availability checker (REST API) |
 | `scripts/square.js` | Square availability checker (Playwright) |
-| `scripts/sevenrooms.py` | SevenRooms availability checker (Playwright) |
-| `scripts/resy.py` | Resy availability checker (Playwright) |
-| `scripts/tock.py` | Tock availability checker (Playwright + stealth) |
 
 ## Update command
 
