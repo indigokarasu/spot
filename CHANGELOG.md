@@ -1,3 +1,18 @@
+## [2.3.0] - 2026-04-12
+
+### Added
+- Travel Context: on confirmed booking, Spot checks active Voyage itineraries and appends a Travel Context entry when venue location matches a trip destination
+- Square edge cases: wait for `market-loading-indicator` to clear before reading disabled state; check `aria-disabled` as fallback; query from host element not document root
+- Filesystem write permission for `{agent_root}/commons/data/ocas-voyage/itineraries/` (needed for Travel Context writes)
+
+### Changed
+- SevenRooms, Resy, Tock, OpenTable: agent now handles these platforms directly via browser automation and REST API calls; no helper scripts required
+- Voyage skill cooperation updated from read-only to read+write
+
+### Removed
+- `scripts/resy.py`, `scripts/sevenrooms.py`, `scripts/tock.py` (contained stale openclaw paths; direct agent handling is more reliable)
+- `python3` from required binaries and `pip` from dependencies
+
 ## [2026-04-05] Yelp discovery layer
 
 ### Added

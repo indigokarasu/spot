@@ -13,7 +13,7 @@ description: >
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "2.2.2"
+  version: "2.3.0"
   hermes:
     tags: [booking, appointments, discovery]
     category: execution
