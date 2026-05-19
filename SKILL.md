@@ -180,9 +180,10 @@ When `time_window` is extracted, filter returned times to that window before pre
    - **ResDiary**: Direct browser automation — UK/Europe/Asia focus, 24-hour time format; see `references/platforms/resdiary.md`
    - **Eat App**: Direct browser automation — Middle East focus, multi-language; see `references/platforms/eatapp.md`
 3. **Bot detection** — After page load, run `detect_bot_block()`. If blocked, trigger VPN workflow (see VPN Integration section) and retry through VPN before proceeding.
-4. **Slot selection** — Present available dates/times to user. Wait for confirmation.
-5. **Booking** — Execute booking flow using `human_click()` and `human_type()` for all interactions. Capture confirmation reference.
-6. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper (via journal briefing payload). Check `{agent_root}/commons/data/ocas-voyage/itineraries/` for active itineraries; if the booked venue's location matches a trip destination, append a Travel Context entry to that itinerary record.
+4. **Conflict check (Sands)** — If Sands is present, write a conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json` containing the proposed datetime and duration. Wait briefly for Sands' response file. If Sands reports a conflict, surface it to the user and ask for confirmation before proceeding. If Sands is absent or unresponsive within timeout, proceed without conflict check.
+5. **Slot selection** — Present available dates/times to user. Wait for confirmation.
+6. **Booking** — Execute booking flow using `human_click()` and `human_type()` for all interactions. Capture confirmation reference.
+7. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper (via journal briefing payload). Check `{agent_root}/commons/data/ocas-voyage/itineraries/` for active itineraries; if the booked venue's location matches a trip destination, append a Travel Context entry to that itinerary record. If Sands is present, write a calendar event request to `{agent_root}/commons/data/ocas-sands/intake/{event_id}.event.json` containing venue name, address, service type, date/time, confirmation number, and notes. If the Sands write fails, log the error in the journal — do NOT attempt to cancel the external booking (it is already confirmed at the venue platform); the user can manually add the event later.
 
 ## Platform support
 
@@ -382,6 +383,7 @@ During `spot.watch.sweep`:
 
 - **Elephas** — Spot emits Place and Concept/Event Signals to journal payload fields (see interfaces specification) after confirmed bookings and on first watch-add for a new venue. Format: `{signal_id}.signal.json`.
 - **Vesper** — Spot writes InsightProposals to journal payload fields (see interfaces specification) when watch-sweep finds new availability and after confirmed bookings. Vesper surfaces these in briefings.
+- **Sands** — Cooperative read+write: Before booking, Spot writes a conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json` with the proposed datetime and duration; Sands responds with a conflict/no-conflict result. After confirmed booking, Spot writes an event creation request to `{agent_root}/commons/data/ocas-sands/intake/{event_id}.event.json` containing venue name, address, service type, date/time, confirmation number, and notes. The booking is not rolled back if Sands writes fail — external venue confirmation is authoritative.
 - **Voyage** — Cooperative read+write: On confirmed booking, Spot checks `{agent_root}/commons/data/ocas-voyage/itineraries/` for active itineraries. If the booked venue's location matches a trip destination, Spot appends a Travel Context entry to that itinerary record so Voyage surfaces the confirmed booking in plan status and reservation checklist.
 - **ocas-vpn** — Spot calls ocas-vpn when bot detection blocks access to a booking platform. VPN provides non-US exit IPs to bypass IP-based blocks. See VPN Integration section above for trigger conditions and workflow.
 
