@@ -273,15 +273,29 @@ await page.waitForTimeout(4000);
 - Different screen sizes break positions
 - **DO:** Use semantic selectors as primary, coordinates as fallback only
 
+### ❌ Clicking service items without shadow DOM traversal
+- Square service list items use `market-row` custom elements with shadow DOM
+- Standard `el.click()` on the `<a>` tag inside shadow DOM often does nothing
+- **DO:** Use `el.shadowRoot?.querySelector('a')?.click()` or click the `market-row` host element
+- **DO:** After clicking a service, verify the URL changed to `/services/{ID}` before proceeding
+
+### ❌ Assuming "Next month" button works on first click
+- The "Next month" button sometimes requires **two clicks** to actually advance the month
+- After first click, the calendar grid may update to show dates from the next month but the header still shows the old month
+- **DO:** Click "Next month", then verify the `<h2>` heading changed before proceeding
+- **DO:** Use `document.querySelector('h2').textContent` to verify the current month, not the grid dates
+
 ---
 
 ## Platform Quirks
 
 1. **Custom Elements Everywhere** - `market-*` tags replace standard HTML
-2. **Shadow DOM** - Some elements inaccessible to standard selectors
+2. **Shadow DOM** - Some elements inaccessible to standard selectors; use `el.shadowRoot?.querySelector()` to traverse
 3. **URL Structure** - `/availability` only appears after flow completion
 4. **OAuth Required for API** - No public consumer API, must use browser automation
 5. **Availability Discrepancies** - Automation vs manual browser can show different results
+6. **Month Navigation** - "Next month" button may require two clicks; always verify via `<h2>` heading text
+7. **Date Availability Detection** - Dates that are NOT available appear as `StaticText` (not `<button>` elements) in the accessibility tree; available dates are `<button>` elements. This is the most reliable way to check availability.
 
 ---
 
