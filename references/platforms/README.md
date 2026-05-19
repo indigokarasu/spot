@@ -11,11 +11,19 @@ Systematic patterns for booking and availability automation. Organized for conti
 | Platform | Status | Method | Last Tested |
 |----------|--------|--------|-------------|
 | [Acuity Scheduling](./acuity.md) | ✅ Production | REST API | 2026-03-30 |
-| [Square Appointments](./square.md) | ⚠️ Working | Browser automation | 2026-03-30 |
-| Mindbody | ❌ Unknown | TBD | - |
-| Fresha | ❌ Unknown | TBD | - |
-| StyleSeat | ❌ Unknown | TBD | - |
-| Calendly | ❌ Unknown | TBD | - |
+| [Square Appointments](./square.md) | ⚠️ Working | Browser automation | 2026-05-18 |
+| [Meevo](./meevo.md) | ⚠️ Working | Browser automation | 2026-05-18 |
+| [Vagaro](./vagaro.md) | ⚠️ Partial | Browser automation | 2026-05-18 |
+| [Mindbody](./mindbody.md) | ⚠️ Working | Browser automation | 2026-05-18 |
+| [Fresha](./fresha.md) | ⚠️ Working | Browser automation | 2026-05-18 |
+| [StyleSeat](./styleseat.md) | ⚠️ Working | Browser automation | 2026-05-18 |
+| [Calendly](./calendly.md) | ✅ Working | REST API + browser | 2026-05-18 |
+| [Booksy](./booksy.md) | 🆕 New | Browser automation | Not yet tested |
+| [GlossGenius](./glossgenius.md) | 🆕 New | Browser automation | Not yet tested |
+| [SimplyBook.me](./simplybook.md) | 🆕 New | Browser automation | Not yet tested |
+| [Boulevard](./boulevard.md) | 🆕 New | Browser automation | Not yet tested |
+| [Mangomint](./mangomint.md) | 🆕 New | Browser automation | Not yet tested |
+| [DaySmart Salon](./daysmart.md) | 🆕 New | Browser automation | Not yet tested |
 
 ### Restaurant Reservation Platforms
 
@@ -24,7 +32,10 @@ Systematic patterns for booking and availability automation. Organized for conti
 | [SevenRooms](./sevenrooms.md) | ✅ Production | REST API | 2026-03-31 |
 | [Resy](./resy.md) | ⚠️ Working | Browser automation | 2026-03-31 |
 | [Tock](./tock.md) | ⚠️ Working | Browser automation | 2026-03-31 |
-| [OpenTable](./opentable.md) | ❌ Blocked | N/A | 2026-03-30 |
+| [OpenTable](./opentable.md) | ⚠️ Working | Session-based | 2026-03-30 |
+| [Yelp Reservations](./yelp-reservations.md) | 🆕 New | Browser automation | Not yet tested |
+| [ResDiary](./resdiary.md) | 🆕 New | Browser automation | Not yet tested |
+| [Eat App](./eatapp.md) | 🆕 New | Browser automation | Not yet tested |
 
 ---
 
@@ -72,21 +83,87 @@ Systematic patterns for booking and availability automation. Organized for conti
 - **Response:** React SPA with shadow DOM
 - **Auth:** OAuth for business, public for consumer
 
-### Mindbody (TODO)
-- **Domain:** `*.mindbodyonline.com`
-- **Signature:** TBD
+### Meevo (Millennium)
+- **Domain:** `*.meevo.com`, `login.meevo.com`
+- **Signature:** Angular SPA, multi-step wizard, `div.category-item` for service categories
+- **Response:** Angular-rendered SPA; requires JS click on inner elements
+- **Auth:** None required for public bookings
 
-### Fresha (TODO)
+### Vagaro
+- **Domain:** `*.vagaro.com`
+- **Signature:** Bootstrap modals, service list on `/services` page
+- **Response:** API-dependent; may fail in automation environments
+- **Auth:** None required for public bookings
+
+### Mindbody
+- **Domain:** `*.mindbodyonline.com`, `*.mindbody.io`
+- **Signature:** React SPA, booking widget loads after hydration
+- **Auth:** None for public bookings; OAuth for API
+
+### Fresha
 - **Domain:** `*.fresha.com`
-- **Signature:** TBD
+- **Signature:** React SPA, service cards with "Book" buttons
+- **Auth:** None for public bookings; no public API
 
-### StyleSeat (TODO)
+### StyleSeat
 - **Domain:** `*.styleseat.com`
-- **Signature:** TBD
+- **Signature:** React SPA, professional profile pages
+- **Auth:** Required for booking; not for availability check
 
-### Calendly (TODO)
+### Calendly
 - **Domain:** `calendly.com`
-- **Signature:** TBD
+- **Signature:** REST API (`/v2/event_type_available_times`) or browser
+- **Auth:** `CALENDLY_API_TOKEN` for API; none for browser
+
+### Booksy
+- **Domain:** `*.booksy.com`
+- **Signature:** React SPA, consumer-first design, service cards
+- **Auth:** Required for booking; not for availability check
+
+### GlossGenius
+- **Domain:** `*.glossgenius.com`
+- **Signature:** React SPA, branded booking pages for independent professionals
+- **Auth:** Required for booking; not for availability check
+
+### SimplyBook.me
+- **Domain:** `*.simplybook.me`
+- **Signature:** Highly customizable React SPA, multi-language support
+- **Auth:** Required for booking; not for availability check
+
+### Boulevard
+- **Domain:** `*.blvdup.com`, `book.boulevard.io`
+- **Signature:** Premium React SPA, staff-centric design
+- **Auth:** Required for booking; not for availability check
+
+### Mangomint
+- **Domain:** `*.mangomint.com`
+- **Signature:** Visual-first React SPA, Instagram-style service cards
+- **Auth:** Required for booking; not for availability check
+
+### DaySmart Salon
+- **Domain:** `*.daysmart.com`
+- **Signature:** React SPA, salon-specific service categories
+- **Auth:** Required for booking; not for availability check
+
+### Yelp Reservations
+- **Domain:** `*.yelp.com`
+- **Signature:** React SPA widget embedded in Yelp business pages
+- **Auth:** None for availability check; Yelp account for booking
+
+### ResDiary
+- **Domain:** `*.resdiary.com`
+- **Signature:** React SPA, UK/Europe/Asia focus, 24-hour time format
+- **Auth:** None for availability check
+
+### Eat App
+- **Domain:** `*.eatapp.co`
+- **Signature:** React SPA, Middle East focus, multi-language
+- **Auth:** None for availability check
+
+### Yelp (Discovery)
+- **Domain:** `www.yelp.com`
+- **Signature:** Business search API + review aggregation
+- **Auth:** Optional `YELP_API_KEY`; works in page mode without key
 
 ---
 
@@ -107,6 +184,12 @@ Systematic patterns for booking and availability automation. Organized for conti
 5. **DON'T assume API endpoints are stable**
    - ✅ DO: Capture and document exact request/response patterns
 
+6. **DON'T assume uniform layout** on customizable platforms
+   - ✅ DO: Use flexible selectors; handle missing elements gracefully
+
+7. **DON'T ignore timezone differences** on international platforms
+   - ✅ DO: Check for 24-hour format, DD/MM/YYYY dates, non-English text
+
 ---
 
 ## File Structure
@@ -119,16 +202,25 @@ knowledge/scheduling/
 # Appointment/Spa Platforms
 ├── acuity.md              # Acuity: Happy path + pitfalls
 ├── square.md              # Square: Happy path + pitfalls
-├── mindbody.md            # (future)
-├── fresha.md              # (future)
-├── styleseat.md           # (future)
-├── calendly.md            # (future)
+├── mindbody.md            # Mindbody: React SPA + VPN fallback
+├── fresha.md              # Fresha: React SPA + VPN fallback
+├── styleseat.md           # StyleSeat: React SPA
+├── calendly.md            # Calendly: REST API + browser
+├── booksy.md              # Booksy: React SPA
+├── glossgenius.md         # GlossGenius: React SPA
+├── simplybook.md          # SimplyBook.me: Customizable React SPA
+├── boulevard.md           # Boulevard: Premium React SPA
+├── mangomint.md           # Mangomint: Visual-first React SPA
+├── daysmart.md            # DaySmart: React SPA
 
 # Restaurant Reservation Platforms
 ├── sevenrooms.md          # SevenRooms: Public API
 ├── resy.md                # Resy: Browser automation
 ├── tock.md                # Tock: Browser automation
-├── opentable.md           # OpenTable: Blocked
+├── opentable.md           # OpenTable: Session-based
+├── yelp-reservations.md   # Yelp Reservations: Widget automation
+├── resdiary.md            # ResDiary: UK/Europe/Asia focus
+├── eatapp.md              # Eat App: Middle East focus
 
 # Reusable patterns
 └── patterns/
