@@ -15,7 +15,7 @@ description: >
 metadata:
   author: Indigo Karasu
   email: mx.indigo.karasu@gmail.com
-  version: "2.5.0"
+  version: "2.5.1"
   hermes:
     tags: [booking, appointments, discovery]
     category: execution
@@ -336,6 +336,18 @@ print(f\"Selected: {best['CountryLong']} (Score: {best['Score']})\")
 ### Browser Routing Through VPN
 
 When VPN is active (tun0 interface up), all system traffic including browser automation routes through the VPN automatically. No special Playwright configuration needed — system routing (`0.0.0.0/1` + `128.0.0.0/1` via tun0) handles it.
+
+**VPN config cipher fix:** When downloading VPN Gate configs, many servers only support `AES-128-CBC`. OpenVPN 2.5+ defaults to GCM ciphers and will fail with `OPTIONS ERROR: failed to negotiate cipher`. Before connecting, patch the config:
+```python
+config = base64.b64decode(server['OpenVPN_ConfigData_Base64']).decode()
+if 'data-ciphers' not in config:
+    lines = config.split('\n')
+    for i, line in enumerate(lines):
+        if line.startswith('cipher '):
+            lines.insert(i+1, 'data-ciphers AES-128-CBC:AES-256-GCM:AES-128-GCM')
+            break
+    config = '\n'.join(lines)
+```
 
 For per-browser VPN routing (when multiple browsers need different exit nodes), use Playwright's `proxy` parameter:
 ```python
