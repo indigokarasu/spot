@@ -1,231 +1,193 @@
 # Square Appointments
 
 **Status:** ⚠️ Working (Browser automation required)
-**Method:** Playwright with custom element handling
-**Last Tested:** 2026-03-30
-**Example Site:** Shade Nail Spa (app.squareup.com)
+**Method:** Playwright / stealth browser with custom element handling
+**Last Updated:** 2026-05-21
+**Example Sites:** Shade Nail Spa (app.squareup.com), Russamee Traditional Thai Massage (book.squareup.com)
+
+> **IMPORTANT (May 2026):** The booking flow and calendar navigation differ significantly from earlier documentation. Read this entire file before implementing.
 
 ---
 
-## Happy Path (What Works)
+## Booking Flow (Updated May 2026)
 
-### 1. Initialize with Proper Config
+### Step 0: Accept Cookies
+
+When the booking page loads, a cookie consent overlay appears. Accept cookies FIRST before any other interaction:
 
 ```javascript
-const { chromium } = require('playwright');
-
-const browser = await chromium.launch({
-  headless: true,
-  args: ['--no-sandbox', '--disable-setuid-sandbox']
-});
-
-const page = await browser.newPage({
-  viewport: { width: 1920, height: 1080 }
-});
+// Via stealth browser JS execution
+(function() {
+  var btns = document.querySelectorAll('button');
+  for (var i = 0; i < btns.length; i++) {
+    if (btns[i].textContent?.trim() === 'Accept all cookies') {
+      btns[i].click();
+      return 'clicked';
+    }
+  }
+  return 'not found';
+})()
 ```
 
-### 2. Navigate with Service ID
+### Step 1: Navigate to Service Selection
 
-```javascript
-const serviceId = 'XA4S2WKU7HYBHTWNKCPBIBDJ';  // Peppermint Pedi
+Navigate to the booking URL (the location URL, NOT with service_id — the old `?service_id=` param pattern caused "something went wrong" errors in testing):
 
-await page.goto(
-  `https://app.squareup.com/appointments/book/L6SV5MCXN00CB/start?service_id=${serviceId}`,
-  { waitUntil: 'domcontentloaded', timeout: 30000 }
-);
-await page.waitForTimeout(4000);
+```
+https://book.squareup.com/appointments/{location_id}/location/{location_hash}
 ```
 
-**Where to find serviceId:**
-- From service selection page (`/services/{ID}`)
-- Or in URL after clicking service manually
+This redirects to `/services` where all services are listed. Do NOT try to skip this step.
 
-### 3. Select Staff
+### Step 2: Click a Service
+
+Services are in `market-row.service-row` elements. Click the anchor inside:
 
 ```javascript
-// Primary: Use aria-label
-await page.locator('[aria-label="Any staff"]').first().click();
-
-// Fallback: First radio button
-await page.locator('market-radio').first().click();
-
-await page.waitForTimeout(2000);
+(function() {
+  var rows = document.querySelectorAll('market-row.service-row');
+  for (var i = 0; i < rows.length; i++) {
+    var text = rows[i].textContent?.trim() || '';
+    if (text.startsWith('Traditional Thai Massage') && !text.includes('Combination')) {
+      var anchor = rows[i].querySelector('a') || rows[i].shadowRoot?.querySelector('a');
+      if (anchor) { anchor.click(); return 'clicked anchor'; }
+      rows[i].click(); return 'clicked row';
+    }
+  }
+  return 'not found';
+})()
 ```
 
-### 4. Continue to Calendar
+URL changes to `/services/{SERVICE_ID}` confirming selection.
+
+### Step 3: Select Duration and Staff
+
+On the service detail page, select duration and staff via `market-radio` elements:
 
 ```javascript
-// Click "Add"
-const addBtn = await page.locator('[aria-label="Add"]').first();
-if (await addBtn.isVisible().catch(() => false)) {
-  await addBtn.click();
-} else {
-  await page.mouse.click(960, 1040);  // Fallback coordinates
-}
-await page.waitForTimeout(1500);
-
-// Click "Next"
-const nextBtn = await page.locator('[aria-label="Next"]').first();
-if (await nextBtn.isVisible().catch(() => false)) {
-  await nextBtn.click();
-} else {
-  await page.mouse.click(1280, 317);  // Fallback
-}
-await page.waitForTimeout(4000);
-
-// URL should now be: .../availability
+(function() {
+  var radios = document.querySelectorAll('market-radio');
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].getAttribute('aria-label') === '1 Hour') { radios[i].click(); break; }
+  }
+  for (var j = 0; j < radios.length; j++) {
+    if (radios[j].getAttribute('aria-label') === 'Any staff') { radios[j].click(); break; }
+  }
+  return 'selected 1 Hour + Any staff';
+})()
 ```
 
-### 5. Navigate to Target Month
+### Step 4: Click "Book"
+
+The "Book" button is a `market-button` with NO aria-label — only text content:
 
 ```javascript
-const text = await page.locator('body').textContent();
-
-if (text.includes('Mar') && !text.includes('Apr')) {
-  // Click next month button
-  await page.mouse.click(1400, 200);
-  await page.waitForTimeout(4000);
-}
+(function() {
+  var allEl = document.querySelectorAll('market-button');
+  for (var i = 0; allEl.length; i++) {
+    if (allEl[i].textContent?.trim() === 'Book') {
+      allEl[i].click();
+      return 'clicked Book';
+    }
+  }
+  return 'not found';
+})()
 ```
 
-### 6. Check Date Availability (CRITICAL PATTERN)
+URL changes to `/availability`.
+
+### Step 5: Navigate Calendar (CRITICAL — Week-by-Week)
+
+**⚠️ CRITICAL UPDATE (May 2026):** Even in month view, Square's calendar has **NO month-level navigation buttons**. There is no "Next month" button. The calendar header `flex` div contains only:
+- `h2` with month name (e.g. "May 2026")
+- `market-button[aria-label="Previous week"]`
+- `market-button[aria-label="Next week"]`
+
+The "Expand to show month view" button shows ~3 weeks spanning two months, but navigation is always **week-by-week**.
 
 ```javascript
-// ❌ WRONG - Playwright methods lie for custom elements
-const isAvailable = await btn.isEnabled();  // Returns true even when disabled!
+// Navigate to target week
+(function() {
+  var mb = document.querySelectorAll('market-button');
+  for (var i = 0; i < mb.length; i++) {
+    if (mb[i].getAttribute('aria-label') === 'Expand to show month view') {
+      mb[i].click(); return 'expanded to month view';
+    }
+  }
+  var collapse = document.querySelector('market-button[aria-label="Collapse to show week view"]');
+  if (collapse) return 'already in month view';
+  return 'month view toggle not found';
+})()
+```
 
-// ✅ CORRECT - Check DOM directly
-const availability = await page.evaluate(() => {
-  const results = {};
-  const buttons = document.querySelectorAll('market-button[data-testid^="date-"]');
-  
-  buttons.forEach(btn => {
-    const testId = btn.getAttribute('data-testid');
-    const day = parseInt(testId.replace('date-', ''));
-    const disabled = btn.hasAttribute('disabled');  // THE TRUTH
-    
-    results[day] = {
-      available: !disabled,
-      text: btn.textContent?.trim()
-    };
+Then click "Next week" repeatedly:
+
+```javascript
+(function() {
+  var mb = document.querySelectorAll('market-button');
+  for (var i = 0; i < mb.length; i++) {
+    if (mb[i].getAttribute('aria-label') === 'Next week') {
+      mb[i].click();
+      return 'clicked Next week';
+    }
+  }
+  return 'not found';
+})()
+```
+
+Verify navigation via the `h2.flex-grow` heading:
+
+```javascript
+(function() {
+  var h2 = document.querySelector('h2.flex-grow');
+  return h2 ? h2.textContent?.trim() : 'unknown';
+})()
+```
+
+**Note:** Month view shows approximately 3 weeks spanning the current and next month (e.g., May 17 - June 6). When a date range spans two months, the dates from each month are rendered separately — check both the first and second week of dates carefully.
+
+### Step 6: Check Date Availability (CRITICAL PATTERN)
+
+```javascript
+(function() {
+  var results = {};
+  document.querySelectorAll('market-button[data-testid^="date-"]').forEach(function(btn) {
+    var testId = btn.getAttribute('data-testid');
+    var day = parseInt(testId.replace('date-', ''));
+    if (!isNaN(day)) {
+      results[day] = {
+        available: !btn.hasAttribute('disabled'),
+        selected: testId.includes('-selected'),
+        text: btn.textContent?.trim() || ''
+      };
+    }
   });
-  
   return results;
-});
-
-// Returns: { "29": { available: false, text: "Su 29" }, "30": { available: true, ... } }
+})()
 ```
 
-### 7. Extract Times for Available Date
+In month view spanning two months, dates may have the same day number from two different months (e.g., May 24 and June 24). The calendar renders them all with `data-testid="date-N"` where N is the day number, making them **ambiguous**. To disambiguate:
+- Dates in the first month show with older/past dates disabled
+- Dates in the second month show with future availability
+- Use the surrounding dates (month header) to determine which month a given date belongs to
+
+### Step 7: Extract Times for Available Date
 
 ```javascript
-// Click available date via DOM
-await page.evaluate((day) => {
-  document.querySelector(`market-button[data-testid="date-${day}"]`)?.click();
-}, targetDay);
+// Click date
+document.querySelector('market-button[data-testid="date-19"]')?.click();
 
-await page.waitForTimeout(5000);
-
-// Extract times
-const times = await page.evaluate(() => {
-  const results = [];
-  
-  document.querySelectorAll('market-button').forEach(btn => {
-    const text = btn.textContent?.trim();
+// After 5s wait, extract times
+(function() {
+  var times = [];
+  document.querySelectorAll('market-button').forEach(function(btn) {
+    var text = btn.textContent?.trim() || '';
     if (/^\d{1,2}:\d{2}\s*[AP]M$/i.test(text)) {
-      results.push({
-        time: text,
-        disabled: btn.hasAttribute('disabled'),
-        testId: btn.getAttribute('data-testid')
-      });
+      times.push({time: text, disabled: btn.hasAttribute('disabled')});
     }
   });
-  
-  return results;
-});
-```
-
-### 8. Complete Working Example
-
-```javascript
-class SquareBooking {
-  constructor(serviceId) {
-    this.serviceId = serviceId;
-  }
-
-  async init() {
-    this.browser = await chromium.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
-    this.page = await this.browser.newPage({
-      viewport: { width: 1920, height: 1080 }
-    });
-  }
-
-  async checkAvailability(targetMonth = 'April') {
-    // Navigate
-    await this.page.goto(
-      `https://app.squareup.com/appointments/book/L6SV5MCXN00CB/start?service_id=${this.serviceId}`,
-      { waitUntil: 'domcontentloaded', timeout: 30000 }
-    );
-    await this.page.waitForTimeout(4000);
-    
-    // Select staff
-    await this.page.locator('[aria-label="Any staff"]').first().click().catch(() => {});
-    await this.page.waitForTimeout(1500);
-    
-    // Click Add
-    await this.page.mouse.click(960, 1040);
-    await this.page.waitForTimeout(1500);
-    
-    // Click Next
-    await this.page.mouse.click(1280, 317);
-    await this.page.waitForTimeout(4000);
-    
-    // Navigate to target month
-    const text = await this.page.locator('body').textContent();
-    if (text.includes('Mar') && targetMonth === 'April') {
-      await this.page.mouse.click(1400, 200);
-      await this.page.waitForTimeout(4000);
-    }
-    
-    // Get availability (DOM method - THE ONLY RELIABLE WAY)
-    return await this.page.evaluate(() => {
-      const results = {};
-      document.querySelectorAll('market-button[data-testid^="date-"]').forEach(btn => {
-        const day = parseInt(btn.getAttribute('data-testid').replace('date-', ''));
-        results[day] = {
-          available: !btn.hasAttribute('disabled'),
-          text: btn.textContent?.trim()
-        };
-      });
-      return results;
-    });
-  }
-
-  async getTimes(day) {
-    await this.page.evaluate((d) => {
-      document.querySelector(`market-button[data-testid="date-${d}"]`)?.click();
-    }, day);
-    await this.page.waitForTimeout(5000);
-    
-    return await this.page.evaluate(() => {
-      const times = [];
-      document.querySelectorAll('market-button').forEach(btn => {
-        const text = btn.textContent?.trim();
-        if (/^\d{1,2}:\d{2}\s*[AP]M$/i.test(text)) {
-          times.push({ time: text, disabled: btn.hasAttribute('disabled') });
-        }
-      });
-      return times;
-    });
-  }
-
-  async close() {
-    await this.browser?.close();
-  }
-}
+  return times;
+})()
 ```
 
 ---
