@@ -1,71 +1,22 @@
 ---
 name: ocas-spot
-description: >
-  Use when checking appointment availability, booking services, monitoring for
-  openings, or discovering venues at salons, spas, and restaurants.
-  spot.discover finds and compares venues via Yelp before booking. Supports
-  Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, OpenTable,
-  Meevo, Vagaro, Mindbody, Fresha, StyleSeat, Calendly, Yelp Reservations,
-  Booksy, GlossGenius, SimplyBook.me, Boulevard, Mangomint, DaySmart,
-  ResDiary, and Eat App. Integrates with ocas-vpn for bot block bypass. Trigger phrases: 'book an appointment at',
-  'check availability at', 'when can I get a [service]', 'find me a slot at',
-  'is [venue] available', 'watch [venue] for openings', 'alert me when [venue]
-  has availability', 'monitor [venue]', 'find a restaurant in', 'compare
-  salons near', 'discover [type] near'.
+description: 'Use when checking appointment availability, booking services, monitoring
+  for openings, or discovering venues at salons, spas, and restaurants. spot.discover
+  finds and compares venues via Yelp before booking. Supports Acuity Scheduling, Square
+  Appointments, Resy, Tock, SevenRooms, OpenTable, Meevo, Vagaro, Mindbody, Fresha,
+  StyleSeat, Calendly, Yelp Reservations, Booksy, GlossGenius, SimplyBook.me, Boulevard,
+  Mangomint, DaySmart, ResDiary, and Eat App. Integrates with ocas-vpn for bot block
+  bypass. Trigger phrases: ''book an appointment at'', ''check availability at'',
+  ''when can I get a [service]'', ''find me a slot at'', ''is [venue] available'',
+  ''watch [venue] for openings'', ''alert me when [venue] has availability'', ''monitor
+  [venue]'', ''find a restaurant in'', ''compare salons near'', ''discover [type]
+  near''.
+
+  '
+license: MIT
 metadata:
   author: Indigo Karasu
-  email: mx.indigo.karasu@gmail.com
-  version: "2.5.1"
-  hermes:
-    tags: [booking, appointments, discovery]
-    category: execution
-    cron:
-      - name: "spot:watch-sweep"
-        schedule: "every 15m"
-        command: "spot.watch.sweep"
-      - name: "spot:update"
-        schedule: "0 0 * * *"
-        command: "spot.update"
-  openclaw:
-    skill_type: system
-    visibility: public
-    filesystem:
-      read:
-        - "{agent_root}/commons/data/ocas-spot/"
-        - "{agent_root}/commons/journals/ocas-spot/"
-        - "{agent_root}/commons/data/ocas-voyage/itineraries/"
-      write:
-        - "{agent_root}/commons/data/ocas-spot/"
-        - "{agent_root}/commons/data/ocas-spot/yelp/"
-        - "{agent_root}/commons/journals/ocas-spot/"
-        - "{agent_root}/commons/data/ocas-voyage/itineraries/"
-    self_update:
-      source: "https://github.com/indigokarasu/ocas-spot"
-      mechanism: "version-checked tarball from GitHub via gh CLI"
-      command: "spot.update"
-      requires_binaries: [gh, tar]
-    requires:
-      bins:
-        - "node"
-      npm:
-        - "playwright"
-      credentials:
-        - name: "yelp_api_key"
-          description: "Yelp Fusion API key for structured business discovery and review data"
-          required: false
-        - name: "resy_api_key"
-          description: "Resy API key for authenticated reservation lookups"
-          required: false
-        - name: "calendly_api_token"
-          description: "Calendly personal access token for API-based availability checks"
-          required: false
-    cron:
-      - name: "spot:watch-sweep"
-        schedule: "every 15m"
-        command: "spot.watch.sweep"
-      - name: "spot:update"
-        schedule: "0 0 * * *"
-        command: "spot.update"
+  version: 2.5.1
 ---
 
 # Spot
@@ -225,170 +176,14 @@ Key requirements:
 - Rotate user agents and viewports per session
 - Add random delays between actions (500ms-2000ms)
 
-## VPN Integration & Bot Block Handling
 
-Many booking platforms employ bot detection (Cloudflare, PerimeterX, Akamai, DataDome) that can block automated access. Spot integrates with `ocas-vpn` to route traffic through non-US exit nodes when bot blocks are detected.
+See `references/vpn-integration.md` for details.
 
-### Bot Detection Triggers
 
-Auto-detect bot blocks using `detect_bot_block()` from stealth config. Trigger VPN routing when:
-- Page loads but booking widget never renders (blank page after 10+ seconds)
-- CAPTCHA challenge appears (reCAPTCHA, hCaptcha, CF Turnstile)
-- "Access denied" / "Please verify you are human" / "Bot detected" message
-- HTTP 403/429 responses from the booking platform
-- Availability data returns empty when manual browser check shows availability
-- TLS fingerprint or headless browser detection triggers a block
+See `references/virtualperson-integration.md` for details.
 
-### Automated VPN Workflow
 
-```
-1. Attempt booking page load (normal connection)
-   ↓
-2. Run detect_bot_block() after page load
-   ├─ No block → Proceed normally
-   └─ Block detected ↓
-3. Check VPN status: ip addr show tun0
-   ├─ VPN already connected → Kill and reconnect (fresh IP)
-   └─ VPN not connected ↓
-4. Connect VPN via ocas-vpn skill:
-   a. Fetch best non-US server from VPN Gate API
-   b. Save config to /root/vpn_gate.ovpn
-   c. openvpn --config /root/vpn_gate.ovpn --daemon
-   d. Wait for tun0, verify non-US exit IP
-   ↓
-5. Retry booking page load through VPN
-   ↓
-6. Still blocked?
-   ├─ Yes → Try different VPN server (different country)
-   │        Rotate through: Japan → Germany → UK → Netherlands → Canada
-   └─ No → Proceed with availability check / booking
-```
-
-### VPN Server Rotation
-
-Maintain a pool of VPN Gate servers for rotation. When one server fails:
-1. Kill current VPN connection
-2. Fetch next best server from VPN Gate API (different country preferred)
-3. Reconnect and retry
-4. Track failed servers in `{agent_root}/commons/data/ocas-spot/vpn-failures.jsonl`
-
-### Platform-Specific Bot Detection & VPN Profiles
-
-| Platform | Bot Detection | VPN Recommended | Preferred Exit | Notes |
-|---|---|---|---|---|
-| Tock | Cloudflare Turnstile | ✅ Yes | Japan | URL-based iteration avoids most triggers; VPN for persistent blocks |
-| OpenTable | Akamai CDN | ✅ Yes | Japan | Session-based workaround preferred; VPN if session expires |
-| Mindbody | PerimeterX (HUMAN) | ✅ Yes | Japan/EU | Some deployments block headless; VPN + stealth scripts |
-| Fresha | Cloudflare | ✅ Yes | Japan | "Checking your browser" page; VPN to non-US exit |
-| Boulevard | Cloudflare | ⚠️ Maybe | Japan | Premium platform; may block aggressive automation |
-| Resy | None known | ❌ No | — | API-based; no VPN needed |
-| Acuity | None known | ❌ No | — | REST API; no VPN needed |
-| Square | None known | ❌ No | — | Browser automation works without VPN |
-| SevenRooms | None known | ❌ No | — | Browser automation works without VPN |
-| Calendly | None known | ❌ No | — | API-based; no VPN needed |
-| Vagaro | API-level | ⚠️ Maybe | Japan | API errors may be IP-based; VPN can help |
-| Meevo | None known | ❌ No | — | Browser automation works without VPN |
-| StyleSeat | Basic | ⚠️ Maybe | Japan | Slow down interactions; VPN if blocked |
-| Yelp Reservations | Cloudflare | ⚠️ Maybe | Japan | Standard Yelp bot detection |
-| Booksy | Cloudflare | ⚠️ Maybe | Japan | Consumer-facing; may have basic bot detection |
-| GlossGenius | Minimal | ❌ No | — | Generally accessible |
-| SimplyBook.me | Minimal | ❌ No | — | Generally accessible |
-| Mangomint | Minimal | ❌ No | — | Generally accessible |
-| DaySmart | Minimal | ❌ No | — | Generally accessible |
-| ResDiary | Minimal | ❌ No | — | UK/Europe focus; VPN rarely needed |
-| Eat App | Minimal | ❌ No | — | Middle East focus; VPN rarely needed |
-
-### VPN Auto-Reconnection
-
-VPN tunnels do not survive gateway/agent restarts. Spot automatically checks VPN health before watch sweeps and booking runs:
-
-```bash
-# VPN health check (runs automatically before each booking/vpn operation)
-vpn_health_check() {
-    # Check if tun0 exists and has an IP
-    if ! ip addr show tun0 2>/dev/null | grep -q 'inet '; then
-        echo "VPN down, reconnecting..."
-        # Fetch fresh server list
-        curl -s "https://www.vpngate.net/api/iphone/" | \
-            python3 -c "
-import csv, base64, sys, json
-reader = csv.DictReader(sys.stdin)
-servers = [r for r in reader if r.get('CountryShort') != 'US' and r.get('OpenVPN_ConfigData_Base64')]
-best = sorted(servers, key=lambda s: int(s.get('Score', 0)), reverse=True)[0]
-config = base64.b64decode(best['OpenVPN_ConfigData_Base64']).decode()
-with open('/root/vpn_gate.ovpn', 'w') as f:
-    f.write(config)
-print(f\"Selected: {best['CountryLong']} (Score: {best['Score']})\")
-"
-        # Kill any existing openvpn
-        pkill -f openvpn 2>/dev/null
-        sleep 2
-        # Connect
-        openvpn --config /root/vpn_gate.ovpn --daemon --log /root/openvpn.log
-        sleep 5
-        # Verify
-        ip addr show tun0
-    fi
-    # Verify exit IP is non-US
-    curl -s --max-time 10 https://ipinfo.io/json
-}
-```
-
-### Browser Routing Through VPN
-
-When VPN is active (tun0 interface up), all system traffic including browser automation routes through the VPN automatically. No special Playwright configuration needed — system routing (`0.0.0.0/1` + `128.0.0.0/1` via tun0) handles it.
-
-**VPN config cipher fix:** When downloading VPN Gate configs, many servers only support `AES-128-CBC`. OpenVPN 2.5+ defaults to GCM ciphers and will fail with `OPTIONS ERROR: failed to negotiate cipher`. Before connecting, patch the config:
-```python
-config = base64.b64decode(server['OpenVPN_ConfigData_Base64']).decode()
-if 'data-ciphers' not in config:
-    lines = config.split('\n')
-    for i, line in enumerate(lines):
-        if line.startswith('cipher '):
-            lines.insert(i+1, 'data-ciphers AES-128-CBC:AES-256-GCM:AES-128-GCM')
-            break
-    config = '\n'.join(lines)
-```
-
-For per-browser VPN routing (when multiple browsers need different exit nodes), use Playwright's `proxy` parameter:
-```python
-context = browser.new_context(
-    proxy={'server': 'socks5://10.8.0.1:1080'}  # WireGuard/SOCKS proxy
-)
-```
-
-## VirtualPerson Integration
-
-For platforms that remain blocked after VPN (Tock, Yelp, OpenTable), VirtualPerson provides a real Chrome browser on a virtual display, routed through VPN. See `references/virtualperson-integration.md` for full setup.
-
-**Patched files** are in `references/virtualperson-patches/`:
-- `docker-compose.yml`, `launch-chrome.sh`, `entrypoint.sh` — VPN Gate variants
-- `vpn-socks5-bridge.sh` — SOCKS5 proxy on host routing through tun0
-- `DEPLOY.md` — Full deployment guide
-
-**Quick connect from ocas-spot:**
-```python
-browser = p.chromium.connect_over_cdp("http://127.0.0.1:9222")
-```
-
-## Platform Access Matrix (Tested May 2026, VPN Gate Japan)
-
-| Platform | Status | HTTP | Block Type | Bypass |
-|----------|--------|------|------------|--------|
-| Fresha | ✅ OK | 200 | — | VPN sufficient |
-| Booksy | ✅ OK | 200 | — | VPN sufficient |
-| Mindbody | ✅ OK | 200 | — | VPN sufficient |
-| ResDiary | ✅ OK | 200 | — | VPN sufficient |
-| Eat App | ✅ OK | 200 | — | VPN sufficient |
-| StyleSeat | ✅ OK | 200 | — | VPN sufficient |
-| Boulevard | ✅ OK | 200 | — | VPN sufficient |
-| Vagaro | ✅ OK | 404 | — | VPN sufficient |
-| SimplyBook.me | ✅ OK | 404 | — | VPN sufficient |
-| Tock | ❌ BLOCKED | 403 | CF Turnstile | Needs VirtualPerson |
-| Yelp | ❌ BLOCKED | 403 | IP-range block | Needs residential proxy |
-| OpenTable | ❌ BLOCKED | 000 | Akamai TLS fingerprint | Needs VirtualPerson |
-
-**Key insight:** Cloudflare Turnstile and Akamai blocks are fingerprint-based, not IP-based. VPN alone is insufficient — need a real browser (VirtualPerson) or residential proxy.
+See `references/platform-access-matrix.md` for details.
 
 ## Watch sweep behavior
 1. Load all active WatchRecords from `watch.jsonl`.
