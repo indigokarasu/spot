@@ -451,6 +451,8 @@ Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run wr
   venues.jsonl              — registered venues with platform configs
   bookings.jsonl            — booking history (past and upcoming)
   watch.jsonl               — watchlist records (active and inactive)
+  intents.jsonl             — audit trail of booking intents (requested actions and outcomes)
+  evidence.jsonl            — audit evidence (screenshots, API responses, hashes for integrity)
   opentable-session.json    — OpenTable session state (not in repo, gitignored)
   yelp/
     alias-cache.md          — name+location → Yelp alias/ID (avoids redundant lookups)
@@ -540,6 +542,20 @@ spot:check-upcoming: spot.list --upcoming
 - Booking accuracy: automation result matches manual browser for every supported platform
 - Bot block recovery: VPN fallback resolves ≥ 80% of bot-blocked booking attempts
 - New platform onboarding: ≤ 2 hours from first research to working reference doc
+- Schedule adherence: watch sweeps execute within 2 minutes of their scheduled interval; missed or delayed sweeps logged with root-cause and recovered within one cycle
+- Data integrity: every booking, watch, and intent record is immutable once written (append-only JSONL); evidence hashes verified on read; orphan or corrupt entries flagged in journal outputs
+
+## Recovery Behavior
+
+When Spot encounters failures — bot blocks, VPN disconnects, platform timeouts, or data corruption — it follows the recovery procedures defined in `references/spec-ocas-recovery.md`. Key principles:
+
+1. **Idempotency** — All recovery actions are idempotent. Re-running a recovery step produces the same outcome as running it once.
+2. **Graceful degradation** — If a platform is unreachable, Spot logs the failure, marks the record, and continues to the next platform/watch entry. Partial results are never discarded.
+3. **VPN reconnection** — If `tun0` drops mid-sweep, Spot pauses the current sweep, reconnects via `ocas-vpn`, and resumes from the last completed entry (not from the beginning).
+4. **Data repair** — On detecting corrupt or truncated JSONL lines, Spot quarantines the bad line to `.quarantine/` and reconstructs the last valid state from journal outputs.
+5. **Audit continuity** — Every recovery action is recorded in `intents.jsonl` (what was attempted) and `evidence.jsonl` (what was observed), preserving a complete audit trail even during failure scenarios.
+
+See `references/spec-ocas-recovery.md` for the full recovery decision tree, timeout values, and escalation procedures.
 
 ## Initialization
 
