@@ -216,10 +216,7 @@ During `spot.init`, register the following cron job (check first to ensure idemp
   --light-context --tz America/Los_Angeles
 ```
 
-During `spot.init`, also append to `{agent_root}/HEARTBEAT.md` if not already present (check before appending to ensure idempotence):
-```
-spot:check-upcoming: spot.list --upcoming
-```
+During `spot.init`, cron registration for spot jobs is handled via `cronjob(action='create', ...)`. No heartbeat registry needed.
 
 ## OKRs
 
@@ -266,19 +263,19 @@ For bot-blocked platforms (Tock, OpenTable, Mindbody, Fresha), VirtualPerson pro
 
 ## Support file map
 
-| File | Purpose |
+| File | When to read |
 |---|---|
-| `references/stealth-config.md` | Shared stealth browser config |
-| `references/platforms/README.md` | Universal decision tree; platform index |
-| `references/platforms/NEW_PLATFORM.md` | Onboarding guide for new platforms |
-| `references/platforms/<platform>.md` | Per-platform patterns (all 20+ platforms) |
-| `references/schemas.md` | Full schema definitions |
-| `references/vpn-integration.md` | VPN integration details |
-| `references/virtualperson-integration.md` | VirtualPerson integration details |
-| `references/platform-access-matrix.md` | Platform access matrix |
-| `references/spec-ocas-recovery.md` | Recovery decision tree and escalation |
-| `scripts/acuity.js` | Acuity availability checker (REST API) |
-| `scripts/square.js` | Square availability checker (Playwright) |
+| `references/stealth-config.md` | Before any browser automation — shared stealth config |
+| `references/platforms/README.md` | Before probing or booking on any platform — decision tree and index |
+| `references/platforms/NEW_PLATFORM.md` | When onboarding a new booking platform |
+| `references/platforms/<platform>.md` | Before automating a specific platform — per-platform patterns |
+| `references/schemas.md` | Before creating VenueRecord, BookingRecord, or WatchRecord |
+| `references/vpn-integration.md` | When bot detection blocks access and VPN fallback is needed |
+| `references/virtualperson-integration.md` | When VirtualPerson headed Chrome is available for bot-blocked platforms |
+| `references/platform-access-matrix.md` | Before checking which platforms are accessible from current IP |
+| `references/spec-ocas-recovery.md` | When modifying recovery behavior or escalation procedures |
+| `scripts/acuity.js` | When checking Acuity Scheduling availability (REST API) |
+| `scripts/square.js` | When checking Square Appointments availability (Playwright) |
 
 ## Self-update
 
