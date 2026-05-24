@@ -261,6 +261,10 @@ For bot-blocked platforms (Tock, OpenTable, Mindbody, Fresha), VirtualPerson pro
 - **External booking confirmation is authoritative** — If Sands reports a conflict after a successful venue booking, the external confirmation stands. Sands write failure never cancels an already-confirmed booking.
 - **20+ platforms, each with unique selectors** — Each booking platform has its own edge cases documented in `references/platforms/<platform>.md`. Always read the per-platform doc before attempting a new platform.
 
+## Platform notes
+
+Spot uses `cronjob` for appointment monitoring. On platforms without `cronjob`, the user triggers checks manually. Yelp API calls and browser automation are platform-independent.
+
 ## Support file map
 
 | File | When to read |
