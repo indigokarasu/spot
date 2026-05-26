@@ -6,22 +6,41 @@ description: 'Use when checking appointment availability, booking services, moni
   Appointments, Resy, Tock, SevenRooms, OpenTable, Meevo, Vagaro, Mindbody, Fresha,
   StyleSeat, Calendly, Yelp Reservations, Booksy, GlossGenius, SimplyBook.me, Boulevard,
   Mangomint, DaySmart, ResDiary, and Eat App. Integrates with ocas-vpn for bot block
-  bypass. Trigger phrases: ''book an appointment at'', ''check availability at'',
-  ''when can I get a [service]'', ''find me a slot at'', ''is [venue] available'',
-  ''watch [venue] for openings'', ''alert me when [venue] has availability'', ''monitor
-  [venue]'', ''find a restaurant in'', ''compare salons near'', ''discover [type]
-  near''.
-
-'
+  bypass. NOT for general travel planning (use ocas-voyage), calendar sync (use ocas-sands),
+  restaurant reservations on unsupported platforms. Trigger phrases: ''book an appointment
+  at'', ''check availability at'', ''when can I get a [service]'', ''find me a slot at'',
+  ''is [venue] available'', ''watch [venue] for openings'', ''alert me when [venue]
+  has availability'', ''monitor [venue]'', ''find a restaurant in'', ''compare salons
+  near'', ''discover [type] near''.'
 license: MIT
+source: https://github.com/indigokarasu/ocas-spot
+includes:
+  - references/**
+  - scripts/**
+
 metadata:
   author: Indigo Karasu
-  version: 2.5.1
+  version: 2.6.0
 ---
 
 # Spot
 
 Spot automates appointment and reservation availability checks, bookings, and persistent monitoring across service venues. It maintains a registry of known venues, a watchlist for ongoing availability monitoring, and handles the full booking flow.
+
+## When to Use
+
+- Checking appointment or reservation availability at salons, spas, or restaurants
+- Booking appointments or reservations at supported venues
+- Monitoring venues for newly opened slots ("watch" use cases)
+- Discovering and comparing new venues via Yelp before booking
+
+## When NOT to Use
+
+- General travel planning — use `ocas-voyage`
+- Calendar sync or conflict checking — use `ocas-sands`
+- Restaurant reservations on platforms Spot does not support
+- Platforms requiring authentication Spot does not hold
+- General web scraping unrelated to appointment booking
 
 ## Responsibility boundary
 
@@ -39,16 +58,6 @@ Spot does not own: general travel planning (Voyage), calendar sync, restaurant r
 ### Discovery
 
 `spot.discover [type] [location] [--open-now] [--price 1|2|3|4] [--min-rating N]` — find and compare venues using Yelp before adding one to the registry. Fans out in parallel: Yelp API business search, delivery eligibility check (where applicable), and public page verification. Fetches reviews for the top 3 candidates in parallel. Returns a ranked shortlist with decision signals. Flows into `spot.venue.add` → `spot.check` → `spot.book`.
-
-| Signal | Weight |
-|--------|--------|
-| Rating stability (not just star average) | High |
-| Review recency (newest reviews matter more) | High |
-| Complaint theme clusters | High |
-| Review volume | Medium |
-| Price fit | Medium |
-| Category match | Medium |
-| Delivery/takeout eligibility | Low (if relevant) |
 
 After discovery, user selects from shortlist. Selected venue is auto-populated into `spot.venue.add` using the Yelp alias. If `YELP_API_KEY` is not set, Spot falls back to public Yelp page navigation — same output, slower, less structured.
 
@@ -84,53 +93,31 @@ After discovery, user selects from shortlist. Selected venue is auto-populated i
 
 ### Maintenance
 
-`spot.update` — Pull latest release from GitHub. Preserves `{agent_root}/commons/data/ocas-spot/` and journals.
+`spot.update` — Pull latest release from GitHub. Preserves `{agent_root}/commons/data/ocas-spot/` and journals. See `references/self-update.md` for the update procedure.
 
 ## NLP parsing
 
-Extract structured parameters from natural language before calling any command:
-
-| Input pattern | Extracted value |
-|---|---|
-| "for 2", "party of 4", "table for two" | `party_size` |
-| "this Saturday", "next weekend", "March 9" | specific date(s) |
-| "in May", "next month", "next 30 days" | `date_range` |
-| "Saturdays in May", "weekends in June" | date list (Sat/Sun of that month) |
-| "dinner", "prime time", "evening" | `time_window: 18:00-22:00` |
-| "lunch" | `time_window: 11:30-14:00` |
-| "6-9pm", "7:30 to 9" | explicit `time_window` |
-| "monitor", "watch", "alert me when", "notify me" | → `spot.watch.add` |
-| "book me", "reserve" | → `spot.book` (after check) |
-| "check", "is there availability", "any tables" | → `spot.check` |
-
-When `time_window` is extracted, filter returned times to that window before presenting results. Resolve ambiguous date language ("next Saturday") against today's date before calling any script.
+See `references/nlp-parsing.md` for the full parameter extraction table. Extract structured parameters from natural language before calling any command. When `time_window` is extracted, filter returned times to that window before presenting results. Resolve ambiguous date language ("next Saturday") against today's date before calling any script.
 
 ## Booking workflow
 
-1. **Venue lookup** — Check `venues.jsonl` for a config match. If no match, run `spot.platform.probe` on the provided URL.
-2. **Availability check** — Use the platform-appropriate method (see Platform Support below). Each platform's script, selectors, edge cases, and known limitations are documented in `references/platforms/<platform>.md`.
-3. **Bot detection** — After page load, run `detect_bot_block()`. If blocked, trigger VPN workflow and retry.
-4. **Conflict check (Sands)** — If Sands is present, write a conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json`. If Sands reports a conflict, surface it and ask for confirmation. If Sands is absent or unresponsive, proceed.
-5. **Slot selection** — Present available dates/times to user. Wait for confirmation.
-6. **Booking** — Execute booking flow using `human_click()` and `human_type()` for all interactions. Capture confirmation reference.
-7. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper. If Voyage itinerary matches, append Travel Context. If Sands is present, write calendar event request. Sands write failure does NOT cancel the external booking.
+See `references/booking-workflow.md` for the full 7-step booking procedure.
 
-## Platform spot supports 20+ booking platforms across two categories:
+## Platform support
 
-- **REST API** (preferred): Acuity Scheduling, Resy, Calendly
-- **Browser automation**: Square Appointments, SevenRooms, Tock, OpenTable, Meevo, Vagaro, Mindbody, Fresha, StyleSeat, Yelp Reservations, Booksy, GlossGenius, SimplyBook.me, Boulevard, Mangomint, DaySmart, ResDiary, Eat App
+Spot supports 20+ booking platforms across three architectural patterns:
 
-Each platform's method, status, edge cases, selectors, and known limitations are documented in `references/platforms/<platform>.md`. See `references/platforms/README.md` for the universal decision tree and platform index.
+| Pattern | Platforms | Auth |
+|---------|-----------|------|
+| **REST API** | Acuity Scheduling, Calendly | None / API token |
+| **Public Widget API** | SevenRooms (availability) | None |
+| **Browser Automation** | Square Appointments, Resy, Tock, OpenTable, Meevo, Vagaro, Mindbody, Fresha, StyleSeat, Booksy, GlossGenius, SimplyBook.me, Boulevard, Mangomint, DaySmart, Yelp Reservations, ResDiary, Eat App, SevenRooms (booking) | Session / none |
 
-**Key platform notes:**
-- **Square**: `hasAttribute('disabled')` on `market-button` (never `isEnabled()`); check `aria-disabled`; shadow DOM queries from host element
-- **OpenTable**: Akamai blocks Chromium — must use Firefox
-- **Tock**: CF Turnstile bypassed via session warming + VPN; use `TockWarm` class
-- **Meevo**: Angular SPA — sub-service radio buttons may not respond to programmatic clicks (report visible info, note limitation)
-- **Vagaro**: May fail due to Incapsula blocking; fall back to `/services` page info
-- **Mindbody/Fresha**: React SPA; VPN fallback for PerimeterX/Cloudflare blocks
+**Status key:** ✅ Production · ⚠️ Working (known limitations) · 🆕 New (untested) · ❌ Blocked (bot detection)
 
-All browser-based scripts use the shared stealth configuration from `references/stealth-config.md` (`create_stealth_browser()`, `human_type()`, `human_click()`, `detect_bot_block()`, UA rotation, random delays).
+Full platform directory and decision tree: `references/platforms/README.md`
+Bot block status and bypasses: `references/platform-access-matrix.md`
+Key platform quirks: `references/platform-notes.md`
 
 ## Watch sweep behavior
 
@@ -156,83 +143,23 @@ Every `spot.check`, `spot.book`, `spot.watch.add`, and `spot.watch.sweep` run wr
 - **Observation Journal** — `spot.check`, `spot.watch.sweep` with no new availability
 - **Action Journal** — `spot.book`, `spot.watch.sweep` when an InsightProposal is written
 
-```json
-{
-  "journal_spec_version": "1.3",
-  "run_identity": {
-    "run_id": "spot-20260404-abc123",
-    "journal_type": "Observation",
-    "skill": "ocas-spot",
-    "skill_version": "2.0.0",
-    "started_at": "2026-04-04T10:00:00-07:00",
-    "completed_at": "2026-04-04T10:00:15-07:00"
-  },
-  "command": "spot.watch.sweep",
-  "records_checked": 3,
-  "new_availability_found": 0,
-  "proposals_written": 0
-}
-```
+See `references/journal-schema.md` for the full journal JSON schema.
 
 ## Storage layout
 
-```
-{agent_root}/commons/data/ocas-spot/
-  config.json               — defaults (timezone, name, email, phone)
-  venues.jsonl              — registered venues with platform configs
-  bookings.jsonl            — booking history (past and upcoming)
-  watch.jsonl               — watchlist records (active and inactive)
-  intents.jsonl             — audit trail of booking intents
-  evidence.jsonl            — audit evidence (screenshots, API responses, hashes)
-  opentable-session.json    — OpenTable session state (gitignored)
-  yelp/
-    alias-cache.md          — name+location → Yelp alias/ID
-    shortlists.md           — saved discovery sessions
-    request-log.md          — redacted endpoint logs
-
-{agent_root}/commons/journals/ocas-spot/
-  YYYY-MM-DD/
-    {run_id}.json
-```
-
-### Record schemas
-
-Full schema definitions with field types and validation rules: `references/schemas.md`.
-
-**VenueRecord** — `venue_id`, `name`, `platform`, `booking_url`, `services[]`, `added_at`, `last_checked`
-
-**BookingRecord** — `booking_id`, `venue_id`, `venue_name`, `service`, `datetime`, `status`, `confirmation_ref`, `booked_at`, `signal_emitted`
-
-**WatchRecord** — `watch_id`, `venue_id`, `venue_name`, `platform`, `party_size`, `dates[]`, `date_range`, `time_window`, `priority`, `active`, `added_at`, `last_checked`, `last_found`
+See `references/storage-layout.md` for the full directory tree and record schemas (VenueRecord, BookingRecord, WatchRecord).
 
 ## Background tasks
 
-During `spot.init`, register the following cron job (check first to ensure idempotence):
-
-```bash
-# Check platform scheduling registry for existing tasks
-# Task declared in SKILL.md frontmatter metadata.{platform}.cron
-  --session isolated --message "spot.watch.sweep" \
-  --light-context --tz America/Los_Angeles
-```
-
-During `spot.init`, cron registration for spot jobs is handled via `cronjob(action='create', ...)`. No heartbeat registry needed.
+During `spot.init`, cron registration for spot jobs is handled via `cronjob(action='create', ...)`. No heartbeat registry needed. See `references/self-update.md` for the cron registration pattern.
 
 ## OKRs
 
-- Every run produces a journal entry
-- No silent failures — all errors recorded with `result: error`
-- Watch sweep latency: new availability surfaced to Vesper within 15 minutes of opening
-- Platform coverage: maintain ≥ 15 confirmed working platforms (currently 20)
-- Booking accuracy: automation result matches manual browser for every supported platform
-- Bot block recovery: VPN fallback resolves ≥ 80% of bot-blocked booking attempts
-- New platform onboarding: ≤ 2 hours from first research to working reference doc
-- Schedule adherence: watch sweeps execute within 2 minutes of scheduled interval; missed/delayed sweeps logged with root-cause and recovered within one cycle
-- Data integrity: every booking, watch, and intent record is immutable once written (append-only JSONL); evidence hashes verified on read; orphan or corrupt entries flagged in journal outputs
+See `references/okrs.md` for all targets (journal coverage, sweep latency, platform coverage, booking accuracy, bot block recovery, onboarding time, schedule adherence).
 
 ## Recovery Behavior
 
-When Spot encounters failures — bot blocks, VPN disconnects, platform timeouts, or data corruption — it follows the recovery procedures defined in `references/spec-ocas-recovery.md`. Key principles:
+When Spot encounters failures — bot blocks, VPN disconnects, platform timeouts, or data corruption — it follows these principles:
 
 1. **Idempotency** — All recovery actions are idempotent.
 2. **Graceful degradation** — If a platform is unreachable, log the failure, mark the record, and continue. Partial results are never discarded.
@@ -260,43 +187,35 @@ For bot-blocked platforms (Tock, OpenTable, Mindbody, Fresha), VirtualPerson pro
 - **Square buttons use `aria-disabled`, not `isEnabled()`** — The `disabled` attribute on `market-button` and shadow DOM queries from the host element are the correct approach for Square Appointments.
 - **External booking confirmation is authoritative** — If Sands reports a conflict after a successful venue booking, the external confirmation stands. Sands write failure never cancels an already-confirmed booking.
 - **20+ platforms, each with unique selectors** — Each booking platform has its own edge cases documented in `references/platforms/<platform>.md`. Always read the per-platform doc before attempting a new platform.
+- **SevenRooms public widget API** — Availability checks use the public widget API (no auth). Booking requires browser automation via Playwright on the customer widget page. There is no customer-facing REST API; `api.sevenrooms.com` is merchant-only.
 
 ## Platform notes
 
 Spot uses `cronjob` for appointment monitoring. On platforms without `cronjob`, the user triggers checks manually. Yelp API calls and browser automation are platform-independent.
 
-## Support file map
+## Support File Map
 
 | File | When to read |
 |---|---|
+| `references/nlp-parsing.md` | Before parsing natural language input — parameter extraction table |
+| `references/booking-workflow.md` | Before executing any booking — full 7-step procedure |
+| `references/platform-notes.md` | Before browser automation — key platform quirks and selectors |
+| `references/self-update.md` | When running `spot.update` — update procedure |
+| `references/journal-schema.md` | When writing journal entries — full JSON schema example |
+| `references/storage-layout.md` | When creating or inspecting data files — directory tree and record schemas |
+| `references/okrs.md` | During OKR evaluation — all targets |
 | `references/stealth-config.md` | Before any browser automation — shared stealth config |
-| `references/platforms/README.md` | Before probing or booking on any platform — decision tree and index |
+| `references/platforms/README.md` | Before probing or booking on any platform — decision tree, index, and per-platform patterns |
 | `references/platforms/NEW_PLATFORM.md` | When onboarding a new booking platform |
-| `references/platforms/<platform>.md` | Before automating a specific platform — per-platform patterns |
 | `references/schemas.md` | Before creating VenueRecord, BookingRecord, or WatchRecord |
 | `references/vpn-integration.md` | When bot detection blocks access and VPN fallback is needed |
 | `references/virtualperson-integration.md` | When VirtualPerson headed Chrome is available for bot-blocked platforms |
 | `references/platform-access-matrix.md` | Before checking which platforms are accessible from current IP |
-| `references/spec-ocas-recovery.md` | When modifying recovery behavior or escalation procedures |
-| `scripts/acuity.js` | When checking Acuity Scheduling availability (REST API) |
-| `scripts/square.js` | When checking Square Appointments availability (Playwright) |
+|| `scripts/acuity.js` | When checking Acuity Scheduling availability (REST API) |
+|| `scripts/square.js` | When checking Square Appointments availability (Playwright) |
+|| `scripts/sevenrooms.py` | When checking SevenRooms availability (public widget API, no auth) or booking (browser automation via Playwright) |
+|| `references/sevenrooms-api-notes.md` | SevenRooms API research notes — endpoint reference, response fields, community repos |
 
 ## Self-update
 
-`spot.update` pulls the latest package from the `source:` URL in this file's frontmatter. Runs silently — no output unless the version changed or an error occurred.
-
-1. Read `source:` from frontmatter → extract `{owner}/{repo}` from URL
-2. Read local version from SKILL.md frontmatter `metadata.version`
-3. Fetch remote version from SKILL.md frontmatter: `gh api "repos/{owner}/{repo}/contents/SKILL.md" --jq '.content' | base64 -d | grep 'version:' | head -1 | sed 's/.*"\(.*\)".*/\1/'`
-4. If remote version equals local version → stop silently
-5. Download and install:
-   ```bash
-   TMPDIR=$(mktemp -d)
-   gh api "repos/{owner}/{repo}/tarball/main" > "$TMPDIR/archive.tar.gz"
-   mkdir "$TMPDIR/extracted"
-   tar xzf "$TMPDIR/archive.tar.gz" -C "$TMPDIR/extracted" --strip-components=1
-   cp -R "$TMPDIR/extracted/"* ./
-   rm -rf "$TMPDIR"
-   ```
-6. On failure → retry once. If second attempt fails, report the error and stop.
-7. Output exactly: `I updated Spot from version {old} to {new}`
+Run `spot.update` to pull the latest release. See `references/self-update.md` for the full procedure.

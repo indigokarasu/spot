@@ -48,21 +48,21 @@ Maintain a pool of VPN Gate servers for rotation. When one server fails:
 ### Platform-Specific Bot Detection & VPN Profiles
 
 | Platform | Bot Detection | VPN Recommended | Preferred Exit | Notes |
-|---|---|---|---|---|
+|----------|--------------|-----------------|----------------|-------|
 | Tock | Cloudflare Turnstile | ✅ Yes | Japan | URL-based iteration avoids most triggers; VPN for persistent blocks |
 | OpenTable | Akamai CDN | ✅ Yes | Japan | Session-based workaround preferred; VPN if session expires |
 | Mindbody | PerimeterX (HUMAN) | ✅ Yes | Japan/EU | Some deployments block headless; VPN + stealth scripts |
 | Fresha | Cloudflare | ✅ Yes | Japan | "Checking your browser" page; VPN to non-US exit |
 | Boulevard | Cloudflare | ⚠️ Maybe | Japan | Premium platform; may block aggressive automation |
+| Yelp / Yelp Reservations | IP-range block | ✅ Yes | Residential proxy | Standard Yelp bot detection; VPN alone insufficient |
 | Resy | None known | ❌ No | — | API-based; no VPN needed |
-| Acuity | None known | ❌ No | — | REST API; no VPN needed |
-| Square | None known | ❌ No | — | Browser automation works without VPN |
-| SevenRooms | None known | ❌ No | — | Browser automation works without VPN |
+| Acuity Scheduling | None known | ❌ No | — | REST API; no VPN needed |
 | Calendly | None known | ❌ No | — | API-based; no VPN needed |
+| Square Appointments | None known | ❌ No | — | Browser automation works without VPN |
+| SevenRooms | None known | ❌ No | — | Widget API (no auth) + browser automation; no VPN needed |
 | Vagaro | API-level | ⚠️ Maybe | Japan | API errors may be IP-based; VPN can help |
 | Meevo | None known | ❌ No | — | Browser automation works without VPN |
 | StyleSeat | Basic | ⚠️ Maybe | Japan | Slow down interactions; VPN if blocked |
-| Yelp Reservations | Cloudflare | ⚠️ Maybe | Japan | Standard Yelp bot detection |
 | Booksy | Cloudflare | ⚠️ Maybe | Japan | Consumer-facing; may have basic bot detection |
 | GlossGenius | Minimal | ❌ No | — | Generally accessible |
 | SimplyBook.me | Minimal | ❌ No | — | Generally accessible |
