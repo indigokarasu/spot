@@ -8,7 +8,7 @@ Stored in `{agent_root}/commons/data/ocas-spot/venues.jsonl`. One record per ven
 {
   "venue_id": "venue_{slug}",
   "name": "Human-readable venue name",
-  "platform": "acuity | square | opentable | unknown",
+  "platform": "acuity | square | opentable | sevenrooms | resy | tock | meevo | vagaro | mindbody | fresha | styleseat | calendly | booksy | glossgenius | simplybook | boulevard | mangomint | daysmart | yelp-reservations | resdiary | eatapp | unknown",
   "booking_url": "https://...",
   "services": [
     {
@@ -66,6 +66,15 @@ Embedded in VenueRecord under `platform_config`. Platform-specific fields:
   "service_ids": {
     "Peppermint Pedi": "XA4S2WKU7HYBHTWNKCPBIBDJ"
   }
+}
+```
+
+### SevenRooms
+```json
+{
+  "venue_slug": "fiorellanoe",
+  "booking_url": "https://www.sevenrooms.com/explore/fiorellanoe/reservations/create/search/",
+  "availability_api": "https://www.sevenrooms.com/api-yoa/availability/widget/range"
 }
 ```
 

@@ -4,38 +4,80 @@ Systematic patterns for booking and availability automation. Organized for conti
 
 ---
 
+## Platform Architecture
+
+Spot handles platforms through three architectural patterns:
+
+| Pattern | How It Works | Platforms |
+|---------|-------------|-----------|
+| **REST API** | Direct HTTP calls to structured endpoints. Fastest, most reliable. | Acuity Scheduling, Calendly |
+| **Public Widget API** | Unauthenticated JSON API embedded in the booking widget. No auth needed for availability. | SevenRooms (availability only) |
+| **Browser Automation** | Playwright-driven interaction with the booking page. Handles SPAs, custom elements, and bot detection. | All others |
+
+**Browser automation sub-patterns:**
+
+| Sub-pattern | Description | Platforms |
+|-------------|-------------|-----------|
+| **Standard Playwright** | Semantic selectors, standard form fills | Booksy, GlossGenius, SimplyBook.me, Boulevard, Mangomint, DaySmart, ResDiary, Eat App |
+| **SPA with shadow DOM** | Custom elements, shadow DOM queries, `aria-disabled` checks | Square Appointments, Meevo, Mindbody, Fresha, Vagaro |
+| **Session-based** | One-time manual login, then session persistence | OpenTable, Resy |
+| **URL-based iteration** | Navigate via URL params instead of clicking | Tock |
+| **Widget page automation** | Fill form on the public booking widget page | SevenRooms (booking), StyleSeat, Yelp Reservations |
+
+---
+
 ## Platform Directory
 
-### Appointment/Spa Platforms
+### Appointment / Spa Platforms
 
-| Platform | Status | Method | Last Tested |
-|----------|--------|--------|-------------|
-| [Acuity Scheduling](./acuity.md) | ✅ Production | REST API | 2026-03-30 |
-| [Square Appointments](./square.md) | ⚠️ Working | Browser automation | 2026-05-18 |
-| [Meevo](./meevo.md) | ⚠️ Working | Browser automation | 2026-05-18 |
-| [Vagaro](./vagaro.md) | ⚠️ Partial | Browser automation | 2026-05-18 |
-| [Mindbody](./mindbody.md) | ⚠️ Working | Browser automation | 2026-05-18 |
-| [Fresha](./fresha.md) | ⚠️ Working | Browser automation | 2026-05-18 |
-| [StyleSeat](./styleseat.md) | ⚠️ Working | Browser automation | 2026-05-18 |
-| [Calendly](./calendly.md) | ✅ Working | REST API + browser | 2026-05-18 |
-| [Booksy](./booksy.md) | 🆕 New | Browser automation | Not yet tested |
-| [GlossGenius](./glossgenius.md) | 🆕 New | Browser automation | Not yet tested |
-| [SimplyBook.me](./simplybook.md) | 🆕 New | Browser automation | Not yet tested |
-| [Boulevard](./boulevard.md) | 🆕 New | Browser automation | Not yet tested |
-| [Mangomint](./mangomint.md) | 🆕 New | Browser automation | Not yet tested |
-| [DaySmart Salon](./daysmart.md) | 🆕 New | Browser automation | Not yet tested |
+| Platform | Status | Method | Auth | Last Tested |
+|----------|--------|--------|------|-------------|
+| [Acuity Scheduling](./acuity.md) | ✅ Production | REST API | None | 2026-03-30 |
+| [Calendly](./calendly.md) | ✅ Production | REST API + browser | API token / none | 2026-05-18 |
+| [Square Appointments](./square.md) | ⚠️ Working | Browser automation (shadow DOM) | None | 2026-05-18 |
+| [Meevo](./meevo.md) | ⚠️ Working | Browser automation (Angular SPA) | None | 2026-05-18 |
+| [Mindbody](./mindbody.md) | ⚠️ Working | Browser automation (React SPA) | None | 2026-05-18 |
+| [Fresha](./fresha.md) | ⚠️ Working | Browser automation (React SPA) | None | 2026-05-18 |
+| [StyleSeat](./styleseat.md) | ⚠️ Working | Browser automation | None | 2026-05-18 |
+| [Vagaro](./vagaro.md) | ⚠️ Partial | Browser automation | None | 2026-05-18 |
+| [Booksy](./booksy.md) | 🆕 New | Browser automation | None | — |
+| [GlossGenius](./glossgenius.md) | 🆕 New | Browser automation | None | — |
+| [SimplyBook.me](./simplybook.md) | 🆕 New | Browser automation | None | — |
+| [Boulevard](./boulevard.md) | 🆕 New | Browser automation | None | — |
+| [Mangomint](./mangomint.md) | 🆕 New | Browser automation | None | — |
+| [DaySmart Salon](./daysmart.md) | 🆕 New | Browser automation | None | — |
 
 ### Restaurant Reservation Platforms
 
-| Platform | Status | Method | Last Tested |
-|----------|--------|--------|-------------|
-| [SevenRooms](./sevenrooms.md) | ✅ Production | REST API | 2026-03-31 |
-| [Resy](./resy.md) | ⚠️ Working | Browser automation | 2026-03-31 |
-| [Tock](./tock.md) | ⚠️ Working | Browser automation | 2026-03-31 |
-| [OpenTable](./opentable.md) | ⚠️ Working | Session-based | 2026-03-30 |
-| [Yelp Reservations](./yelp-reservations.md) | 🆕 New | Browser automation | Not yet tested |
-| [ResDiary](./resdiary.md) | 🆕 New | Browser automation | Not yet tested |
-| [Eat App](./eatapp.md) | 🆕 New | Browser automation | Not yet tested |
+| Platform | Status | Method | Auth | Last Tested |
+|----------|--------|--------|------|-------------|
+| [SevenRooms](./sevenrooms.md) | ✅ Production | Public widget API (availability) + browser automation (booking) | None | 2026-05-25 |
+| [Resy](./resy.md) | ⚠️ Working | REST API (auth) / browser fallback | API key + credentials | 2026-03-31 |
+| [Tock](./tock.md) | ⚠️ Working | Browser automation (URL iteration) | None | 2026-03-31 |
+| [OpenTable](./opentable.md) | ⚠️ Working | Session-based browser | Manual login | 2026-03-30 |
+| [Yelp Reservations](./yelp-reservations.md) | 🆕 New | Browser automation | None | — |
+| [ResDiary](./resdiary.md) | 🆕 New | Browser automation | None | — |
+| [Eat App](./eatapp.md) | 🆕 New | Browser automation | None | — |
+
+### Discovery
+
+| Service | Status | Method | Auth | Last Tested |
+|---------|--------|--------|------|-------------|
+| Yelp Fusion | ✅ Production | REST API + page fallback | API key / none | 2026-05-18 |
+
+---
+
+## Blocked Platforms
+
+Some platforms cannot be automated from certain IP ranges due to bot detection. See [`references/platform-access-matrix.md`](platform-access-matrix.md) for the full breakdown.
+
+| Platform | Block Type | Bypass | Status |
+|----------|-----------|--------|--------|
+| Tock | Cloudflare Turnstile | VirtualPerson (headed Chrome) | ⚠️ Partial |
+| OpenTable | Akamai TLS fingerprint | VirtualPerson + manual login | ⚠️ Partial |
+| Yelp | IP-range block | Residential proxy | ❌ Blocked |
+
+**Key insight:** Cloudflare Turnstile and Akamai blocks are fingerprint-based, not IP-based. VPN alone is insufficient — need a real browser (VirtualPerson) or residential proxy.
 
 ---
 
@@ -77,43 +119,41 @@ Systematic patterns for booking and availability automation. Organized for conti
 - **Response:** JSON with boolean availability
 - **Auth:** None required for public bookings
 
+### Calendly
+- **Domain:** `calendly.com`
+- **Signature:** REST API (`/v2/event_type_available_times`) or browser
+- **Auth:** `CALENDLY_API_TOKEN` for API; none for browser
+
 ### Square Appointments
 - **Domain:** `book.squareup.com`, `app.squareup.com`
 - **Signature:** `market-*` custom elements
 - **Response:** React SPA with shadow DOM
-- **Auth:** OAuth for business, public for consumer
+- **Auth:** None for consumer bookings
 
 ### Meevo (Millennium)
 - **Domain:** `*.meevo.com`, `login.meevo.com`
 - **Signature:** Angular SPA, multi-step wizard, `div.category-item` for service categories
-- **Response:** Angular-rendered SPA; requires JS click on inner elements
-- **Auth:** None required for public bookings
-
-### Vagaro
-- **Domain:** `*.vagaro.com`
-- **Signature:** Bootstrap modals, service list on `/services` page
-- **Response:** API-dependent; may fail in automation environments
 - **Auth:** None required for public bookings
 
 ### Mindbody
 - **Domain:** `*.mindbodyonline.com`, `*.mindbody.io`
 - **Signature:** React SPA, booking widget loads after hydration
-- **Auth:** None for public bookings; OAuth for API
+- **Auth:** None for public bookings
 
 ### Fresha
 - **Domain:** `*.fresha.com`
 - **Signature:** React SPA, service cards with "Book" buttons
-- **Auth:** None for public bookings; no public API
+- **Auth:** None for public bookings
+
+### Vagaro
+- **Domain:** `*.vagaro.com`
+- **Signature:** Bootstrap modals, service list on `/services` page
+- **Auth:** None required for public bookings
 
 ### StyleSeat
 - **Domain:** `*.styleseat.com`
 - **Signature:** React SPA, professional profile pages
 - **Auth:** Required for booking; not for availability check
-
-### Calendly
-- **Domain:** `calendly.com`
-- **Signature:** REST API (`/v2/event_type_available_times`) or browser
-- **Auth:** `CALENDLY_API_TOKEN` for API; none for browser
 
 ### Booksy
 - **Domain:** `*.booksy.com`
@@ -144,6 +184,27 @@ Systematic patterns for booking and availability automation. Organized for conti
 - **Domain:** `*.daysmart.com`
 - **Signature:** React SPA, salon-specific service categories
 - **Auth:** Required for booking; not for availability check
+
+### SevenRooms
+- **Domain:** `sevenrooms.com`
+- **Signature:** Public widget API at `/api-yoa/availability/widget/range` (no auth); booking widget at `/explore/{venue}/reservations/create/search/`
+- **Availability response:** JSON with `data.availability.{date}[].times[]` — each slot has `type`, `time`, `access_persistent_id`, `public_time_slot_description`, `duration`, `cancellation_policy`
+- **Auth:** None for availability; browser automation for booking (no customer REST API)
+
+### Resy
+- **Domain:** `resy.com`
+- **Signature:** REST API (`/4/find`) with auth token; browser fallback
+- **Auth:** API key + email/password for API; none for browser
+
+### Tock
+- **Domain:** `exploretock.com`
+- **Signature:** URL-based date iteration (`?date=YYYY-MM-DD`)
+- **Auth:** None; CF Turnstile on calendar interactions
+
+### OpenTable
+- **Domain:** `opentable.com`
+- **Signature:** Session-based; requires Firefox (Akamai blocks Chromium)
+- **Auth:** Manual login once, then session persistence
 
 ### Yelp Reservations
 - **Domain:** `*.yelp.com`
@@ -190,22 +251,27 @@ Systematic patterns for booking and availability automation. Organized for conti
 7. **DON'T ignore timezone differences** on international platforms
    - ✅ DO: Check for 24-hour format, DD/MM/YYYY dates, non-English text
 
+8. **DON'T assume the widget API doesn't work** without testing it directly
+   - ✅ DO: Always test the public widget API before falling back to browser automation (SevenRooms pattern)
+
 ---
 
 ## File Structure
 
 ```
-knowledge/scheduling/
+references/platforms/
 ├── README.md              # This file
 ├── NEW_PLATFORM.md        # Step-by-step guide for new platforms
 
 # Appointment/Spa Platforms
-├── acuity.md              # Acuity: Happy path + pitfalls
-├── square.md              # Square: Happy path + pitfalls
+├── acuity.md              # Acuity: REST API, no auth
+├── calendly.md            # Calendly: REST API + browser
+├── square.md              # Square: shadow DOM, custom elements
+├── meevo.md               # Meevo: Angular SPA
 ├── mindbody.md            # Mindbody: React SPA + VPN fallback
 ├── fresha.md              # Fresha: React SPA + VPN fallback
 ├── styleseat.md           # StyleSeat: React SPA
-├── calendly.md            # Calendly: REST API + browser
+├── vagaro.md              # Vagaro: Bootstrap modals
 ├── booksy.md              # Booksy: React SPA
 ├── glossgenius.md         # GlossGenius: React SPA
 ├── simplybook.md          # SimplyBook.me: Customizable React SPA
@@ -214,10 +280,10 @@ knowledge/scheduling/
 ├── daysmart.md            # DaySmart: React SPA
 
 # Restaurant Reservation Platforms
-├── sevenrooms.md          # SevenRooms: Public API
-├── resy.md                # Resy: Browser automation
-├── tock.md                # Tock: Browser automation
-├── opentable.md           # OpenTable: Session-based
+├── sevenrooms.md          # SevenRooms: Public widget API + browser
+├── resy.md                # Resy: REST API (auth) + browser
+├── tock.md                # Tock: URL iteration + CF Turnstile
+├── opentable.md           # OpenTable: Session-based, Firefox
 ├── yelp-reservations.md   # Yelp Reservations: Widget automation
 ├── resdiary.md            # ResDiary: UK/Europe/Asia focus
 ├── eatapp.md              # Eat App: Middle East focus
@@ -238,5 +304,7 @@ knowledge/scheduling/
 3. Document all failed attempts (what NOT to do)
 4. Update this README platform directory
 5. Add to decision tree if new patterns discovered
+6. Update `references/platform-notes.md` with key quirks
+7. Update `references/vpn-integration.md` bot detection table
 
 See [NEW_PLATFORM.md](./NEW_PLATFORM.md) for full workflow.
