@@ -119,14 +119,19 @@ Full platform directory and decision tree: `references/platforms/README.md`
 Bot block status and bypasses: `references/platform-access-matrix.md`
 Key platform quirks: `references/platform-notes.md`
 
+## Cron sweep pattern
+
+See `references/cron-sweep-pattern.md` for the cron-specific sweep flow including browser lifecycle management.
+
 ## Watch sweep behavior
 
 1. Load all active WatchRecords from `watch.jsonl`.
-2. For each record, call the platform script with venue, dates/range, and party_size.
+2. For each record, call the platform script with venue, dates/range, and party_size. For Square, use the stealth browser flow below.
 3. Filter results to the record's `time_window` if set.
 4. Compare found times against `last_found`. If new times exist, write an InsightProposal to Vesper (via journal briefing payload) and update `last_found` + `last_checked`.
 5. Always update `last_checked`, even when no availability found.
-6. Write a journal entry: Observation type if no new availability; Action type if InsightProposal written.
+6. Write an **Action** journal entry when availability changed (new or different times found). Write an **Observation** journal entry when no change detected.
+7. Journal format: flat JSON with `run_id`, `timestamp`, `type` (Action|Observation), `results[]` array containing one entry per venue checked, each with `watch_id`, `venue`, `platform`, `status`, and change details. See `references/journal-schema.md` for the canonical schema.
 
 ## Optional skill cooperation
 
@@ -184,10 +189,17 @@ For bot-blocked platforms (Tock, OpenTable, Mindbody, Fresha), VirtualPerson pro
 
 - **OpenTable requires Firefox** — Akamai blocks Chromium-based browsers for OpenTable. The skill must use Firefox for any OpenTable booking attempt.
 - **Bot blocks require VPN fallback** — CF Turnstile, PerimeterX, and Incapsula blocks are common on Tock, Mindbody, Fresha, and Vagaro. The VPN fallback via `ocas-vpn` resolves ~80% of blocks; if VPN is unavailable, the booking will fail.
-- **Square buttons use `aria-disabled`, not `isEnabled()`** — The `disabled` attribute on `market-button` and shadow DOM queries from the host element are the correct approach for Square Appointments.
+- **Square: use stealth browser, not Playwright or built-in browser** — Square Appointments automation uses the MCP stealth browser (`mcp_stealth_browser_*` tools). The built-in `browser_navigate` fails with `ERR_INSUFFICIENT_RESOURCES` on Square pages. The full verified flow is in `references/stealth-browser-square-flow-20260608.md`. Key: `execute_script` works for `window.location.href` only — use `query_elements` + `click_element` for all DOM interaction.
+- **Stealth browser instance may need re-spawn** — First `navigate` call on a fresh instance can fail with `[Errno 111] Connect call failed`. Re-spawn a new instance and retry. This is a race condition, not a persistent failure.
+- **Square `disabled` attribute on dates** — The `disabled` attribute on `market-button[data-testid^='date-']` elements is the correct availability check. `query_elements` returns `attributes.disabled` — if present, the date is unavailable. For **past** dates this is expected. For **future** dates this means the booking window hasn't reached that date yet (venue only books ~1 week out) OR the date is fully booked. Preserve `last_found` and re-check in a few days.
+- **Square calendar viewport behavior** — The date strip extends beyond the 1920px viewport (x positions range from negative for past dates to >1500 for future dates). No scrolling needed — all dates are in the DOM and queryable via `query_elements` even if partially off-screen. The calendar shows ~3 weeks at a time (past days as disabled, current week, future weeks up to the booking window — beyond which dates are also disabled). Use `data-testid^='date-'` to get all dates; check `disabled` attribute and `data-testid` value (N vs N-selected) to identify the target date.
+- **Square time slot state** — `market-button[data-testid='time-slot']` elements render for all available slots. Unlike dates, time slots do NOT use the `disabled` attribute to indicate unavailability — if a slot is listed, it's bookable. If a date is clicked and no time-slot elements appear, the date has zero availability (outside window or fully booked).
+- **Square OneTrust cookie banner** — Always check for and dismiss the cookie banner first step after navigation. Use `click_element(selector="#accept-recommended-btn-handler")` (CSS ID selector is faster than text_match). Without dismissing it, subsequent clicks may not register on overlapping elements.
+- **Meevo and Vagaro are effectively unautomated** — Despite HTTP access working, both platforms have persistent automation failures (Meevo: Angular change detection, 50+ consecutive failures; Vagaro: JS handler failures, 60+ consecutive failures). Skip these in watch sweeps rather than wasting cycles. Re-attempt only if platform behavior changes.
 - **External booking confirmation is authoritative** — If Sands reports a conflict after a successful venue booking, the external confirmation stands. Sands write failure never cancels an already-confirmed booking.
 - **20+ platforms, each with unique selectors** — Each booking platform has its own edge cases documented in `references/platforms/<platform>.md`. Always read the per-platform doc before attempting a new platform.
 - **SevenRooms public widget API** — Availability checks use the public widget API (no auth). Booking requires browser automation via Playwright on the customer widget page. There is no customer-facing REST API; `api.sevenrooms.com` is merchant-only.
+- **Journal path is NOT profile-scoped** — Journals always go to `<hermes-root>/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json`, NOT under `profiles/indigo/`. Writing journals to the profile-scoped path means other profiles and the Vesper aggregator won't find them.
 
 ## Platform notes
 
@@ -215,6 +227,10 @@ Spot uses `cronjob` for appointment monitoring. On platforms without `cronjob`, 
 || `scripts/square.js` | When checking Square Appointments availability (Playwright) |
 || `scripts/sevenrooms.py` | When checking SevenRooms availability (public widget API, no auth) or booking (browser automation via Playwright) |
 || `references/sevenrooms-api-notes.md` | SevenRooms API research notes — endpoint reference, response fields, community repos |
+|| `references/stealth-browser-square-flow-20260608.md` | Square flow via stealth browser — execute_script returns null, use query_elements + click_element only. Primary reference for Square automation. |
+|| `references/platform-access-matrix.md` | Before checking which platforms are accessible — now includes both HTTP access AND automation status (two separate tables). |
+|| `references/cron-sweep-pattern.md` | Before running watch sweeps via cron — browser lifecycle, error handling, and sequencing for automated sweeps. |
+|| `references/watch-sweep-behavior.md` | Before designing or modifying sweep logic — detailed behavioral spec for watch sweep edge cases. |
 
 ## Self-update
 
