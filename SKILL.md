@@ -1,5 +1,6 @@
 ---
 name: ocas-spot
+license: MIT
 description: 'Use when checking appointment availability, booking services, monitoring
   for openings, or discovering venues at salons, spas, and restaurants. spot.discover
   finds and compares venues via Yelp before booking. Supports Acuity Scheduling, Square
@@ -12,11 +13,10 @@ description: 'Use when checking appointment availability, booking services, moni
   ''is [venue] available'', ''watch [venue] for openings'', ''alert me when [venue]
   has availability'', ''monitor [venue]'', ''find a restaurant in'', ''compare salons
   near'', ''discover [type] near''.'
-license: MIT
 source: https://github.com/indigokarasu/ocas-spot
 includes:
   - references/**
-  - scripts/**
+  - scripts**
 
 metadata:
   author: Indigo Karasu
@@ -25,7 +25,7 @@ metadata:
 
 # Spot
 
-Spot automates appointment and reservation availability checks, bookings, and persistent monitoring across service venues. It maintains a registry of known venues, a watchlist for ongoing availability monitoring, and handles the full booking flow.
+Spot automates appointment and reservation availability checks, bookings, and persistent monitoring across service venues. It maintains a registry of known venues, a watchlist for ongoing availability monitoring, and handles the full booking flow. This automation exists because manual booking monitoring is time-consuming and error-prone, especially across 20+ different platforms.
 
 ## When to Use
 
@@ -50,8 +50,8 @@ Spot does not own: general travel planning (Voyage), calendar sync, restaurant r
 
 ## Ontology types
 
-- **Place** — venues where appointments or reservations are made. Emitted to Elephas on first booking or first watch entry for a new venue.
-- **Concept/Event** — confirmed appointments and reservations. Emitted to Elephas after booking confirmation.
+- **Place** — venues where appointments or reservations are made. Included in journal signal payloads on first booking or first watch entry for a new venue.
+- **Concept/Event** — confirmed appointments and reservations. Included in journal signal payloads after booking confirmation.
 
 ## Commands
 
@@ -65,7 +65,7 @@ After discovery, user selects from shortlist. Selected venue is auto-populated i
 
 `spot.check [venue] [service] [date_range]` — Check availability at a venue. `venue` may be a registered name or booking URL. `date_range` defaults to next 30 days. Returns available dates and time slots.
 
-`spot.book [venue] [service] [datetime] [--name NAME] [--email EMAIL] [--phone PHONE]` — Book an appointment. Reads contact defaults from `config.json` if flags omitted. Writes BookingRecord to `bookings.jsonl`. Emits Place + Concept/Event Signals to Elephas and an InsightProposal to Vesper (via journal briefing payload). If the venue location matches an active Voyage itinerary destination (checked via `{agent_root}/commons/data/ocas-voyage/itineraries/`), appends a Travel Context entry to that itinerary record.
+`spot.book [venue] [service] [datetime] [--name NAME] [--email EMAIL] [--phone PHONE]` — Book an appointment. Reads contact defaults from `config.json` if flags omitted. Writes BookingRecord to `bookings.jsonl`. Emits Place + Concept/Event Signals via journal payload and an InsightProposal to Vesper (via journal briefing payload). If the venue location matches an active Voyage itinerary destination (checked via `{agent_root}/commons/data/ocas-voyage/itineraries/`), appends a Travel Context entry to that itinerary record.
 
 `spot.list [--upcoming] [--all]` — List bookings from `bookings.jsonl`. Default: next 30 days.
 
@@ -135,7 +135,7 @@ See `references/cron-sweep-pattern.md` for the cron-specific sweep flow includin
 
 ## Optional skill cooperation
 
-- **Elephas** — Spot emits Place and Concept/Event Signals to journal payload fields after confirmed bookings and on first watch-add for a new venue.
+- **Chronicle** — Spot emits Place and Concept/Event Signals to journal payload fields after confirmed bookings and on first watch-add for a new venue.
 - **Vesper** — Spot writes InsightProposals to journal payload fields when watch-sweep finds new availability and after confirmed bookings.
 - **Sands** — Before booking: conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json`. After booking: event creation request to `{agent_root}/commons/data/ocas-sands/intake/{event_id}.event.json`. External venue confirmation is authoritative — never roll back on Sands failure.
 - **Voyage** — On confirmed booking, checks `{agent_root}/commons/data/ocas-voyage/itineraries/` for matching destinations. Appends Travel Context entry if matched.
