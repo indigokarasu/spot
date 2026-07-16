@@ -21,6 +21,14 @@ includes:
 metadata:
   author: Indigo Karasu
   version: 2.6.0
+  hermes:
+    category: productivity
+    tags:
+    - appointments
+    - reservations
+    - availability-monitoring
+    - booking
+    - OCAS-core
 ---
 
 # Spot
@@ -125,13 +133,13 @@ See `references/cron-sweep-pattern.md` for the cron-specific sweep flow includin
 
 ## Watch sweep behavior
 
-1. Load all active WatchRecords from `watch.jsonl`.
-2. For each record, call the platform script with venue, dates/range, and party_size. For Square, use the stealth browser flow below.
-3. Filter results to the record's `time_window` if set.
-4. Compare found times against `last_found`. If new times exist, write an InsightProposal to Vesper (via journal briefing payload) and update `last_found` + `last_checked`.
-5. Always update `last_checked`, even when no availability found.
-6. Write an **Action** journal entry when availability changed (new or different times found). Write an **Observation** journal entry when no change detected.
-7. Journal format: flat JSON with `run_id`, `timestamp`, `type` (Action|Observation), `results[]` array containing one entry per venue checked, each with `watch_id`, `venue`, `platform`, `status`, and change details. See `references/journal-schema.md` for the canonical schema.
+- [ ] Load all active WatchRecords from `watch.jsonl`.
+- [ ] For each record, call the platform script with venue, dates/range, and party_size. For Square, use the stealth browser flow below.
+- [ ] Filter results to the record's `time_window` if set.
+- [ ] Compare found times against `last_found`. If new times exist, write an InsightProposal to Vesper (via journal briefing payload) and update `last_found` + `last_checked`.
+- [ ] Always update `last_checked`, even when no availability found.
+- [ ] Write an **Action** journal entry when availability changed (new or different times found). Write an **Observation** journal entry when no change detected.
+- [ ] Journal format: flat JSON with `run_id`, `timestamp`, `type` (Action|Observation), `results[]` array containing one entry per venue checked, each with `watch_id`, `venue`, `platform`, `status`, and change details. See `references/journal-schema.md` for the canonical schema.
 
 ## Optional skill cooperation
 
@@ -166,11 +174,11 @@ See `references/okrs.md` for all targets (journal coverage, sweep latency, platf
 
 When Spot encounters failures — bot blocks, VPN disconnects, platform timeouts, or data corruption — it follows these principles:
 
-1. **Idempotency** — All recovery actions are idempotent.
-2. **Graceful degradation** — If a platform is unreachable, log the failure, mark the record, and continue. Partial results are never discarded.
-3. **VPN reconnection** — If `tun0` drops mid-sweep, pause, reconnect via `ocas-vpn`, and resume from the last completed entry.
-4. **Data repair** — Quarantine corrupt JSONL lines to `.quarantine/` and reconstruct last valid state from journal outputs.
-5. **Audit continuity** — Every recovery action is recorded in `intents.jsonl` and `evidence.jsonl`.
+- [ ] **Idempotency** — All recovery actions are idempotent.
+- [ ] **Graceful degradation** — If a platform is unreachable, log the failure, mark the record, and continue. Partial results are never discarded.
+- [ ] **VPN reconnection** — If `tun0` drops mid-sweep, pause, reconnect via `ocas-vpn`, and resume from the last completed entry.
+- [ ] **Data repair** — Quarantine corrupt JSONL lines to `.quarantine/` and reconstruct last valid state from journal outputs.
+- [ ] **Audit continuity** — Every recovery action is recorded in `intents.jsonl` and `evidence.jsonl`.
 
 ## Initialization
 
