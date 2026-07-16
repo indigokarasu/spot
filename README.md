@@ -1,4 +1,4 @@
-# 💧 Spot
+# Spot
 
 <p align="center">
   <img src="./assets/readme/hero.svg" width="100%" alt="Spot: one booking request becomes a confirmed reservation across SevenRooms, Resy, Tock, and OpenTable, then a Travel Context entry in Voyage">
