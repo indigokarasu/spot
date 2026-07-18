@@ -2,7 +2,7 @@
   <title id="title">Spot</title>
   <desc id="desc">Spot — reservation booking automation. One plain-language request becomes a confirmed reservation across SevenRooms, Resy, Tock, and OpenTable, then a Travel Context entry in Voyage.</desc>
   <defs>
-    <radialGradient id="bg" cx="0.26" cy="0.34" r="0.9" gradientUnits="userSpaceOnUse">
+    <radialGradient id="bg" cx="1000" cy="120" r="820" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#15101F"/>
       <stop offset="0.55" stop-color="#0C0F16"/>
       <stop offset="1" stop-color="#0B0E11"/>
@@ -11,25 +11,64 @@
       <stop offset="0" stop-color="#7C5CFF"/>
       <stop offset="1" stop-color="#9B7BFF"/>
     </linearGradient>
+    <radialGradient id="pinGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7C5CFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+    </radialGradient>
   </defs>
+
   <rect width="1200" height="420" fill="url(#bg)"/>
-  <circle cx="980" cy="150" r="220" fill="#7C5CFF" opacity="0.06"/>
+
+  <!-- faint map grid in the right zone -->
+  <g stroke="#7C5CFF" stroke-opacity="0.05" stroke-width="1">
+    <line x1="640" y1="60" x2="1160" y2="60"/>
+    <line x1="640" y1="140" x2="1160" y2="140"/>
+    <line x1="640" y1="220" x2="1160" y2="220"/>
+    <line x1="640" y1="300" x2="1160" y2="300"/>
+    <line x1="740" y1="30" x2="740" y2="390"/>
+    <line x1="860" y1="30" x2="860" y2="390"/>
+    <line x1="980" y1="30" x2="980" y2="390"/>
+    <line x1="1100" y1="30" x2="1100" y2="390"/>
+  </g>
+
+  <!-- radar pulse rings (static depth cue) centered on the pin -->
+  <g fill="none" stroke="#7C5CFF">
+    <circle cx="900" cy="180" r="62" stroke-opacity="0.28" stroke-width="1.5"/>
+    <circle cx="900" cy="180" r="98" stroke-opacity="0.18" stroke-width="1.2"/>
+    <circle cx="900" cy="180" r="134" stroke-opacity="0.10" stroke-width="1"/>
+  </g>
+
+  <!-- connectors: four platforms converge to the one confirmed pin -->
+  <g stroke="#7C5CFF" stroke-opacity="0.40" stroke-width="1.4">
+    <line x1="770" y1="110" x2="900" y2="170"/>
+    <line x1="1030" y1="110" x2="900" y2="170"/>
+    <line x1="770" y1="300" x2="900" y2="190"/>
+    <line x1="1030" y1="300" x2="900" y2="190"/>
+  </g>
+
+  <!-- four platform nodes converging on the pin -->
+  <g>
+    <circle cx="770" cy="110" r="5" fill="#7C5CFF"/>
+    <circle cx="1030" cy="110" r="5" fill="#7C5CFF"/>
+    <circle cx="770" cy="300" r="5" fill="#7C5CFF"/>
+    <circle cx="1030" cy="300" r="5" fill="#7C5CFF"/>
+  </g>
+
+  <!-- confirmed pin (the ask becomes a booked table) -->
+  <circle cx="900" cy="180" r="120" fill="url(#pinGlow)"/>
+  <g transform="translate(900 180)">
+    <path d="M0 -78 C -40 -78 -66 -46 -66 -14 C -66 20 -28 52 -28 78 L 28 78 C 28 52 66 20 66 -14 C 66 -46 40 -78 0 -78 Z" fill="#0E111A" stroke="url(#accent)" stroke-width="2.5"/>
+    <circle cx="0" cy="-18" r="22" fill="#7C5CFF"/>
+    <circle cx="0" cy="-18" r="10" fill="#0B0E11"/>
+    <text x="0" y="126" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="1.5" fill="#9FE9B0">BOOKED</text>
+  </g>
+
+  <text x="900" y="372" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8A93A6">ONE ASK → FOUR TABLES → CONFIRMED</text>
+
+  <!-- left title block -->
   <text x="64" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="58" font-weight="800" letter-spacing="-1" fill="#F4F6FB">Spot</text>
   <rect x="66" y="126" width="64" height="4" rx="2" fill="url(#accent)"/>
   <text x="64" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" fill="#C7CEDB">Reservation booking automation —</text>
   <text x="64" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" fill="#C7CEDB">one mouth for four platforms.</text>
-  <!-- Location-pin motif: the ask becomes a confirmed pin -->
-  <g transform="translate(940 220)">
-    <path d="M0 -78 C -40 -78 -66 -46 -66 -14 C -66 20 -28 52 -28 78 L 28 78 C 28 52 66 20 66 -14 C 66 -46 40 -78 0 -78 Z" fill="#0E111A" stroke="url(#accent)" stroke-width="2.5"/>
-    <circle cx="0" cy="-18" r="20" fill="#7C5CFF"/>
-    <circle cx="0" cy="-18" r="9" fill="#0B0E11"/>
-    <text x="0" y="120" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#9FE9B0">BOOKED</text>
-  </g>
-  <g font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#AEB6C6" text-anchor="middle">
-    <line x1="690" y1="220" x2="850" y2="220" stroke="#7C5CFF" stroke-width="1.4" opacity="0.5"/>
-    <circle cx="690" cy="220" r="6" fill="#7C5CFF"/><text x="690" y="244">request</text>
-    <text x="770" y="200" fill="#8A93A6">-&gt;</text>
-    <circle cx="850" cy="220" r="6" fill="#7C5CFF"/><text x="850" y="244">confirm</text>
-  </g>
   <text x="64" y="290" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#8A93A6" letter-spacing="2">SEVENROOMS · RESY · TOCK · OPENTABLE — THEN VOYAGE.</text>
 </svg>
