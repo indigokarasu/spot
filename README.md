@@ -1,7 +1,7 @@
 # Spot
 
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="Spot: one booking request becomes a confirmed reservation across SevenRooms, Resy, Tock, and OpenTable, then a Travel Context entry in Voyage">
+  <img src="./assets/readme/hero.jpg" width="100%" alt="Spot: one booking request becomes a confirmed reservation across SevenRooms, Resy, Tock, and OpenTable, then a Travel Context entry in Voyage">
 </p>
 
 **Spot** turns a single plain-language request into a confirmed restaurant reservation — across **SevenRooms, Resy, Tock, and OpenTable** — through browser automation. No helper scripts, no API keys. Confirmed bookings automatically drop a **Travel Context** entry into [Voyage](https://github.com/indigokarasu/voyage).
