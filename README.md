@@ -1,12 +1,67 @@
-# spot
+# ⚙️ Spot
 
-<p align="center">
-  <img src="./assets/readme/hero.jpg" width="100%" alt="Spot: one booking request becomes a confirmed reservation across SevenRooms, Resy, Tock, and OpenTable">
-</p>
+  <img src="./assets/readme/hero.jpg" width="100%" alt="Spot">
 
-Spot turns a plain-language request into a confirmed reservation across SevenRooms, Resy, Tock, or OpenTable via browser automation. Confirmed bookings automatically create a Travel Context entry in Voyage.
+Use when checking appointment availability, booking services, monitoring
 
-**Capabilities:**
-- Reservation search and booking via browser automation
-- Multi-platform routing: SevenRooms, Resy, Tock, OpenTable
-- Automatic Travel Context entry in Voyage
+**Skill name:** `ocas-spot`
+**Version:** 2.6.0
+**Type:** 
+**Layer:** productivity
+**Author:** Indigo Karasu
+
+---
+
+## 📖 Overview
+
+Use when checking appointment availability, booking services, monitoring
+
+---
+
+## 🔧 Commands
+
+See `SKILL.md` for verbs and subcommands.
+
+
+---
+
+## 📊 Outputs
+
+See `SKILL.md` for outputs, journals, and persistence rules.
+
+---
+
+## 📄 Files
+
+| File | Purpose |
+|---|---|
+| `SKILL.md` | Skill definition |
+| `references/` | Supporting documentation |
+| `scripts/` | Helper scripts |
+
+
+## Changelog
+
+- [2.3.0] - 2026-04-12
+- Added
+- Changed
+- Removed
+- [2026-04-05] Yelp discovery layer
+- Added
+- Changed
+- Validation
+
+---
+
+## 📚 Documentation
+
+Read `SKILL.md` for operational details, schemas, and validation rules.
+
+Read `references/` for detailed specifications and examples.
+
+
+---
+
+## 📄 License
+
+MIT License — see `LICENSE` for details.
