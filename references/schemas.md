@@ -85,8 +85,13 @@ Stored at `{agent_root}/commons/data/ocas-spot/config.json`.
 ```json
 {
   "timezone": "America/Los_Angeles",
+<<<<<<< Updated upstream
   "name": "Indigo Karasu",
   "email": "<third-party-or-user-email>",
+=======
+  "name": "<agent-name>",
+  "email": "<agent-email>",
+>>>>>>> Stashed changes
   "phone": null
 }
 ```
