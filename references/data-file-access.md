@@ -24,14 +24,14 @@ The `read_file` Hermes tool prepends line numbers to displayed output (e.g., `1|
 
 Spot data lives under the Hermes profile directory. The exact paths depend on profile:
 
-**Indigo profile (active):**
-- Data: `<hermes-home>/commons/data/ocas-spot/`
-- Journals: `<hermes-root>/commons/journals/ocas-spot/YYYY-MM-DD/`
-- Config: `<hermes-home>/commons/data/ocas-spot/config.json`
+**the agent profile (active):**
+- Data: `<hermes-home>/profiles/indigo/commons/data/ocas-spot/`
+- Journals: `<hermes-home>/commons/journals/ocas-spot/YYYY-MM-DD/`
+- Config: `<hermes-home>/profiles/indigo/commons/data/ocas-spot/config.json`
 
 **Default/non-profile:**
-- Data: `<hermes-root>/commons/data/ocas-spot/`
-- Journals: `<hermes-root>/commons/journals/ocas-spot/YYYY-MM-DD/`
+- Data: `<hermes-home>/commons/data/ocas-spot/`
+- Journals: `<hermes-home>/commons/journals/ocas-spot/YYYY-MM-DD/`
 
 **Key files:**
 - `watch.jsonl` — WatchRecord entries (full-replace)
@@ -40,7 +40,7 @@ Spot data lives under the Hermes profile directory. The exact paths depend on pr
 - `metrics.jsonl` — Sweep history (append-only)
 - `config.json` — Single JSON object
 
-**Journal directory pattern:** Journals go to `<hermes-root>/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json` (NOT under profiles/indigo/). The journal path is shared across profiles.
+**Journal directory pattern:** Journals go to `<hermes-home>/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json` (NOT under profiles/indigo/). The journal path is shared across profiles.
 
 ## Cron mode constraints
 - `execute_code` is **blocked**. Use `terminal()` for shell commands and `write_file()` for file writes.
@@ -126,7 +126,7 @@ def strip_prefixes(line_str):
             break
     return line_str
 
-with open('<hermes-home>/commons/data/ocas-spot/watch.jsonl', 'rb') as f:
+with open('<hermes-home>/profiles/indigo/commons/data/ocas-spot/watch.jsonl', 'rb') as f:
     raw_lines = f.readlines()
 records = []
 for line in raw_lines:

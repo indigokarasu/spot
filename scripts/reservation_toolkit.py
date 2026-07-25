@@ -23,7 +23,8 @@ from datetime import datetime, timedelta
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 log = logging.getLogger(__name__)
 
-DATA_DIR = Path("<hermes-root>/commons/data/ocas-spot")
+HERMES_HOME = Path(os.environ.get("HERMES_HOME", os.path.expanduser("~/.hermes")))
+DATA_DIR = HERMES_HOME / "commons" / "data" / "ocas-spot"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 

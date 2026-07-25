@@ -86,7 +86,7 @@ Stored at `{agent_root}/commons/data/ocas-spot/config.json`.
 {
   "timezone": "America/Los_Angeles",
   "name": "Indigo Karasu",
-  "email": "mx.indigo.karasu@gmail.com",
+  "email": "<third-party-or-user-email>",
   "phone": null
 }
 ```
