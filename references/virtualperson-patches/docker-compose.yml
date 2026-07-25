@@ -19,7 +19,7 @@ services:
     tty: true
     volumes:
       # Persist all Hermes state (config, memories, sessions, skills, logs).
-      - hermes-state:/home/hermes/.hermes
+      - hermes-state:<home>/.hermes
     user: "1000:1000"
     environment:
       # Virtual display for headed Chrome.
@@ -42,7 +42,7 @@ services:
       #   then open http://localhost:6080/vnc.html
       - "127.0.0.1:6080:6080"
     # entrypoint.sh starts Xvfb → Chrome → VNC → Hermes gateway.
-    command: /home/hermes/entrypoint.sh
+    command: <home>/entrypoint.sh
     # /dev/shm for Chrome — prevents "out of shared memory" crashes.
     shm_size: '512m'
     restart: unless-stopped

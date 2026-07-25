@@ -207,7 +207,7 @@ For bot-blocked platforms (Tock, OpenTable, Mindbody, Fresha), VirtualPerson pro
 - **External booking confirmation is authoritative** — If Sands reports a conflict after a successful venue booking, the external confirmation stands. Sands write failure never cancels an already-confirmed booking.
 - **20+ platforms, each with unique selectors** — Each booking platform has its own edge cases documented in `references/platforms/<platform>.md`. Always read the per-platform doc before attempting a new platform.
 - **SevenRooms public widget API** — Availability checks use the public widget API (no auth). Booking requires browser automation via Playwright on the customer widget page. There is no customer-facing REST API; `api.sevenrooms.com` is merchant-only.
-- **Journal path is NOT profile-scoped** — Journals always go to `<hermes-root>/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json`, NOT under `profiles/indigo/`. Writing journals to the profile-scoped path means other profiles and the Vesper aggregator won't find them.
+- **Journal path is NOT profile-scoped** — Journals always go to `<hermes-home>/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json`, NOT under `profiles/indigo/`. Writing journals to the profile-scoped path means other profiles and the Vesper aggregator won't find them.
 
 ## Platform notes
 

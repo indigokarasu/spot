@@ -92,12 +92,12 @@ python3 sevenrooms.py check --venue fiorellanoe --date 2026-06-01 --party-size 2
 ### Book (browser automation via Playwright):
 ```bash
 python3 sevenrooms.py book --venue fiorellanoe --date 2026-07-15 --time "7:00 PM" \
-    --party-size 2 --first-name owner --last-name operator \
+    --party-size 2 --first-name <operator> --last-name <operator-last> \
     --email owner@example.com --phone "+141****1234"
 
 # Headed mode (visible browser) for debugging:
 python3 sevenrooms.py book --venue fiorellanoe --date 2026-07-15 --time "7:00 PM" \
-    --party-size 2 --first-name owner --last-name operator \
+    --party-size 2 --first-name <operator> --last-name <operator-last> \
     --email owner@example.com --phone "+141****1234" --headed
 ```
 
