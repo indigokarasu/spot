@@ -213,4 +213,3 @@ If stuck on a platform:
 4. Look for `/swagger` or `/api/docs`
 5. Search GitHub for "{platform} api" or "{platform} booking"
 6. Check if there's a public API documentation
-
