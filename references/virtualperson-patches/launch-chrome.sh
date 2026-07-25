@@ -10,24 +10,24 @@
 # - CDP on 127.0.0.1:9222 (localhost only)
 # - WebRTC leak protection
 # - No automation detection flags
-# - Persistent profile at /home/hermes/.chrome-profile
+# - Persistent profile at <home>/hermes/.chrome-profile
 #
 # Usage:
-#   /home/hermes/launch-chrome.sh          — launch Chrome (kills existing first)
-#   /home/hermes/launch-chrome.sh status    — check if Chrome is healthy
-#   /home/hermes/launch-chrome.sh kill      — kill Chrome
-#   /home/hermes/launch-chrome.sh restart   — kill + relaunch
+#   <home>/hermes/launch-chrome.sh          — launch Chrome (kills existing first)
+#   <home>/hermes/launch-chrome.sh status    — check if Chrome is healthy
+#   <home>/hermes/launch-chrome.sh kill      — kill Chrome
+#   <home>/hermes/launch-chrome.sh restart   — kill + relaunch
 
 set -u
 
 CHROME_BIN=$(command -v google-chrome-stable 2>/dev/null || command -v google-chrome 2>/dev/null)
-PROFILE_DIR="/home/hermes/.hermes/.chrome-profile"
+PROFILE_DIR="<home>/hermes/.hermes/.chrome-profile"
 CDP_PORT=9222
 CDP_BIND="127.0.0.1"
 # VPN Gate SOCKS5 proxy on the host (replaces Mullvad 172.18.0.1:1080)
 PROXY="socks5://host.docker.internal:1080"
 DISPLAY="${DISPLAY:-:99}"
-LOG="/home/hermes/chrome.log"
+LOG="<home>/hermes/chrome.log"
 
 log() { echo "[launch-chrome] $*"; }
 

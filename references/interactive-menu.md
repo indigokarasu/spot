@@ -33,4 +33,3 @@ Match the user's response against the full choice string. Extract the action key
 
 On CLI, choices are navigable with arrow keys. On messaging platforms, choices render as a numbered list. The two-level hierarchy ensures no more than 4 options appear at any level on any platform.
 
-

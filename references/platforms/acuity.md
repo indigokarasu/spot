@@ -155,4 +155,3 @@ async function checkAcuityAvailability(config) {
 | `timezone` | ✅ | Client timezone (URL-encoded) |
 | `month` | For monthly | Format: `YYYY-MM` |
 | `startDate` | For daily | Format: `YYYY-MM-DD` |
-

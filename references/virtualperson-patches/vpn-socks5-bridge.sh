@@ -14,15 +14,15 @@ set -u
 
 PROXY_PORT=1080
 PROXY_BIND="127.0.0.1"
-LOG="/root/vpn-socks5-bridge.log"
-PIDFILE="/root/vpn-socks5-bridge.pid"
+LOG="<fs-root>/vpn-socks5-bridge.log"
+PIDFILE="<fs-root>/vpn-socks5-bridge.pid"
 
 log() { echo "[vpn-socks5-bridge] $*"; }
 
 check_tun0() {
     if ! ip addr show tun0 2>/dev/null | grep -q 'inet '; then
         log "ERROR: tun0 (VPN) is not active. Start VPN first:"
-        log "  openvpn --config /root/vpn_gate.ovpn --daemon"
+        log "  openvpn --config <vpn-config> --daemon"
         return 1
     fi
     return 0

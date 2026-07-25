@@ -9,7 +9,7 @@
 #   x11vnc          VNC server mirroring :99, port 5900
 #   websockify      noVNC websocket proxy, port 6080
 #
-# Chrome profile persists at /home/hermes/.hermes/.chrome-profile (on named volume).
+# Chrome profile persists at <home>/hermes/.hermes/.chrome-profile (on named volume).
 # Cookies, sessions, localStorage all survive container restarts.
 
 set -u
@@ -19,7 +19,7 @@ DISPLAY=":${DISPLAY_NUM}"
 VNC_PORT=5900
 NOVNC_PORT=6080
 CDP_PORT=9222
-CHROME_PROFILE="/home/hermes/.hermes/.chrome-profile"
+CHROME_PROFILE="<home>/hermes/.hermes/.chrome-profile"
 
 log() { echo "[entrypoint] $*"; }
 
@@ -47,8 +47,8 @@ export DISPLAY
 # ── 2. Google Chrome (headed, CDP + VPN Gate proxy) ───────────────────────────
 # Uses launch-chrome.sh as the single source of truth for Chrome flags.
 # The proxy points to the host's SOCKS5 bridge which routes through VPN Gate.
-if [ -x /home/hermes/launch-chrome.sh ]; then
-    /home/hermes/launch-chrome.sh launch
+if [ -x <home>/hermes/launch-chrome.sh ]; then
+    <home>/hermes/launch-chrome.sh launch
 else
     log "WARNING: launch-chrome.sh not found, launching Chrome directly"
     CHROME_BIN=$(command -v google-chrome-stable 2>/dev/null || command -v google-chrome 2>/dev/null || true)
@@ -100,8 +100,8 @@ fi
             log "WATCHDOG: Chrome CDP down — restarting Chrome..."
             pkill -9 -f "google-chrome" 2>/dev/null || true
             sleep 2
-            if [ -x /home/hermes/launch-chrome.sh ]; then
-                /home/hermes/launch-chrome.sh launch
+            if [ -x <home>/hermes/launch-chrome.sh ]; then
+                <home>/hermes/launch-chrome.sh launch
             fi
         fi
         sleep 30

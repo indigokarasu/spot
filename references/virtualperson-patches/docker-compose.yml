@@ -6,7 +6,7 @@
 # - All browser traffic routes through VPN Gate tunnel on the host
 #
 # Prerequisites:
-# 1. VPN Gate connected: openvpn --config /root/vpn_gate.ovpn --daemon
+# 1. VPN Gate connected: openvpn --config <vpn-config> --daemon
 # 2. SOCKS5 bridge running: ./vpn-socks5-bridge.sh start
 # 3. Verify: curl --socks5 127.0.0.1:1080 https://ipinfo.io/json
 

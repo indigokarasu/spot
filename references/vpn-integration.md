@@ -25,8 +25,8 @@ Auto-detect bot blocks using `detect_bot_block()` from stealth config. Trigger V
    └─ VPN not connected ↓
 4. Connect VPN via ocas-vpn skill:
    a. Fetch best non-US server from VPN Gate API
-   b. Save config to /root/vpn_gate.ovpn
-   c. openvpn --config /root/vpn_gate.ovpn --daemon
+   b. Save config to <vpn-config>
+   c. openvpn --config <vpn-config> --daemon
    d. Wait for tun0, verify non-US exit IP
    ↓
 5. Retry booking page load through VPN
@@ -89,7 +89,7 @@ reader = csv.DictReader(sys.stdin)
 servers = [r for r in reader if r.get('CountryShort') != 'US' and r.get('OpenVPN_ConfigData_Base64')]
 best = sorted(servers, key=lambda s: int(s.get('Score', 0)), reverse=True)[0]
 config = base64.b64decode(best['OpenVPN_ConfigData_Base64']).decode()
-with open('/root/vpn_gate.ovpn', 'w') as f:
+with open('<vpn-config>', 'w') as f:
     f.write(config)
 print(f\"Selected: {best['CountryLong']} (Score: {best['Score']})\")
 "
@@ -97,7 +97,7 @@ print(f\"Selected: {best['CountryLong']} (Score: {best['Score']})\")
         pkill -f openvpn 2>/dev/null
         sleep 2
         # Connect
-        openvpn --config /root/vpn_gate.ovpn --daemon --log /root/openvpn.log
+        openvpn --config <vpn-config> --daemon --log <fs-root>/openvpn.log
         sleep 5
         # Verify
         ip addr show tun0
