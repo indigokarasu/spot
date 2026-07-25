@@ -100,7 +100,7 @@
 ### Changed
 - Package directory renamed from `spot` to `ocas-spot` (OCAS spec compliance)
 - Platform table updated: SevenRooms ✅, Resy ✅, Tock ⚠️, OpenTable ⚠️ (session required)
-- `self_update.source` updated to `indigokarasu/ocas-spot`
+- `self_update.source` updated to `<agent-handle>/ocas-spot`
 - `skill.json` `requires` now lists `npm` and `pip` dependencies explicitly
 - `filesystem.write` updated: `ocas-elephas` intake path corrected to `{agent_root}/commons/db/ocas-elephas/intake/`
 - `filesystem.read` extended to include `ocas-voyage/itineraries/`
