@@ -54,11 +54,7 @@
 
 ## Hermes Browser — Persistent about:blank Pattern (2026-06-08)
 
-<<<<<<< Updated upstream
 **`read_file` path resolution issue (confirmed 2026-06-08, 4 consecutive failures this session)** — In cron mode, `read_file` can fail for ANY path — both `~/...` home-relative paths and fully-resolved absolute paths like `<hermes-home>/profiles/indigo/...`. The tool's path resolver prepends `/home/` to the home-directory segment, producing double-prefixed paths like `<hermes-home>/profiles/indigo/home/.hermes/profiles/indigo/...`. The failure is silent (returns "File not found") and does NOT fall back to alternative resolution. **Use `terminal(command="cat /absolute/path")` as the reliable fallback for ANY file read in cron mode.** This is the single most common cron-mode blocker — it will hit on the first file read of every sweep until you switch to `terminal()`. After 2 consecutive `read_file` failures in a session, switch to `terminal()` for all remaining file reads — do not retry `read_file`.
-=======
-**`read_file` path resolution issue (confirmed 2026-06-08, 4 consecutive failures this session)** — In cron mode, `read_file` can fail for ANY path — both `~/...` home-relative paths and fully-resolved absolute paths like `~/.hermes/profiles/indigo/...`. The tool's path resolver prepends `/home/` to the home-directory segment, producing double-prefixed paths like `~/.hermes/profiles/indigo/home/.hermes/profiles/indigo/...`. The failure is silent (returns "File not found") and does NOT fall back to alternative resolution. **Use `terminal(command="cat /absolute/path")` as the reliable fallback for ANY file read in cron mode.** This is the single most common cron-mode blocker — it will hit on the first file read of every sweep until you switch to `terminal()`. After 2 consecutive `read_file` failures in a session, switch to `terminal()` for all remaining file reads — do not retry `read_file`.
->>>>>>> Stashed changes
 
 When Hermes browser gets `about:blank` post-Book, re-navigating to `?date=` and re-running the full JS flow usually resolves it (transient failure). However, on 2026-06-08 the re-run ALSO produced `about:blank` — this was the third consecutive sweep (along with 2026-06-05 and 2026-06-06) where about:blank occurred.
 

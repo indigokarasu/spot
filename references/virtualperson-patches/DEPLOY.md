@@ -19,11 +19,7 @@ Host Server
 ## Prerequisites
 
 - Ubuntu 22.04+ with Docker & Docker Compose
-<<<<<<< Updated upstream
-- VPN Gate config at `<vpn-config>`
-=======
 - VPN Gate config at `<fs-root>/vpn_gate.ovpn`
->>>>>>> Stashed changes
 - `microsocks` installed (or auto-installed by bridge script)
 
 ## Quick Start
@@ -32,11 +28,7 @@ Host Server
 
 ```bash
 # Connect to VPN Gate (Japan server)
-<<<<<<< Updated upstream
-openvpn --config <vpn-config> --daemon --log <fs-root>/openvpn.log
-=======
 openvpn --config <fs-root>/vpn_gate.ovpn --daemon --log <fs-root>/openvpn.log
->>>>>>> Stashed changes
 
 # Wait for connection
 sleep 5
@@ -122,21 +114,13 @@ if 'data-ciphers' not in config:
             lines2.insert(i+1, 'data-ciphers AES-128-CBC:AES-256-GCM:AES-128-GCM')
             break
     config = '\n'.join(lines2)
-<<<<<<< Updated upstream
-with open('<vpn-config>', 'w') as f:
-=======
 with open('<fs-root>/vpn_gate.ovpn', 'w') as f:
->>>>>>> Stashed changes
     f.write(config)
 print(f"Selected: {target['CountryLong']} {target['IP']}")
 EOF
 
 # Reconnect
-<<<<<<< Updated upstream
-openvpn --config <vpn-config> --daemon
-=======
 openvpn --config <fs-root>/vpn_gate.ovpn --daemon
->>>>>>> Stashed changes
 sleep 5
 
 # Restart SOCKS5 bridge (it auto-detects the new tun0)
@@ -177,11 +161,7 @@ with sync_playwright() as p:
 ### VPN connection drops
 - The watchdog in entrypoint.sh will restart Chrome when CDP goes down
 - Restart the bridge: `./vpn-socks5-bridge.sh restart`
-<<<<<<< Updated upstream
-- If tun0 is down, reconnect VPN: `openvpn --config <vpn-config> --daemon`
-=======
 - If tun0 is down, reconnect VPN: `openvpn --config <fs-root>/vpn_gate.ovpn --daemon`
->>>>>>> Stashed changes
 
 ### Cipher negotiation fails
 - VPN Gate servers often use AES-128-CBC

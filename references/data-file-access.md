@@ -24,7 +24,6 @@ The `read_file` Hermes tool prepends line numbers to displayed output (e.g., `1|
 
 Spot data lives under the Hermes profile directory. The exact paths depend on profile:
 
-<<<<<<< Updated upstream
 **the agent profile (active):**
 - Data: `<hermes-home>/profiles/indigo/commons/data/ocas-spot/`
 - Journals: `<hermes-home>/commons/journals/ocas-spot/YYYY-MM-DD/`
@@ -33,16 +32,6 @@ Spot data lives under the Hermes profile directory. The exact paths depend on pr
 **Default/non-profile:**
 - Data: `<hermes-home>/commons/data/ocas-spot/`
 - Journals: `<hermes-home>/commons/journals/ocas-spot/YYYY-MM-DD/`
-=======
-**Indigo profile (active):**
-- Data: `~/.hermes/profiles/indigo/commons/data/ocas-spot/`
-- Journals: `~/.hermes/commons/journals/ocas-spot/YYYY-MM-DD/`
-- Config: `~/.hermes/profiles/indigo/commons/data/ocas-spot/config.json`
-
-**Default/non-profile:**
-- Data: `~/.hermes/commons/data/ocas-spot/`
-- Journals: `~/.hermes/commons/journals/ocas-spot/YYYY-MM-DD/`
->>>>>>> Stashed changes
 
 **Key files:**
 - `watch.jsonl` — WatchRecord entries (full-replace)
@@ -51,11 +40,7 @@ Spot data lives under the Hermes profile directory. The exact paths depend on pr
 - `metrics.jsonl` — Sweep history (append-only)
 - `config.json` — Single JSON object
 
-<<<<<<< Updated upstream
 **Journal directory pattern:** Journals go to `<hermes-home>/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json` (NOT under profiles/indigo/). The journal path is shared across profiles.
-=======
-**Journal directory pattern:** Journals go to `~/.hermes/commons/journals/ocas-spot/YYYY-MM-DD/{run_id}.json` (NOT under profiles/indigo/). The journal path is shared across profiles.
->>>>>>> Stashed changes
 
 ## Cron mode constraints
 - `execute_code` is **blocked**. Use `terminal()` for shell commands and `write_file()` for file writes.
@@ -141,11 +126,7 @@ def strip_prefixes(line_str):
             break
     return line_str
 
-<<<<<<< Updated upstream
 with open('<hermes-home>/profiles/indigo/commons/data/ocas-spot/watch.jsonl', 'rb') as f:
-=======
-with open('~/.hermes/profiles/indigo/commons/data/ocas-spot/watch.jsonl', 'rb') as f:
->>>>>>> Stashed changes
     raw_lines = f.readlines()
 records = []
 for line in raw_lines:
