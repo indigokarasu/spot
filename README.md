@@ -8,11 +8,7 @@ Use when checking appointment availability, booking services, monitoring
 **Version:** 2.6.0
 **Type:** 
 **Layer:** productivity
-<<<<<<< Updated upstream
-**Author:** Indigo Karasu
-=======
 **Author:** <agent-name>
->>>>>>> Stashed changes
 
 ---
 

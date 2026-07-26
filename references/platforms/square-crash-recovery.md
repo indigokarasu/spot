@@ -419,8 +419,4 @@ The script file isolates the kill commands from the terminal shell's process gro
 
 Server-side date tracking pattern completed on cron sweep. No SPA hydration failure on first navigate — page loaded on first `browser_navigate(?date=2026-06-19)`. JS MARKET-ROW click for Swedish Massage, `browser_click` for 1.5hr duration (ref=e16), JS `[role="option"]`+setAttribute for Any staff, JS market-button Book click. Book→/availability verified via `browser_console` URL check. Server-side date tracking loaded June 19 directly. 34 total slots (Morning 8, Afternoon 20, Evening 6). 7 slots in 3:30-5:00 PM window unchanged. 37th+ consecutive clean Square run. Hermes browser used successfully; stealth browser not attempted (known working).
 
-<<<<<<< Updated upstream
 **Read_file path resolution issue:** `read_file()` with `~/hermes/profiles/indigo/...` paths can double-resolve the home directory (e.g., `<hermes-home>/profiles/indigo/home/.hermes/profiles/indigo/...`). Always use `terminal(command="cat <hermes-home>/...")` for JSONL files instead. This is a read_file path resolution quirk, not a skill content issue — but worth noting for sweep reliability.
-=======
-**Read_file path resolution issue:** `read_file()` with `~/hermes/profiles/indigo/...` paths can double-resolve the home directory (e.g., `~/.hermes/profiles/indigo/home/.hermes/profiles/indigo/...`). Always use `terminal(command="cat ~/.hermes/...")` for JSONL files instead. This is a read_file path resolution quirk, not a skill content issue — but worth noting for sweep reliability.
->>>>>>> Stashed changes
