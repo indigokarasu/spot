@@ -220,14 +220,32 @@ class OpenTableFirefox:
     def start(self):
         from playwright.sync_api import sync_playwright
         self.pw = sync_playwright().start()
-        
-        self.browser = self.pw.firefox.launch(
-            headless=True,
-            firefox_user_prefs={
-                "media.peerconnection.enabled": False,
-                "general.useragent.override": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0",
-            }
-        )
+
+        # OpenTable is among the most aggressively bot-gated targets this box
+        # touches, so it uses the same shared cascade as every other browser
+        # skill: obscura (anti-detect) -> firefox -> chrome -> chromium. The
+        # Firefox user-agent and prefs are applied ONLY when the Firefox
+        # engine is actually selected — a Firefox UA on a Chrome engine is a
+        # detectable contradiction, worse than either on its own.
+        # Pin an engine with BROWSER_CASCADE or OBSCURA_ENGINE.
+        import os
+        import sys
+        _scripts = os.path.join(os.environ.get("HERMES_HOME", ""), "scripts")
+        if _scripts and _scripts not in sys.path:
+            sys.path.insert(0, _scripts)
+        try:
+            import browser_cascade
+            self.browser, self.engine, _attempts = browser_cascade.launch_sync(self.pw)
+            log.info(browser_cascade.describe(_attempts))
+        except ImportError:
+            self.engine = "firefox"
+            self.browser = self.pw.firefox.launch(
+                headless=True,
+                firefox_user_prefs={
+                    "media.peerconnection.enabled": False,
+                    "general.useragent.override": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:133.0) Gecko/20100101 Firefox/133.0",
+                }
+            )
         
         self.context = self.browser.new_context(
             viewport={'width': 1920, 'height': 1080},
