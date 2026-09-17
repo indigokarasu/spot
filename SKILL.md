@@ -20,7 +20,7 @@ includes:
 
 metadata:
   author: Indigo Karasu
-  version: 2.6.0
+  version: "2.7.0"
   hermes:
     category: productivity
     tags:
@@ -148,6 +148,7 @@ See `references/cron-sweep-pattern.md` for the cron-specific sweep flow includin
 - **Sands** — Before booking: conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json`. After booking: event creation request to `{agent_root}/commons/data/ocas-sands/intake/{event_id}.event.json`. External venue confirmation is authoritative — never roll back on Sands failure.
 - **Voyage** — On confirmed booking, checks `{agent_root}/commons/data/ocas-voyage/itineraries/` for matching destinations. Appends Travel Context entry if matched.
 - **ocas-vpn** — Called when bot detection blocks access. Provides non-US exit IPs. See `references/vpn-integration.md`.
+- **Vesper** — On confirmed appointment, emit an appointment-confirmation brief directly to `ocas-vesper`'s intake directory (`{agent_root}/commons/data/ocas-vesper/intake/`) so the morning/evening briefing can surface upcoming appointments. One brief per confirmation with venue, provider, time, and confirmation reference.
 
 ## Journal outputs
 

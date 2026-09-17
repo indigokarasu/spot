@@ -1,3 +1,8 @@
+## [2.7.0] - 2026-09-16
+
+### Added
+- **Vesper intake brief emission** — confirmed appointments emit a confirmation brief to `ocas-vesper`'s intake directory (venue, provider, time, confirmation ref) for the daily briefing.
+
 ## [2.3.0] - 2026-04-12
 
 ### Added
