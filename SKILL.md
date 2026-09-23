@@ -35,6 +35,9 @@ metadata:
 
 Spot automates appointment and reservation availability checks, bookings, and persistent monitoring across service venues. It maintains a registry of known venues, a watchlist for ongoing availability monitoring, and handles the full booking flow. This automation exists because manual booking monitoring is time-consuming and error-prone, especially across 20+ different platforms.
 
+
+**Support files:** `references/support-file-map.md` indexes the bundled files not covered inline in this skill — check it before working from assumptions about what is (not) available.
+
 ## When to Use
 
 - Checking appointment or reservation availability at salons, spas, or restaurants

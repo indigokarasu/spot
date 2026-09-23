@@ -6,4 +6,4 @@
 4. **Conflict check (Sands)** — If Sands is present, write a conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json`. If Sands reports a conflict, surface it and ask for confirmation. If Sands is absent or unresponsive, proceed.
 5. **Slot selection** — Present available dates/times to user. Wait for confirmation.
 6. **Booking** — Execute booking flow using `human_click()` and `human_type()` for all interactions. Capture confirmation reference.
-7. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Elephas. Write InsightProposal to Vesper. If Voyage itinerary matches, append Travel Context. If Sands is present, write calendar event request. Sands write failure does NOT cancel the external booking.
+7. **Record** — Write BookingRecord to `bookings.jsonl`. Emit Signals to Chronicle. Write InsightProposal to Vesper. If Voyage itinerary matches, append Travel Context. If Sands is present, write calendar event request. Sands write failure does NOT cancel the external booking.

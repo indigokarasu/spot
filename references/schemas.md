@@ -93,7 +93,7 @@ Stored at `{agent_root}/commons/data/ocas-spot/config.json`.
 
 ## Signal formats
 
-### Place Signal (to Elephas)
+### Place Signal (to Chronicle)
 
 ```json
 {
@@ -110,7 +110,7 @@ Stored at `{agent_root}/commons/data/ocas-spot/config.json`.
 }
 ```
 
-### Concept/Event Signal (to Elephas)
+### Concept/Event Signal (to Chronicle)
 
 ```json
 {
