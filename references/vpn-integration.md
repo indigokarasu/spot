@@ -126,6 +126,6 @@ if 'data-ciphers' not in config:
 For per-browser VPN routing (when multiple browsers need different exit nodes), use Playwright's `proxy` parameter:
 ```python
 context = browser.new_context(
-    proxy={'server': 'socks5://10.8.0.1:1080'}  # WireGuard/SOCKS proxy
+    proxy={'server': 'socks5://<proxy-ip>:1080'}  # WireGuard/SOCKS proxy
 )
 ```

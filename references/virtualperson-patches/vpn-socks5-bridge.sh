@@ -1,7 +1,7 @@
 #!/bin/bash
 # vpn-socks5-bridge.sh — SOCKS5 proxy that routes through VPN Gate (tun0)
 #
-# This replaces Mullvad's SOCKS5 proxy (172.18.0.1:1080) with a local
+# This replaces the container-side Mullvad SOCKS5 proxy with a local
 # SOCKS5 proxy that routes all traffic through the VPN Gate tun0 interface.
 #
 # Usage:

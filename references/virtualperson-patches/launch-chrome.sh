@@ -24,7 +24,7 @@ CHROME_BIN=$(command -v google-chrome-stable 2>/dev/null || command -v google-ch
 PROFILE_DIR="<home>/hermes/.hermes/.chrome-profile"
 CDP_PORT=9222
 CDP_BIND="127.0.0.1"
-# VPN Gate SOCKS5 proxy on the host (replaces Mullvad 172.18.0.1:1080)
+# VPN Gate SOCKS5 proxy on the host (replaces the container-side Mullvad proxy)
 PROXY="socks5://host.docker.internal:1080"
 DISPLAY="${DISPLAY:-:99}"
 LOG="<home>/hermes/chrome.log"

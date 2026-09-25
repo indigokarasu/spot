@@ -1,7 +1,7 @@
 # docker-compose.yml — VirtualPerson patched for VPN Gate
 #
 # Changes from original:
-# - Replaced Mullvad SOCKS5 (172.18.0.1:1080) with host's VPN SOCKS5 proxy
+# - Replaced the container-side Mullvad SOCKS5 proxy with the host's VPN SOCKS5 proxy
 # - Uses host.docker.internal to reach the host's SOCKS5 proxy
 # - All browser traffic routes through VPN Gate tunnel on the host
 #
