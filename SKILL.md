@@ -6,9 +6,11 @@ description: 'Use when checking appointment availability, booking services, moni
   finds and compares venues via Yelp before booking. Supports Acuity Scheduling, Square
   Appointments, Resy, Tock, SevenRooms, OpenTable, Meevo, Vagaro, Mindbody, Fresha,
   StyleSeat, Calendly, Yelp Reservations, Booksy, GlossGenius, SimplyBook.me, Boulevard,
-  Mangomint, DaySmart, ResDiary, and Eat App. Integrates with ocas-vpn for bot block
-  bypass. NOT for general travel planning (use ocas-voyage), calendar sync (use ocas-sands),
-  restaurant reservations on unsupported platforms. Trigger phrases: ''book an appointment
+  Mangomint, DaySmart, ResDiary, and Eat App. VPN handling for bot blocks is documented
+  in references/vpn-integration.md inside THIS skill; there is no separate VPN skill.
+  NOT for general travel planning (use ocas-voyage), calendar sync (use ocas-sands),
+  restaurant reservations on unsupported platforms, VPN/proxy setup, or captcha
+  troubleshooting. Trigger phrases: ''book an appointment
   at'', ''check availability at'', ''when can I get a [service]'', ''find me a slot at'',
   ''is [venue] available'', ''watch [venue] for openings'', ''alert me when [venue]
   has availability'', ''monitor [venue]'', ''find a restaurant in'', ''compare salons
@@ -150,7 +152,7 @@ See `references/cron-sweep-pattern.md` for the cron-specific sweep flow includin
 - **Vesper** — Spot writes InsightProposals to journal payload fields when watch-sweep finds new availability and after confirmed bookings.
 - **Sands** — Before booking: conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json`. After booking: event creation request to `{agent_root}/commons/data/ocas-sands/intake/{event_id}.event.json`. External venue confirmation is authoritative — never roll back on Sands failure.
 - **Voyage** — On confirmed booking, checks `{agent_root}/commons/data/ocas-voyage/itineraries/` for matching destinations. Appends Travel Context entry if matched.
-- **ocas-vpn** — Called when bot detection blocks access. Provides non-US exit IPs. See `references/vpn-integration.md`.
+- **VPN (in-skill, no separate skill)** — Bot-block handling is documented in `references/vpn-integration.md` in THIS skill. Do NOT call `skill_view` for `ocas-vpn` or `util-vpn`: neither exists in the skill index, so the call always fails and wastes a turn.
 - **Vesper** — On confirmed appointment, emit an appointment-confirmation brief directly to `ocas-vesper`'s intake directory (`{agent_root}/commons/data/ocas-vesper/intake/`) so the morning/evening briefing can surface upcoming appointments. One brief per confirmation with venue, provider, time, and confirmation reference.
 
 ## Journal outputs
