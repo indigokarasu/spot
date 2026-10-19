@@ -30,6 +30,11 @@ async function checkMonthlyAvailability(owner, appointmentTypeId, calendarId, mo
 }
 
 async function main() {
+  if (process.argv.includes('--help') || process.argv.includes('-h')) {
+    console.log('Usage: acuity.js <owner> <appointmentTypeId> <calendarId> <month YYYY-MM> [timezone]');
+    console.log('Checks Acuity Scheduling availability via public REST API (no auth).');
+    process.exit(0);
+  }
   const [,, owner, aptTypeId, calendarId, month, tz] = process.argv;
   if (!owner || !aptTypeId || !calendarId || !month) {
     console.error('Usage: acuity.js <owner> <appointmentTypeId> <calendarId> <month YYYY-MM> [timezone]');

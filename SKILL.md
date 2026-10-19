@@ -1,38 +1,49 @@
 ---
+warning: 'FALSE TRIGGER RISK: Has had 100% false trigger rate on interactive loads. Loaded in VPN and order-status sessions where user did not request appointment booking. Do not load when user asks about VPN, orders, or general web tasks. Added automatically on 2026-10-19.'
 name: ocas-spot
 license: MIT
-description: 'Use when checking appointment availability, booking services, monitoring
-  for openings, or discovering venues at salons, spas, and restaurants. spot.discover
-  finds and compares venues via Yelp before booking. Supports Acuity Scheduling, Square
-  Appointments, Resy, Tock, SevenRooms, OpenTable, Meevo, Vagaro, Mindbody, Fresha,
-  StyleSeat, Calendly, Yelp Reservations, Booksy, GlossGenius, SimplyBook.me, Boulevard,
-  Mangomint, DaySmart, ResDiary, and Eat App. VPN handling for bot blocks is documented
-  in references/vpn-integration.md inside THIS skill; there is no separate VPN skill.
-  NOT for general travel planning (use ocas-voyage), calendar sync (use ocas-sands),
-  restaurant reservations on unsupported platforms, VPN/proxy setup, or captcha
-  troubleshooting. Trigger phrases: ''book an appointment
-  at'', ''check availability at'', ''when can I get a [service]'', ''find me a slot at'',
-  ''is [venue] available'', ''watch [venue] for openings'', ''alert me when [venue]
-  has availability'', ''monitor [venue]'', ''find a restaurant in'', ''compare salons
-  near'', ''discover [type] near''.'
+description: 'Use when checking appointment availability, booking services, monitoring for openings, or discovering venues at salons, spas, and restaurants. spot.discover finds and compares venues via Yelp before booking. Supports Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, OpenTable, Meevo, Vagaro, Mindbody, Fresha, StyleSeat, Calendly, Yelp Reservations, Booksy, GlossGenius, SimplyBook.me, Boulevard, Mangomint, DaySmart, ResDiary, and Eat App. VPN handling for bot blocks is documented in references/vpn-integration.md inside THIS skill; there is no separate VPN skill. NOT for general travel planning (use ocas-voyage), calendar sync (use ocas-sands), restaurant reservations on unsupported platforms, VPN/proxy setup, or captcha troubleshooting. Trigger phrases: ''book an appointment at'', ''check availability at'', ''when can I get a [service]'', ''find me a slot at'', ''is [venue] available'', ''watch [venue] for openings'', ''monitor [venue]'', ''find a restaurant in''.'
 source: https://github.com/<agent-handle>/ocas-spot
 includes:
   - references/**
   - scripts**
-
+triggers:
+  - appointment availability
+  - book an appointment
+  - check availability
+  - watch for openings
+  - find a slot
+  - discover venues
+  - salon booking
+  - restaurant reservation
 metadata:
   author: Indigo Karasu
   version: "2.7.0"
   hermes:
     category: productivity
     tags:
-    - appointments
-    - reservations
-    - availability-monitoring
-    - booking
-    - OCAS-core
+      - appointments
+      - reservations
+      - availability-monitoring
+      - booking
+      - OCAS-core
+    config:
+      - key: YELP_API_KEY
+        description: Yelp Fusion API key for spot.discover (optional; falls back to page mode)
+        default: ""
+      - key: CALENDLY_API_TOKEN
+        description: Calendly API token for Calendly availability checks
+        default: ""
+      - key: RESY_API_KEY
+        description: Resy API key for Resy availability checks
+        default: ""
+      - key: RESY_EMAIL
+        description: Resy account email for authenticated booking
+        default: ""
+      - key: RESY_PASSWORD
+        description: Resy account password for authenticated booking
+        default: ""
 ---
-
 # Spot
 
 Spot automates appointment and reservation availability checks, bookings, and persistent monitoring across service venues. It maintains a registry of known venues, a watchlist for ongoing availability monitoring, and handles the full booking flow. This automation exists because manual booking monitoring is time-consuming and error-prone, especially across 20+ different platforms.
@@ -57,14 +68,16 @@ Spot automates appointment and reservation availability checks, bookings, and pe
 
 ## Responsibility boundary
 
-Spot owns: availability checks, appointment bookings, venue registry management, booking history, watchlist management, platform detection, and platform knowledge base maintenance.
-
-Spot does not own: general travel planning (Voyage), calendar sync, restaurant reservations on unsupported platforms, or platforms requiring authentication Spot does not hold.
+Owns: availability checks, bookings, venue registry, watchlist, platform detection. Does not own: travel planning (Voyage), calendar sync, unsupported platforms.
 
 ## Ontology types
 
-- **Place** — venues where appointments or reservations are made. Included in journal signal payloads on first booking or first watch entry for a new venue.
-- **Concept/Event** — confirmed appointments and reservations. Included in journal signal payloads after booking confirmation.
+Place = venue (on first booking/watch). Concept/Event = confirmed booking.
+
+## Example
+
+Input: `spot.check "Square Barber" haircut "next week"`
+Output: dates [Mon 10/20, Wed 10/22], slots [9:00, 10:30, 14:00]; Observation journal entry.
 
 ## Commands
 
@@ -148,12 +161,11 @@ See `references/cron-sweep-pattern.md` for the cron-specific sweep flow includin
 
 ## Optional skill cooperation
 
-- **Chronicle** — Spot emits Place and Concept/Event Signals to journal payload fields after confirmed bookings and on first watch-add for a new venue.
-- **Vesper** — Spot writes InsightProposals to journal payload fields when watch-sweep finds new availability and after confirmed bookings.
-- **Sands** — Before booking: conflict-check request to `{agent_root}/commons/data/ocas-sands/intake/{check_id}.conflict.json`. After booking: event creation request to `{agent_root}/commons/data/ocas-sands/intake/{event_id}.event.json`. External venue confirmation is authoritative — never roll back on Sands failure.
-- **Voyage** — On confirmed booking, checks `{agent_root}/commons/data/ocas-voyage/itineraries/` for matching destinations. Appends Travel Context entry if matched.
-- **VPN (in-skill, no separate skill)** — Bot-block handling is documented in `references/vpn-integration.md` in THIS skill. Do NOT call `skill_view` for `ocas-vpn` or `util-vpn`: neither exists in the skill index, so the call always fails and wastes a turn.
-- **Vesper** — On confirmed appointment, emit an appointment-confirmation brief directly to `ocas-vesper`'s intake directory (`{agent_root}/commons/data/ocas-vesper/intake/`) so the morning/evening briefing can surface upcoming appointments. One brief per confirmation with venue, provider, time, and confirmation reference.
+- **Chronicle** — emits Place/Concept/Event Signals after bookings and first watch-add for a new venue.
+- **Vesper** — writes InsightProposals on new availability; emits appointment-confirmation briefs to `ocas-vesper` intake.
+- **Sands** — conflict-check before booking (`intake/{check_id}.conflict.json`); event creation after (`intake/{event_id}.event.json`). External confirmation authoritative.
+- **Voyage** — appends Travel Context entry if booking matches an itinerary destination.
+- **VPN (in-skill)** — bot-block handling in `references/vpn-integration.md`. No `ocas-vpn`/`util-vpn` skill exists; do not call `skill_view` for them.
 
 ## Journal outputs
 
@@ -170,21 +182,30 @@ See `references/storage-layout.md` for the full directory tree and record schema
 
 ## Background tasks
 
-During `spot.init`, cron registration for spot jobs is handled via `cronjob(action='create', ...)`. No heartbeat registry needed. See `references/self-update.md` for the cron registration pattern.
+Cron registration via `cronjob(action='create', ...)` during `spot.init`. See `references/self-update.md`.
 
 ## OKRs
 
 See `references/okrs.md` for all targets (journal coverage, sweep latency, platform coverage, booking accuracy, bot block recovery, onboarding time, schedule adherence).
 
+## Error Handling
+
+| Failure | Symptom | Handling |
+|---|---|---|
+| Bot block (CF Turnstile/PerimeterX) | HTTP 403 or challenge page | Retry via VPN fallback; if VPN unavailable, mark record blocked and skip |
+| VPN disconnect mid-sweep | `tun0` down, requests fail | Pause sweep, reconnect via `ocas-vpn`, resume from last completed entry |
+| Platform timeout | No response within 30s | Log failure, mark record, continue to next venue; retry next sweep |
+| Corrupt JSONL data | Parse error on read | Quarantine corrupt lines to `.quarantine/`, reconstruct from last valid state |
+| Missing Playwright module | `MODULE_NOT_FOUND` on square.js | Install playwright or use stealth browser flow instead |
+| OpenTable Akamai block | Chromium rejected | Switch to Firefox for OpenTable booking attempts |
+| Sands conflict after booking | Conflict report post-confirmation | External booking stands; Sands failure never cancels confirmed booking |
+| Unknown platform | `spot.platform.probe` returns low confidence | Fall back to browser automation or prompt user for manual entry |
+| Yelp API unavailable | No `YELP_API_KEY` or rate limit | Fall back to public Yelp page navigation (slower, less structured) |
+| Stealth browser spawn race | `[Errno 111] Connect call failed` | Re-spawn instance and retry; not a persistent failure |
+
 ## Recovery Behavior
 
-When Spot encounters failures — bot blocks, VPN disconnects, platform timeouts, or data corruption — it follows these principles:
-
-- [ ] **Idempotency** — All recovery actions are idempotent.
-- [ ] **Graceful degradation** — If a platform is unreachable, log the failure, mark the record, and continue. Partial results are never discarded.
-- [ ] **VPN reconnection** — If `tun0` drops mid-sweep, pause, reconnect via `ocas-vpn`, and resume from the last completed entry.
-- [ ] **Data repair** — Quarantine corrupt JSONL lines to `.quarantine/` and reconstruct last valid state from journal outputs.
-- [ ] **Audit continuity** — Every recovery action is recorded in `intents.jsonl` and `evidence.jsonl`.
+See `references/recovery-behavior.md` for the full recovery principles (idempotency, graceful degradation, VPN reconnection, data repair, audit continuity).
 
 ## Initialization
 
@@ -197,7 +218,7 @@ When Spot encounters failures — bot blocks, VPN disconnects, platform timeouts
 
 ## VirtualPerson Integration
 
-For bot-blocked platforms (Tock, OpenTable, Mindbody, Fresha), VirtualPerson provides a headed Chrome environment that's harder to detect than headless Chromium. Patched files for VPN Gate integration are at `references/virtualperson-patches/`. See `ocas-vpn` skill for VPN setup. Connect via CDP: `p.chromium.connect_over_cdp("http://127.0.0.1:9222")`.
+See `references/virtualperson-integration.md` for VirtualPerson headed-Chrome setup and CDP connection.
 
 ## Gotchas
 
@@ -217,7 +238,7 @@ For bot-blocked platforms (Tock, OpenTable, Mindbody, Fresha), VirtualPerson pro
 
 ## Platform notes
 
-Spot uses `cronjob` for appointment monitoring. On platforms without `cronjob`, the user triggers checks manually. Yelp API calls and browser automation are platform-independent.
+Uses `cronjob` for monitoring; manual trigger on platforms without it.
 
 ## Support File Map
 
@@ -236,15 +257,15 @@ Spot uses `cronjob` for appointment monitoring. On platforms without `cronjob`, 
 | `references/schemas.md` | Before creating VenueRecord, BookingRecord, or WatchRecord |
 | `references/vpn-integration.md` | When bot detection blocks access and VPN fallback is needed |
 | `references/virtualperson-integration.md` | When VirtualPerson headed Chrome is available for bot-blocked platforms |
-| `references/platform-access-matrix.md` | Before checking which platforms are accessible from current IP |
-|| `scripts/acuity.js` | When checking Acuity Scheduling availability (REST API) |
-|| `scripts/square.js` | When checking Square Appointments availability (Playwright) |
-|| `scripts/sevenrooms.py` | When checking SevenRooms availability (public widget API, no auth) or booking (browser automation via Playwright) |
-|| `references/sevenrooms-api-notes.md` | SevenRooms API research notes — endpoint reference, response fields, community repos |
-|| `references/stealth-browser-square-flow-20260608.md` | Square flow via stealth browser — execute_script returns null, use query_elements + click_element only. Primary reference for Square automation. |
-|| `references/platform-access-matrix.md` | Before checking which platforms are accessible — now includes both HTTP access AND automation status (two separate tables). |
-|| `references/cron-sweep-pattern.md` | Before running watch sweeps via cron — browser lifecycle, error handling, and sequencing for automated sweeps. |
-|| `references/watch-sweep-behavior.md` | Before designing or modifying sweep logic — detailed behavioral spec for watch sweep edge cases. |
+| `references/platform-access-matrix.md` | Before checking which platforms are accessible — HTTP access AND automation status (two tables) |
+| `scripts/acuity.js` | When checking Acuity Scheduling availability (REST API) |
+| `scripts/square.js` | When checking Square Appointments availability (Playwright) |
+| `scripts/sevenrooms.py` | When checking SevenRooms availability (public widget API) or booking (browser automation) |
+| `scripts/reservation_toolkit.py` | When running VPN, Resy, OpenTable, Tock, or Yelp operations |
+| `references/sevenrooms-api-notes.md` | When researching SevenRooms endpoints — API reference and response fields |
+| `references/stealth-browser-square-flow-20260608.md` | When automating Square via stealth browser — primary reference for Square automation |
+| `references/cron-sweep-pattern.md` | Before running watch sweeps via cron — browser lifecycle and sequencing |
+| `references/watch-sweep-behavior.md` | Before designing or modifying sweep logic — behavioral spec for edge cases |
 
 ## Self-update
 

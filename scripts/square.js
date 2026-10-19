@@ -6,6 +6,11 @@
  * CRITICAL: Always use hasAttribute('disabled') — never isEnabled() — for market-* custom elements.
  * Playwright's isEnabled()/isDisabled() return wrong results for Square's web components.
  */
+if (process.argv.includes('--help') || process.argv.includes('-h')) {
+  console.log('Usage: node square.js <bookingUrl> <serviceId> [targetMonth e.g. "April 2026"]');
+  console.log('Checks Square Appointments availability via Playwright browser automation.');
+  process.exit(0);
+}
 const { chromium } = require('playwright');
 
 async function checkAvailability(bookingUrl, serviceId, targetMonth) {
