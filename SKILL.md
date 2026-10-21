@@ -3,7 +3,7 @@ warning: 'FALSE TRIGGER RISK: Has had 100% false trigger rate on interactive loa
 name: ocas-spot
 license: MIT
 description: 'Use when checking appointment availability, booking services, monitoring for openings, or discovering venues at salons, spas, and restaurants. spot.discover finds and compares venues via Yelp before booking. Supports Acuity Scheduling, Square Appointments, Resy, Tock, SevenRooms, OpenTable, Meevo, Vagaro, Mindbody, Fresha, StyleSeat, Calendly, Yelp Reservations, Booksy, GlossGenius, SimplyBook.me, Boulevard, Mangomint, DaySmart, ResDiary, and Eat App. VPN handling for bot blocks is documented in references/vpn-integration.md inside THIS skill; there is no separate VPN skill. NOT for general travel planning (use ocas-voyage), calendar sync (use ocas-sands), restaurant reservations on unsupported platforms, VPN/proxy setup, or captcha troubleshooting. Trigger phrases: ''book an appointment at'', ''check availability at'', ''when can I get a [service]'', ''find me a slot at'', ''is [venue] available'', ''watch [venue] for openings'', ''monitor [venue]'', ''find a restaurant in''.'
-source: https://github.com/<agent-handle>/ocas-spot
+source: https://github.com/indigokarasu/ocas-spot
 includes:
   - references/**
   - scripts**
